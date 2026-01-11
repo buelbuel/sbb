@@ -1,0 +1,433 @@
+{
+    "meta": {
+        "home": {
+            "title": "Salesforce & CRM Solution Design für komplexe Systeme",
+            "description": "Senior Salesforce Solution Architect mit Schwerpunkt auf Lösungsdesign, Integrationen und tragfähigen Systementscheidungen."
+        },
+        "about": {
+            "title": "Über mich – Salesforce Solution Architect",
+            "description": "Mehr als zehn Jahre Erfahrung in Salesforce-, CRM- und Cloud-Lösungen mit Verantwortung für komplexe Enterprise-Systeme."
+        },
+        "services": {
+            "title": "Leistungen – Salesforce Solution Design & Integrationen",
+            "description": "Strukturiertes Lösungsdesign, Integrationskonzepte und Entscheidungsunterstützung für gewachsene Salesforce-Landschaften."
+        },
+        "references": {
+            "title": "Referenzen – Salesforce- & CRM-Projekte",
+            "description": "Ausgewählte Projektkontexte aus Lösungsdesign, Integrationen und Verantwortung in komplexen CRM-Systemen."
+        },
+        "contact": {
+            "title": "Kontakt – Unverbindlicher Austausch",
+            "description": "Ein erstes Gespräch zu Salesforce-, CRM- oder Integrationsfragen."
+        },
+        "privacy": {
+            "title": "Datenschutz",
+            "description": "Informationen zur Verarbeitung personenbezogener Daten auf dieser Website."
+        },
+        "imprint": {
+            "title": "Impressum",
+            "description": "Anbieterkennzeichnung und rechtliche Pflichtangaben."
+        },
+        "notfound": {
+            "title": "Seite nicht gefunden"
+        }
+    },
+    "nav": {
+        "home": "Start",
+        "services": "Leistungen",
+        "about": "Über mich",
+        "references": "Referenzen",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "home": {
+            "title": "Salesforce & CRM Solution Design.<br />Für komplexe Systeme.",
+            "description": "Strukturiertes Lösungsdesign, Integrationen und technische Entscheidungen für belastbare Salesforce-Landschaften.",
+            "cta": "Kontakt aufnehmen",
+            "secondaryCta": "Leistungen ansehen"
+        },
+        "about": {
+            "title": "Über mich.",
+            "description": "Senior Salesforce Solution Architect mit Fokus auf Lösungsdesign, Integrationen und verantwortungsvolle Systementscheidungen."
+        },
+        "services": {
+            "title": "Leistungen.",
+            "description": "Lösungsdesign und Entscheidungsarbeit für komplexe Salesforce- und CRM-Systeme."
+        },
+        "contact": {
+            "title": "Kurzer Austausch.",
+            "description": "Ein erstes Gespräch zur Einordnung Ihrer Salesforce- oder CRM-Situation."
+        },
+        "references": {
+            "title": "Referenzen.",
+            "description": "Ausgewählte Projektkontexte aus Salesforce, CRM und Integrationen."
+        }
+    },
+    "home": {
+        "positioning": {
+            "title": "Gewachsene CRM-Systeme.<br />Hohe Komplexität.<br />Klare Lösungen.",
+            "text": "Herausforderungen in CRM-Systemen sind selten rein technisch. Häufig fehlen saubere Lösungsbilder, klare Zuständigkeiten oder belastbare Integrationskonzepte. Ich unterstütze dabei, Salesforce-Landschaften zu ordnen, Entscheidungsoptionen sichtbar zu machen und Systeme langfristig tragfähig aufzustellen.",
+            "cta": "Mehr erfahren"
+        },
+        "footer_cta": {
+            "title": "Lassen Sie uns sprechen.",
+            "linkedin": "LinkedIn",
+            "email": "E-Mail schreiben"
+        }
+    },
+    "about": {
+        "profile": {
+            "title": "Profil.",
+            "p1": "Ich arbeite seit über zehn Jahren mit Salesforce-, CRM- und Cloud-Systemen – von operativer Administration bis zur Verantwortung komplexer Solution- und Integrationslandschaften im Enterprise- und Mid-Market-Umfeld.",
+            "p2": "In Rollen als Salesforce Solution Architect, Senior Administrator und externer Berater habe ich Systeme neu entworfen, restrukturiert, migriert und über mehrere Jahre hinweg stabil betrieben.",
+            "p3": "Mein Schwerpunkt liegt auf Lösungsdesign und Entscheidungsarbeit: Anforderungen strukturieren, Systemgrenzen sauber schneiden, Integrationen absichern und technische Optionen unter realen organisatorischen Bedingungen bewerten.",
+            "philosophy": {
+                "p1": "Ich arbeite dort, wo CRM-Systeme geschäftskritisch sind und technische Entscheidungen langfristige Wirkung entfalten.",
+                "p2": "Mein Anspruch ist Klarheit: nachvollziehbare Lösungsbilder, belastbare Integrationen und Entscheidungen, die Teams langfristig tragen können.",
+                "p3": "Gute CRM-Lösungen entstehen nicht durch Tool-Fokus, sondern durch ein sauberes Zusammenspiel aus Prozessen, Daten und Verantwortlichkeiten."
+            }
+        },
+        "cta": {
+            "title": "Lassen Sie uns sprechen.",
+            "text": "Ob Architektur-Review, Lösungsdesign oder Entscheidungsunterstützung – ich freue mich auf Ihre Nachricht."
+        }
+    },
+    "services": {
+        "situations": {
+            "title": "Typische Ausgangssituationen.",
+            "subtitle": "Kontexte, in denen strukturiertes Lösungsdesign gefragt ist",
+            "items": [
+                "Salesforce- und CRM-Landschaften sind historisch gewachsen und fachlich wie technisch schwer wartbar.",
+                "Mehrere Lösungs- oder Integrationsoptionen stehen im Raum, Risiken und Auswirkungen sind unklar.",
+                "Produkt, Business und IT verfolgen unterschiedliche Zielbilder innerhalb desselben CRM-Systems."
+            ]
+        },
+        "focus": {
+            "title": "Leistungsschwerpunkte.",
+            "text": "Lösungsdesign und Entscheidungsarbeit für Salesforce-, CRM- und Integrationssysteme.",
+            "items": {
+                "architecture": {
+                    "title": "Salesforce Solution Design",
+                    "text": "Strukturierung von Lösungen für Sales, Service, CPQ, FSL und Experience Cloud mit Blick auf Skalierbarkeit und langfristige Wartbarkeit."
+                },
+                "crm": {
+                    "title": "Integrationen & Systemkopplung",
+                    "text": "Konzeption und Bewertung von Integrationen zu ERP-, Middleware- und Drittsystemen inklusive Schnittstellen-, Sicherheits- und Betriebsaspekten."
+                },
+                "product": {
+                    "title": "Datenmodelle & Prozesse",
+                    "text": "Fachlich saubere Datenmodelle, klare Prozesse und Automatisierungen zur gezielten Reduktion technischer Schulden."
+                },
+                "ownership": {
+                    "title": "Verantwortung & Entscheidungsabsicherung",
+                    "text": "Übernahme technischer Verantwortung und Unterstützung bei tragfähigen, dokumentierten Entscheidungen."
+                }
+            }
+        },
+        "details": {
+            "architecture": {
+                "subtitle": "Was ich liefere:",
+                "points": [
+                    "Klar strukturierte Lösungsbilder mit definierten Systemgrenzen und Integrationspfaden",
+                    "Security-, Identity- und Berechtigungskonzepte, die auch bei Wachstum tragfähig bleiben",
+                    "Rollout- und Migrationspfade mit realistischen, überprüfbaren Meilensteinen"
+                ],
+                "longtext1": "Ich analysiere bestehende Salesforce-Landschaften, fachliche Anforderungen und organisatorische Rahmenbedingungen und leite daraus belastbare Lösungsbilder ab. Ziel ist keine abstrakte Zielzeichnung, sondern eine Lösung, die im Tagesgeschäft funktioniert und weiterentwickelbar bleibt.",
+                "longtext2": "Dabei beziehe ich Org-Gesundheit, Governance, Sicherheitskonzepte und Integrationen systematisch mit ein. Empfehlungen entstehen nicht generisch, sondern orientieren sich an Geschäftsmodell, Teamstruktur und realistischen Zeitplänen."
+            },
+            "crm": {
+                "subtitle": "Schwerpunktbereiche",
+                "points": [
+                    "Integrationskonzepte zu ERP-, Middleware- und Fachsystemen (REST, Events, Auth)",
+                    "Definition klarer Schnittstellenverträge, Monitoring- und Betriebskonzepte",
+                    "Datenfluss- und Verantwortungsmodelle über System- und Teamgrenzen hinweg"
+                ],
+                "longtext": "Ich unterstütze dabei, CRM-Systeme so zu integrieren, dass Datenflüsse nachvollziehbar bleiben, operative Risiken reduziert werden und Teams effizient zusammenarbeiten können. Ziel ist ein Systemverbund, der Akzeptanz fördert statt zusätzliche Komplexität zu erzeugen.",
+                "stats": {
+                    "adoption": "60%",
+                    "adoption_label": "Typische Akzeptanzsteigerung",
+                    "timeline": "3–4 Mon",
+                    "timeline_label": "Typischer Umsetzungszeitraum"
+                }
+            },
+            "product": {
+                "points": [
+                    "Domänenschnitte und Datenmodelle entlang fachlicher Verantwortlichkeiten",
+                    "Automationen und Flows mit klaren Leitplanken und Testbarkeit",
+                    "Reporting- und KPI-Strukturen zur fundierten Entscheidungsunterstützung"
+                ],
+                "longtext": "Saubere Datenmodelle und Prozesse bilden die Grundlage jeder skalierbaren CRM-Lösung. Ich helfe dabei, Fachlogik klar abzubilden, Automatisierungen beherrschbar zu halten und technische Schulden gezielt abzubauen."
+            },
+            "ownership": {
+                "subtitle": "Was Verantwortung bedeutet:",
+                "points": [
+                    "Klare Zuordnung technischer und fachlicher Verantwortung für Systeme und Daten",
+                    "Dokumentierte Entscheidungen mit nachvollziehbarer Begründung und Abwägung",
+                    "Governance-Modelle, die auch über Personen und Projektphasen hinaus tragen"
+                ],
+                "longtext1": "Verantwortung endet nicht mit einer Empfehlung. Ich unterstütze Organisationen dabei, technische Entscheidungen so zu treffen und zu dokumentieren, dass sie auch langfristig tragfähig bleiben.",
+                "longtext2": "Ob punktuelle Entscheidungsabsicherung, temporäre Übernahme technischer Verantwortung oder Unterstützung beim Aufbau klarer Ownership-Modelle über verteilte Teams – mein Fokus liegt darauf, dass Zuständigkeiten eindeutig sind und Entscheidungen Bestand haben.",
+                "flow_title": "Ownership-Framework"
+            }
+        },
+        "benefits": {
+            "title": "Warum mit mir arbeiten",
+            "subtitle": "Erfahrung aus realen Systemen statt theoretischer Modelle",
+            "items": [
+                {
+                    "title": "Langjährige Erfahrung",
+                    "description": "Über zehn Jahre Salesforce in komplexen Enterprise- und Mid-Market-Umgebungen"
+                },
+                {
+                    "title": "Strategische Klarheit",
+                    "description": "Nachvollziehbare Lösungsoptionen mit klaren Trade-offs"
+                },
+                {
+                    "title": "Messbare Wirkung",
+                    "description": "Verbesserte Akzeptanz, Stabilität und Entscheidungsfähigkeit"
+                },
+                {
+                    "title": "Praxisnahe Umsetzung",
+                    "description": "Lösungen, die im Alltag funktionieren und wartbar bleiben"
+                }
+            ]
+        },
+        "cta": {
+            "title": "Bereit für klare Lösungen?",
+            "subtitle": "Ob Lösungsdesign, Integrationsfrage oder kritische Entscheidung – lassen Sie uns gemeinsam klären, welcher nächste Schritt sinnvoll ist."
+        },
+        "faq": {
+            "title": "Fragen? Antworten.",
+            "subtitle": "Typische Situationen und Vorgehensweisen, aus der Praxis beschrieben.",
+            "items": [
+                {
+                    "question": "Salesforce- und CRM-Landschaften sind historisch gewachsen und schwer wartbar.",
+                    "answer": "In solchen Situationen analysiere ich bestehende Salesforce-Orgs, angebundene Systeme und reale Nutzungsweisen im Betrieb. Ich mache technische Abhängigkeiten, implizite Annahmen und gewachsene Sonderlogiken sichtbar und ordne diese fachlich wie technisch ein. Ergebnis ist ein klares Lösungsbild, das zeigt, welche Teile stabilisiert, vereinfacht oder neu geschnitten werden müssen, ohne den laufenden Betrieb zu gefährden."
+                },
+                {
+                    "question": "Mehrere Lösungs- oder Integrationsoptionen stehen im Raum, Risiken und Auswirkungen sind unklar.",
+                    "answer": "Ich bereite strukturierte Entscheidungsgrundlagen vor, in denen technische Optionen vergleichbar werden. Dazu gehören Trade-offs, Integrationsrisiken, Auswirkungen auf Betrieb, Datenqualität und Teamstrukturen sowie realistische Migrationspfade. Ziel ist eine Entscheidung, die nachvollziehbar getroffen wird und auch unter Zeit- und Organisationsdruck Bestand hat."
+                },
+                {
+                    "question": "Produkt, Business und IT haben unterschiedliche Vorstellungen vom selben CRM-System.",
+                    "answer": "Ich strukturiere Anforderungen, Zielbilder und Randbedingungen über alle beteiligten Rollen hinweg und übersetze sie in ein gemeinsames Lösungsverständnis. Dabei kläre ich, was das System leisten soll, was bewusst nicht und wo fachliche Verantwortung liegt. Entscheidungen werden dokumentiert und so getroffen, dass sie von den beteiligten Teams getragen und umgesetzt werden können."
+                },
+                {
+                    "question": "Langjährige Erfahrung",
+                    "answer": "Ich arbeite seit über zehn Jahren mit Salesforce-, CRM- und Integrationssystemen in Enterprise- und Mid-Market-Umgebungen. Meine Erfahrung reicht von operativer Administration über komplexe Migrationen bis hin zur Verantwortung für Lösungsdesign, Integrationen und langfristig stabile Systemlandschaften."
+                },
+                {
+                    "question": "Strategische Klarheit",
+                    "answer": "Technische Entscheidungen entstehen bei mir nicht implizit oder rein toolgetrieben. Ich lege Annahmen offen, bewerte Alternativen und formuliere klare Entscheidungsoptionen, die fachliche, technische und organisatorische Auswirkungen berücksichtigen. Das schafft Transparenz und reduziert spätere Korrekturen."
+                },
+                {
+                    "question": "Messbare Wirkung",
+                    "answer": "Der Fokus liegt auf stabilen Systemen, besserer Nutzerakzeptanz und belastbaren Prozessen. Lösungen werden so gestaltet, dass sie den operativen Alltag erleichtern, technische Schulden reduzieren und Entscheidungen messbar unterstützen, statt neue Komplexität zu erzeugen."
+                },
+                {
+                    "question": "Praxisnahe Umsetzung",
+                    "answer": "Alle Lösungen orientieren sich an realen Teams, bestehenden Fähigkeiten und betrieblichen Zwängen. Ziel ist keine theoretische Idealarchitektur, sondern ein System, das im Tagesgeschäft funktioniert, wartbar bleibt und schrittweise weiterentwickelt werden kann."
+                }
+            ]
+        }
+    },
+    "contact": {
+        "text_col": {
+            "intro": "Ich unterstütze Unternehmen bei Architektur- und Entscheidungsfragen rund um Salesforce-, CRM- und Integrationssysteme.",
+            "sub": "Wenn Sie vor einer komplexen CRM- oder Architekturentscheidung stehen, lässt sich das in einem kurzen Gespräch gut einordnen.",
+            "suitable": {
+                "title": "Gut geeignet, wenn:",
+                "items": [
+                    "Salesforce- oder CRM-Architekturen überprüft oder neu ausgerichtet werden sollen",
+                    "Integrationen oder Datenmodelle an ihre Grenzen stoßen",
+                    "technische Entscheidungen vorbereitet oder abgesichert werden müssen"
+                ]
+            }
+        },
+        "contact_col": {
+            "title": "Schreiben Sie mir.",
+            "text": "Schildern Sie kurz Ihre Situation. Ich melde mich in der Regel innerhalb von 24 Stunden.",
+            "disclaimer": "Kein Sales-Pitch. Kein Follow-up ohne Einverständnis.",
+            "linkedin": "LinkedIn Profil"
+        }
+    },
+    "references": {
+        "intro": "Ausgewählte Projekte aus Salesforce, CRM, Integrationen und Cloud-Architektur. Die Kurzbeschreibung ordnet den Kontext ein, die Detailansicht beschreibt konkrete Architekturentscheidungen, Systemgrenzen und technische Verantwortung.",
+        "description": "Ausgewählte Projekte aus Salesforce, CRM, Integrationen und Cloud-Architektur.",
+        "section_title": "Ausgewählte Projektkontexte.",
+        "expand": "Mehr Details",
+        "collapse": "Weniger Details",
+        "items": {
+            "baywa": {
+                "name": "BayWa AG",
+                "description": "Entwurf einer individuellen Middleware-Architektur zur Ablösung manueller Prozesse und Sicherstellung konsistenter Daten.",
+                "detail": "Verantwortlich für die Konzeption und Umsetzung einer maßgeschneiderten Middleware zwischen ERP-, CRM- und Drittsystemen.\n\nSchwerpunkte:\n- Analyse bestehender manueller und teilautomatisierter Prozesse\n- Definition klarer Systemgrenzen und Ownership je Datenobjekt\n- API-Design für stabile, nachvollziehbare Datenflüsse\n- Einführung eines Parallelbetriebs (Phased Rollout) zur Risikominimierung\n- Monitoring- und Fehlerkonzept zur operativen Absicherung\n\nErgebnis war eine skalierbare Integrationsarchitektur mit hoher Datenintegrität und deutlich reduzierter manueller Nacharbeit."
+            },
+            "peek": {
+                "name": "Peek & Cloppenburg",
+                "description": "Weiterentwicklung der Customer Experience mit Salesforce Experience Cloud.",
+                "detail": "Architektonische Beratung und Umsetzung rund um Experience Cloud zur Verbesserung der kanalübergreifenden Customer Experience.\n\nSchwerpunkte:\n- Strukturierung von Daten-, Rollen- und Berechtigungskonzepten\n- Konzeption personalisierter Journeys auf Basis konsistenter Kundendaten\n- Governance für Inhalte, Datenpflege und Zuständigkeiten\n- Verbindung von Marketing-, Service- und CRM-Perspektive\n\nFokus lag weniger auf einzelnen Features, sondern auf einem tragfähigen Gesamtsystem, das langfristig wartbar bleibt."
+            },
+            "sennder": {
+                "name": "sennder GmbH",
+                "description": "Modellierung neuer Objekte und Prozesse zur operativen Optimierung und Systemstabilität.",
+                "detail": "Verantwortlich für die Neustrukturierung von Datenmodellen und Prozessen in einer integrationsintensiven Umgebung.\n\nSchwerpunkte:\n- Modellierung neuer Salesforce-Objekte zur Abbildung operativer Prozesse\n- Sicherstellung konsistenter Daten zwischen CRM, VoIP und weiteren Systemen\n- Beratung zu DSGVO-konformer Datenhaltung und Zugriffskonzepten\n- Dokumentation systemübergreifender Prozesse und Verantwortlichkeiten\n\nZiel war es, operative Abläufe nachvollziehbar, stabil und organisationsübergreifend verständlich zu gestalten."
+            },
+            "meinestadt": {
+                "name": "meinestadt.de",
+                "description": "Migration von Salesforce Classic zu Lightning und Entwicklung maßgeschneiderter LWCs.",
+                "detail": "Begleitung der technischen und organisatorischen Migration von Salesforce Classic zu Lightning Experience.\n\nSchwerpunkte:\n- Planung eines stufenweisen Rollouts (Wave-Ansatz)\n- Betrieb einer Shadow-Mode-Phase zur Absicherung des Tagesgeschäfts\n- Entwicklung wiederverwendbarer Lightning Web Components\n- Beratung zu Architekturentscheidungen und Bestands-Refactoring\n- Enablement interner Admins durch Dokumentation und Schulungen\n\nDer Fokus lag auf einer risikoarmen Migration mit langfristig wartbarer Architektur."
+            },
+            "nordmetall": {
+                "name": "NORDMETALL",
+                "description": "Technische Leitung bei Konzeption und Umsetzung einer neuen Web-Plattform.",
+                "detail": "Übernahme der technischen Gesamtverantwortung für eine neue Web-Plattform.\n\nSchwerpunkte:\n- Definition der Systemarchitektur und des Migrationspfads\n- Technische Abstimmung mit Redaktion, Marketing und externen Dienstleistern\n- KPI-Definition für Reichweite, Struktur und Conversion\n- Sicherstellung einer skalierbaren, wartbaren Code- und Systembasis\n\nZiel war eine Plattform, die sowohl redaktionellen als auch geschäftlichen Anforderungen gerecht wird."
+            },
+            "bundesverband": {
+                "name": "Bundesverband Geothermie",
+                "description": "Einführung eines CRM-Systems inklusive Datenstruktur und Nutzertrainings.",
+                "detail": "Konzeption und Einführung eines CRM-Systems zur Ablösung verteilter Einzeltools.\n\nSchwerpunkte:\n- Definition eines sauberen Datenmodells und klarer Pflegeverantwortung\n- Berechtigungs- und Rollenkonzept für unterschiedliche Nutzergruppen\n- Planung und Durchführung von Nutzertrainings\n- Begleitung der organisatorischen Adoption\n\nDer Fokus lag auf Akzeptanz, Datenqualität und langfristiger Nutzbarkeit."
+            },
+            "tuev": {
+                "name": "TÜV Thüringen",
+                "description": "Digitalisierung und Optimierung von Prüfprozessen mit Salesforce.",
+                "detail": "Beratung und Umsetzung im Umfeld Field Service und mobiler Prozesse.\n\nSchwerpunkte:\n- Konzeption mobiler Field-Service-Prozesse mit Offline-Fähigkeit\n- Modellierung von Gerätestammdaten und Prüfobjekten\n- Integration in bestehende Backend-Systeme\n- Stabilisierung operativer Abläufe durch saubere Datenflüsse\n\nZiel war eine robuste, praxistaugliche Lösung für den Außendienst."
+            },
+            "nordicdent": {
+                "name": "NordicDent",
+                "description": "Aufbau einer skalierbaren Sales- und Service-Architektur.",
+                "detail": "Verantwortlich für die Strukturierung einer durchgängigen Sales- und Service-Landschaft.\n\nSchwerpunkte:\n- Klare Prozessdefinition für Sales, Service und Übergabepunkte\n- Aufbau nachvollziehbarer Eskalations- und Service-Playbooks\n- Reporting-Strukturen für operative Steuerung und Management\n\nDer Fokus lag auf Wartbarkeit, Nutzerakzeptanz und Skalierbarkeit."
+            },
+            "traumzaun24": {
+                "name": "Traumzaun24",
+                "description": "Integration von Epicor CPQ und Neustrukturierung komplexer Salesforce-Automationen.",
+                "detail": "Gesamtverantwortung für Architektur, Integration und technische Umsetzung.\n\nSchwerpunkte:\n- Integration von Epicor CPQ in eine bestehende Salesforce-Landschaft\n- Refactoring komplexer Automationen und APEX-Strukturen\n- Definition rollenbasierter Berechtigungen\n- Aufbau eines wiederholbaren Deployment- und Release-Prozesses\n\nZiel war eine zukunftssichere, wartbare CPQ- und Sales-Architektur."
+            },
+            "secmarket": {
+                "name": "SECMarket",
+                "description": "Konzeption und Umsetzung einer CRM-Lösung inklusive API-Design.",
+                "detail": "Greenfield-Projekt mit vollständiger Verantwortung für Architektur und Struktur.\n\nSchwerpunkte:\n- Definition der Gesamtarchitektur und Systemgrenzen\n- API-first-Ansatz für Backend-Integration\n- Enge Abstimmung mit Backend-Teams zur Schnittstellengestaltung\n- Durchführung von Workshops mit Fachbereichen\n\nErgebnis war eine saubere, erweiterbare CRM-Basis mit klarer technischer Verantwortung."
+            },
+            "uberall": {
+                "name": "uberall",
+                "description": "Optimierung bestehender Salesforce-Systeme mit Fokus auf Nutzerakzeptanz.",
+                "detail": "Analyse und Optimierung einer bestehenden Salesforce-Landschaft.\n\nSchwerpunkte:\n- Vereinfachung von Sales-Pipelines und Prozessen\n- Sales-Enablement zur Steigerung der Nutzerakzeptanz\n- Einführung nachvollziehbarer KPIs\n- Schrittweises Refactoring bestehender Automationen\n\nZiel war messbare Verbesserung von Pre-Sales-Conversion und Systemakzeptanz."
+            },
+            "vaitrade": {
+                "name": "VAI Trade",
+                "description": "Einführung strukturierter Sales- und Serviceprozesse.",
+                "detail": "Konzeption und Umsetzung skalierbarer Prozesse für Sales und Service.\n\nSchwerpunkte:\n- Definition sauberer Übergabepunkte zwischen Teams\n- Reporting-Strukturen für Wachstum und Expansion\n- Technische Umsetzung mit Fokus auf Einfachheit und Wartbarkeit"
+            },
+            "jakobs": {
+                "name": "Jakobs Medien",
+                "description": "Implementierung von Salesforce Sales Cloud und Angebotsautomatisierung.",
+                "detail": "Einführung von Salesforce Sales Cloud inklusive Angebots- und Genehmigungsprozessen.\n\nSchwerpunkte:\n- Automatisierte Angebots- und Freigabeworkflows\n- Template-basierte Angebotsdokumente\n- Klar geregelte Rollen- und Berechtigungskonzepte\n\nZiel war eine deutliche Reduktion manueller Aufwände im Vertriebsprozess."
+            }
+        }
+    },
+    "footer": {
+        "sections": {
+            "discover": "Entdecken",
+            "contact": "Kontakt",
+            "legal": "Rechtliches"
+        },
+        "links": {
+            "home": "Startseite",
+            "about": "Über mich",
+            "services": "Leistungen",
+            "references": "Referenzen",
+            "request": "Anfrage senden",
+            "email": "E-Mail",
+            "imprint": "Impressum",
+            "privacy": "Datenschutz"
+        },
+        "copyright": "Alle Rechte vorbehalten."
+    },
+    "notfound": {
+        "title": "404",
+        "text": "Diese Seite existiert nicht oder wurde verschoben.",
+        "cta": "Zur Startseite"
+    },
+    "privacy": {
+        "title": "Datenschutz",
+        "heading": "Informationen zum Datenschutz",
+        "intro": "Wie ich mit personenbezogenen Daten auf dieser Website umgehe.",
+        "sections": [
+            {
+                "title": "Verantwortlicher",
+                "items": [
+                    "Salesforce Beratung Bülbül (SBB)",
+                    "Ali Cem Bülbül",
+                    "E-Mail: hallo@sbb.dev"
+                ]
+            },
+            {
+                "title": "Datenquellen",
+                "items": [
+                    "Server-Logfiles (IP-Adresse, Zeitstempel, URL)",
+                    "Kommunikationsdaten bei Kontaktaufnahme (Name, E-Mail, Inhalte)"
+                ]
+            },
+            {
+                "title": "Zwecke & Rechtsgrundlagen",
+                "items": [
+                    "Bereitstellung der Website (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO)",
+                    "Bearbeitung von Anfragen (Art. 6 Abs. 1 lit. b DSGVO)"
+                ]
+            },
+            {
+                "title": "Speicherdauer",
+                "items": [
+                    "Server-Logs werden routinemäßig rotiert bzw. anonymisiert.",
+                    "Kontaktdaten werden bis Abschluss der Anfrage bzw. gesetzlicher Aufbewahrungspflichten gespeichert."
+                ]
+            },
+            {
+                "title": "Ihre Rechte",
+                "items": [
+                    "Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Datenübertragbarkeit",
+                    "Beschwerderecht bei einer Aufsichtsbehörde"
+                ]
+            }
+        ],
+        "contact_label": "Datenschutz-Anfragen",
+        "contact_text": "Bei Fragen zur Verarbeitung Ihrer Daten können Sie sich jederzeit melden.",
+        "contact_cta": "Kontakt"
+    },
+    "imprint": {
+        "title": "Impressum",
+        "heading": "Anbieterkennzeichnung",
+        "intro": "Pflichtangaben gemäß § 5 TMG und § 18 MStV.",
+        "sections": [
+            {
+                "title": "Anbieter",
+                "items": [
+                    "Salesforce Beratung Bülbül (SBB)",
+                    "Ali Cem Bülbül",
+                    "Karower Straße 22, 13156 Berlin, Deutschland"
+                ]
+            },
+            {
+                "title": "Kontakt",
+                "items": [
+                    "E-Mail: hallo@sbb.dev",
+                    "Weitere Kontaktmöglichkeiten siehe Kontakt-Seite."
+                ]
+            },
+            {
+                "title": "Verantwortlich für den Inhalt",
+                "items": [
+                    "Ali Cem Bülbül",
+                    "Anschrift wie oben"
+                ]
+            },
+            {
+                "title": "Haftung und Urheberrecht",
+                "items": [
+                    "Für externe Links wird keine Haftung übernommen; es gilt die Verantwortung der jeweiligen Anbieter.",
+                    "Eigene Inhalte unterliegen dem deutschen Urheberrecht."
+                ]
+            }
+        ]
+    }
+}

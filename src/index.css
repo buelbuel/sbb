@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #007AFF;
+    --color-primary-dark: #0056B3;
+    --color-secondary: #5E5CE6;
+    --color-secondary-dark: #4744BE;
+
+    --color-bg-base: #F8F8F7;
+    --color-bg-glass: rgba(255, 255, 255, 0.65);
+    --color-bg-glass-dark: rgb(30, 30, 30, 0.65);
+
+    --color-text-primary: #1D1D1F;
+
+    --color-border-glass: rgba(255, 255, 255, 0.5);
+    --color-border-subtle: rgba(0, 0, 0, 0.1);
+
+    --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@layer base {
+    :root {
+        @apply font-sans text-text-primary dark:bg-bg-base bg-bg-base antialiased;
+        scroll-behavior: smooth;
+    }
+
+    :root.dark {
+        --color-bg-base: #0b0b0c;
+        --color-bg-glass: rgba(30, 30, 30, 0.65);
+        --color-text-primary: #f5f5f7;
+        --color-border-subtle: rgba(255, 255, 255, 0.12);
+    }
+
+    body {
+        @apply min-h-screen m-0 overflow-x-hidden selection:bg-primary selection:text-white;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .glass-panel {
+        @apply backdrop-blur-xl bg-bg-glass border border-white/40 shadow-sm;
+    }
+
+    .glass-panel-dark {
+        @apply backdrop-blur-xl bg-black/60 border border-white/10 shadow-lg text-white;
+    }
+}
+
+/* Custom Animations */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 20s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
