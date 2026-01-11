@@ -87,8 +87,8 @@ export function Home () {
                                 </div>
 
                                 {/* Content */ }
-                                <div className="relative z-10 flex items-center justify-between gap-8">
-                                    <div className="flex items-start gap-6 flex-1 min-w-0">
+                                <div className="relative z-10 md:flex items-center justify-between gap-8">
+                                    <div className="md:flex items-start gap-6 flex-1 min-w-0">
                                         <div className="w-12 h-12 flex items-center justify-center shrink-0">
                                             <item.icon className="w-6 h-6" strokeWidth={ 1.5 } />
                                         </div>

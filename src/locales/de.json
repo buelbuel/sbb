@@ -119,8 +119,8 @@
                     "text": "Fachlich saubere Datenmodelle, klare Prozesse und Automatisierungen zur gezielten Reduktion technischer Schulden."
                 },
                 "ownership": {
-                    "title": "Verantwortung & Entscheidungsabsicherung",
-                    "text": "Übernahme technischer Verantwortung und Unterstützung bei tragfähigen, dokumentierten Entscheidungen."
+                    "title": "Verantwortung",
+                    "text": "Unterstützung bei technischen Entscheidungen."
                 }
             }
         },
@@ -159,7 +159,7 @@
                 "longtext": "Saubere Datenmodelle und Prozesse bilden die Grundlage jeder skalierbaren CRM-Lösung. Ich helfe dabei, Fachlogik klar abzubilden, Automatisierungen beherrschbar zu halten und technische Schulden gezielt abzubauen."
             },
             "ownership": {
-                "subtitle": "Was Verantwortung bedeutet:",
+                "subtitle": "Was das bedeutet:",
                 "points": [
                     "Klare Zuordnung technischer und fachlicher Verantwortung für Systeme und Daten",
                     "Dokumentierte Entscheidungen mit nachvollziehbarer Begründung und Abwägung",

@@ -41,10 +41,25 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
 
     useEffect(() => {
         const saved = localStorage.getItem("theme")
-        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
-        const initial = saved || (prefersDark ? "dark" : "light")
-        setTheme(initial)
-        document.documentElement.classList.toggle("dark", initial === "dark")
+        const hasSaved = Boolean(saved)
+        const media = window.matchMedia("(prefers-color-scheme: dark)")
+
+        const apply = (mode: string) => {
+            setTheme(mode)
+            document.documentElement.classList.toggle("dark", mode === "dark")
+        }
+
+        const initial = saved || (media.matches ? "dark" : "light")
+        apply(initial)
+
+        const handleSystemChange = (event: MediaQueryListEvent) => {
+            if (!hasSaved) {
+                apply(event.matches ? "dark" : "light")
+            }
+        }
+
+        media.addEventListener("change", handleSystemChange)
+        return () => media.removeEventListener("change", handleSystemChange)
     }, [])
 
     const toggleLanguage = () => {
@@ -62,8 +77,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
         <>
             {/* HEADER */ }
             <header className="fixed top-0 inset-x-0 z-50">
-                <div className="mx-auto mt-6 max-w-5xl">
-                    <div className="flex items-center justify-between h-18 px-6 rounded-4xl bg-bg-glass/80 backdrop-blur-[20px] saturate-150 border border-border-glass shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
+                <div className="w-full lg:max-w-5xl mx-auto lg:mt-6 px-0 sm:px-0 lg:px-0">
+                    <div className="flex items-center justify-between h-18 px-4 sm:px-5 lg:px-6 lg:rounded-4xl bg-bg-glass/80 backdrop-blur-[20px] saturate-150 lg:border border-border-glass shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
                         <Link href="/" className="font-black text-2xl">SBB</Link>
 
                         <nav className="hidden lg:block">

@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client"
 import React, { useEffect, useState, Suspense, lazy } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import "./i18n"
+import i18n from "./i18n"
 
 import { Header } from "./components/Header"
 import Footer from "./components/Footer"
@@ -74,6 +74,19 @@ const App: React.FC = () => {
         window.addEventListener("hashchange", handleHashScroll)
         return () => window.removeEventListener("hashchange", handleHashScroll)
     }, [path])
+
+    useEffect(() => {
+        const setLangAttribute = () => {
+            const lang = i18n.resolvedLanguage || i18n.language || "de"
+            document.documentElement.lang = lang
+        }
+
+        setLangAttribute()
+        i18n.on("languageChanged", setLangAttribute)
+        return () => {
+            i18n.off("languageChanged", setLangAttribute)
+        }
+    }, [])
 
     return (
         <>
