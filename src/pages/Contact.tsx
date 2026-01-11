@@ -68,11 +68,6 @@ const Contact = () => {
                                 <CTAButton href="mailto:hallo@sbb.dev" className="w-full justify-center">
                                     hallo@sbb.dev
                                 </CTAButton>
-
-                                <p
-                                    className="mt-8 text-sm/70 text-center w-full"
-                                    dangerouslySetInnerHTML={ { __html: t("contact.contact_col.disclaimer") } }
-                                />
                             </Card>
 
                             <Card className="p-8 flex items-center justify-between group cursor-pointer border-border-subtle hover:bg-bg-glass dark:hover:bg-bg-glass-dark transition-colors" variant="outline">
