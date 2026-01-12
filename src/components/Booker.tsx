@@ -1,8 +1,15 @@
 import { getCalApi } from "@calcom/embed-react"
 import { useEffect, useState } from "react"
 
+const getInitialTheme = (): 'light' | 'dark' => {
+    if (typeof window === 'undefined') return 'light'
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||
+        document.documentElement.classList.contains('dark')
+    return isDark ? 'dark' : 'light'
+}
+
 export const Booker: React.FC = () => {
-    const [theme, setTheme] = useState<'light' | 'dark'>('light')
+    const [theme, setTheme] = useState<'light' | 'dark'>(getInitialTheme)
 
     useEffect(() => {
         const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||

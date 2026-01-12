@@ -78,16 +78,16 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
             {/* HEADER */ }
             <header className="fixed top-0 inset-x-0 z-50">
                 <div className="w-full lg:max-w-5xl mx-auto lg:mt-6 px-0 sm:px-0 lg:px-0">
-                    <div className="flex items-center justify-between h-18 px-4 sm:px-5 lg:px-6 lg:rounded-4xl bg-bg-glass/80 backdrop-blur-[20px] saturate-150 lg:border border-border-glass shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
+                    <div className="flex items-center justify-between h-18 px-4 sm:px-5 lg:px-6 lg:rounded-4xl bg-bg-glass/80 backdrop-blur-[20px] saturate-150 shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
                         <Link href="/" className="font-black text-2xl">SBB</Link>
 
                         <nav className="hidden lg:block">
                             <ul
                                 ref={ listRef }
-                                className="relative flex items-center p-1 rounded-full bg-black/5 ring-1 ring-black/5"
+                                className="relative flex items-center p-1 rounded-full bg-bg-base ring-1 ring-bg-glass"
                             >
                                 <span
-                                    className="absolute top-1 bottom-1 rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-[left,width] duration-500 ease-apple"
+                                    className="absolute top-1 bottom-1 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-[left,width] duration-500 ease-apple"
                                     style={ indicator }
                                 />
                                 { navItems.map(item => {
@@ -98,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                                                 <button
                                                     data-active={ active }
                                                     className={ `px-5 py-2 text-[15px] font-medium rounded-full ${active
-                                                        ? ""
+                                                        ? "text-black"
                                                         : "hover:opacity-70"
                                                         }` }
                                                 >
@@ -114,7 +114,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                         <div className="flex items-center gap-3">
                             <button
                                 onClick={ toggleTheme }
-                                className="p-2 rounded-full hover:bg-black/5 text-sm font-medium flex items-center gap-2"
+                                className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 text-sm font-medium flex items-center gap-2"
                                 aria-label="Toggle dark mode"
                             >
                                 { theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" /> }
@@ -122,7 +122,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                             </button>
                             <button
                                 onClick={ toggleLanguage }
-                                className="p-2 rounded-full hover:bg-black/5 text-sm font-medium flex items-center gap-2"
+                                className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 text-sm font-medium flex items-center gap-2"
                             >
                                 <Globe className="w-4 h-4" />
                                 { i18n.language.startsWith("de") ? "DE" : "EN" }
@@ -130,7 +130,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
 
                             <button
                                 onClick={ () => setMobileOpen(true) }
-                                className="md:hidden w-10 h-10 rounded-full bg-black/5 flex items-center justify-center"
+                                className="md:hidden w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center"
                             >
                                 <Menu className="w-5 h-5" />
                             </button>
@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                                 <span className="text-lg font-semibold">Menu</span>
                                 <button
                                     onClick={ () => setMobileOpen(false) }
-                                    className="w-10 h-10 rounded-full bg-black/5 flex items-center justify-center"
+                                    className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center"
                                 >
                                     <X className="w-5 h-5" />
                                 </button>
@@ -182,7 +182,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                                         { hovered === item.href && (
                                             <motion.span
                                                 layoutId="mobile-hover"
-                                                className="absolute inset-0 rounded-2xl bg-black/5 backdrop-blur-[2px]"
+                                                className="absolute inset-0 rounded-2xl bg-black/5 dark:bg-white/10 backdrop-blur-[2px]"
                                                 transition={ {
                                                     type: "tween",
                                                     duration: 0.28,

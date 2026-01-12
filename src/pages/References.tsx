@@ -20,6 +20,7 @@ import vaiTradeLogo from "../assets/logos/vaiTrade.png"
 import jakobsMedienLogo from "../assets/logos/jakobsMedien.jpg"
 type Project = {
     key: string
+    showName: boolean
     logo: string
     theme: "dark" | "light"
     surface: string
@@ -32,6 +33,7 @@ type Project = {
 const projects: Project[] = [
     {
         key: "baywa",
+        showName: false,
         logo: baywaLogo,
         theme: "dark",
         surface: "bg-[#0d0f14]",
@@ -42,6 +44,7 @@ const projects: Project[] = [
     },
     {
         key: "peek",
+        showName: false,
         logo: peekCloppenburgLogo,
         theme: "light",
         surface: "bg-white",
@@ -52,6 +55,7 @@ const projects: Project[] = [
     },
     {
         key: "sennder",
+        showName: false,
         logo: sennderLogo,
         theme: "dark",
         surface: "bg-[#0f1116]",
@@ -61,6 +65,7 @@ const projects: Project[] = [
     },
     {
         key: "meinestadt",
+        showName: false,
         logo: meinestadtLogo,
         theme: "light",
         surface: "bg-white",
@@ -70,6 +75,7 @@ const projects: Project[] = [
     },
     {
         key: "nordmetall",
+        showName: true,
         logo: nordmetallLogo,
         theme: "light",
         surface: "bg-[#f7f8ff]",
@@ -79,6 +85,7 @@ const projects: Project[] = [
     },
     {
         key: "bundesverband",
+        showName: true,
         logo: bundesverbandLogo,
         theme: "light",
         surface: "bg-[#fff7f7]",
@@ -88,6 +95,7 @@ const projects: Project[] = [
     },
     {
         key: "tuev",
+        showName: false,
         logo: tuevLogo,
         theme: "light",
         surface: "bg-white",
@@ -97,6 +105,7 @@ const projects: Project[] = [
     },
     {
         key: "nordicdent",
+        showName: false,
         logo: nordicdentLogo,
         theme: "light",
         surface: "bg-white",
@@ -106,6 +115,7 @@ const projects: Project[] = [
     },
     {
         key: "traumzaun24",
+        showName: true,
         logo: traumzaun24Logo,
         theme: "light",
         surface: "bg-[#f7f8ff]",
@@ -115,6 +125,7 @@ const projects: Project[] = [
     },
     {
         key: "secmarket",
+        showName: false,
         logo: secmarketLogo,
         theme: "light",
         surface: "bg-white",
@@ -124,6 +135,7 @@ const projects: Project[] = [
     },
     {
         key: "uberall",
+        showName: false,
         logo: uberallLogo,
         theme: "light",
         surface: "bg-white",
@@ -133,6 +145,7 @@ const projects: Project[] = [
     },
     {
         key: "vaitrade",
+        showName: true,
         logo: vaiTradeLogo,
         theme: "dark",
         surface: "bg-[#0f1116]",
@@ -142,6 +155,7 @@ const projects: Project[] = [
     },
     {
         key: "jakobs",
+        showName: true,
         logo: jakobsMedienLogo,
         theme: "dark",
         surface: "bg-[#131319]",
@@ -167,7 +181,7 @@ const References = () => {
                 description={ t("hero.references.description") }
             />
 
-            {/* Showcase grid inspired by apple.com */ }
+            {/* Showcase */ }
             <section className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 { projects.map((project, idx) => {
                     const isOpen = openId === project.key
@@ -176,30 +190,24 @@ const References = () => {
                     })
 
                     return (
-                        <motion.article
+                        <article
                             key={ project.key }
-                            initial={ { opacity: 0, y: 20 } }
-                            whileInView={ { opacity: 1, y: 0 } }
-                            viewport={ { once: true, margin: "-50px" } }
-                            transition={ {
-                                duration: 0.5,
-                                delay: idx * 0.05
-                            } }
+
                             className={ `relative border ${project.border} ${project.surface} ${project.accent} shadow-[0_14px_44px_rgba(0,0,0,0.06)] ${project.featured ? "md:col-span-2" : ""}` }
                         >
-                            <div className="flex flex-col p-10 md:p-12 gap-10 max-h-[90vh] overflow-y-auto">
-                                <div className="flex items-center justify-between">
+                            <div className="flex flex-col p-10 md:p-12 gap-10">
+                                <div className="flex items-center justify-start gap-6">
                                     <img
                                         src={ project.logo }
                                         alt={ t(`references.items.${project.key}.name`) }
                                         className="h-10 md:h-12 w-auto object-contain"
                                     />
+                                    <h3 className="text-3xl md:text-4xl font-semibold leading-tight">
+                                        { project.showName && t(`references.items.${project.key}.name`) }
+                                    </h3>
                                 </div>
 
                                 <div className="space-y-4">
-                                    <h3 className="text-3xl md:text-4xl font-semibold leading-tight">
-                                        { t(`references.items.${project.key}.name`) }
-                                    </h3>
                                     <p className={ `text-lg leading-relaxed ${project.theme === "dark" ? "text-white/80" : "text-neutral-600"}` }>
                                         { t(`references.items.${project.key}.description`) }
                                     </p>
@@ -249,7 +257,7 @@ const References = () => {
                                     </motion.button>
                                 </div>
                             </div>
-                        </motion.article>
+                        </article>
                     )
                 }) }
             </section>
