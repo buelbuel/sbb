@@ -2,12 +2,16 @@ import "../index.css"
 import PageMeta from "../components/PageMeta"
 import CTAButton from "@/components/CTAButton"
 import Card from "../components/Card"
-import Hero from "@/components/Hero"
 import { Mail, CheckCircle2, ArrowRight } from "lucide-react"
 import { useTranslation } from "react-i18next"
+import { Booker } from "../components/Booker"
+import cvDe from "../assets/de_cv_9_buelbuel_2026.pdf"
+import cvEn from "../assets/en_cv_9_buelbuel_2026.pdf"
 
 const Contact = () => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
+    const locale = i18n.language || i18n.resolvedLanguage || "en"
+    const cvHref = locale.startsWith("de") ? cvDe : cvEn
 
     const suitableItems = t("contact.text_col.suitable.items", { returnObjects: true }) as string[]
 
@@ -18,15 +22,11 @@ const Contact = () => {
                 description={ t("meta.contact.description") }
             />
 
-            {/* HERO */ }
-            <Hero
-                title={ t("hero.contact.title") }
-                description={ t("hero.contact.description") }
-            />
-
             {/* CONTENT */ }
-            <section className="py-32 bg-bg-base">
-                <div className="container mx-auto px-6 max-w-245">
+            <section className="py-8">
+
+                <div className="container mx-auto my-6 max-w-245">
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
                         {/* Text Column */ }
@@ -65,9 +65,12 @@ const Contact = () => {
                                     { t("contact.contact_col.text") }
                                 </p>
 
-                                <CTAButton href="mailto:hallo@sbb.dev" className="w-full justify-center">
-                                    hallo@sbb.dev
-                                </CTAButton>
+                                <div className="mt-auto flex flex-col gap-3 w-full">
+                                    <CTAButton href="mailto:hallo@sbb.dev">
+                                        hallo@sbb.dev
+                                    </CTAButton>
+
+                                </div>
                             </Card>
 
                             <Card className="p-8 flex items-center justify-between group cursor-pointer border-border-subtle hover:bg-bg-glass dark:hover:bg-bg-glass-dark transition-colors" variant="outline">
@@ -79,9 +82,27 @@ const Contact = () => {
                                 </div>
                                 <ArrowRight className="w-5 h-5 group-hover:opacity-70 transition-opacity" />
                             </Card>
+                            <Card className="p-8 flex items-center justify-between group cursor-pointer border-border-subtle hover:bg-bg-glass dark:hover:bg-bg-glass-dark transition-colors" variant="outline">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-bg-glass-dark flex items-center justify-center text-white">
+                                        cv
+                                    </div>
+                                    <a href={ cvHref }
+                                        download className="font-semibold">
+                                        { t("contact.contact_col.CV") }</a>
+                                </div>
+                                <ArrowRight className="w-5 h-5 group-hover:opacity-70 transition-opacity" />
+                            </Card>
                         </div>
-
                     </div>
+
+                </div>
+            </section>
+            <section id="booker" className='py-8 max-w-245 mx-auto'>
+                <div className="space-y-8">
+                    <h2 className='text-2xl md:text-4xl font-semibold leading-tight'>{ t("contact.booker.title") }</h2>
+                    <p className='mb-6'>{ t("contact.booker.text") }</p>
+                    <Booker />
                 </div>
             </section>
         </>

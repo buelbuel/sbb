@@ -29,7 +29,8 @@ export function Home () {
 
     const socialLinks = [
         { label: t("home.footer_cta.linkedin"), href: "https://www.linkedin.com/in/alicem-buelbuel/" },
-        { label: t("home.footer_cta.email"), href: "mailto:kontakt@deine-domain.de" },
+        { label: t("home.footer_cta.email"), href: "/contact" },
+        { label: t("home.footer_cta.book"), href: "/contact#booker" },
     ]
 
     return (
@@ -113,7 +114,7 @@ export function Home () {
                         )
                     }) }
 
-                    <div className="mt-24 text-center">
+                    <div className="mt-6 text-center">
                         <CTAButton href="/services">
                             { t("nav.services") ?? "View all services" }
                         </CTAButton>
@@ -122,7 +123,7 @@ export function Home () {
             </section>
 
             {/* SOCIAL LINKS / FOOTER CTA */ }
-            <section className="py-32 border-t border-gray-100 dark:border-gray-800">
+            <section className="py-16 border-t border-gray-100 dark:border-gray-800">
                 <div className="container mx-auto px-6 max-w-4xl text-center">
                     <h3 className="text-4xl font-semibold mb-12 tracking-tight">
                         { t("home.footer_cta.title") }
@@ -130,14 +131,14 @@ export function Home () {
 
                     <div className="flex flex-wrap justify-center gap-4">
                         { socialLinks.map(link => (
-                            <a
+                            <CTAButton
                                 key={ link.label }
                                 href={ link.href }
-                                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-bg-base font-medium text-[17px] hover:bg-[#E8E8ED] transition-colors duration-200"
+                                variant='neutral'
                             >
                                 { link.label }
                                 <ArrowRight className="ml-2 w-4 h-4" />
-                            </a>
+                            </CTAButton>
                         )) }
                     </div>
                 </div>

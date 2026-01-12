@@ -168,7 +168,7 @@ const References = () => {
             />
 
             {/* Showcase grid inspired by apple.com */ }
-            <section className="grid grid-cols-1 md:grid-cols-2 gap-2 auto-rows-fr">
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 { projects.map((project, idx) => {
                     const isOpen = openId === project.key
                     const detail = t(`references.items.${project.key}.detail`, {
@@ -178,17 +178,16 @@ const References = () => {
                     return (
                         <motion.article
                             key={ project.key }
-                            initial={ { opacity: 0, y: 40 } }
+                            initial={ { opacity: 0, y: 20 } }
                             whileInView={ { opacity: 1, y: 0 } }
-                            viewport={ { once: true, margin: "-100px" } }
+                            viewport={ { once: true, margin: "-50px" } }
                             transition={ {
-                                duration: 0.7,
-                                delay: idx * 0.1,
-                                ease: [0.16, 1, 0.3, 1]
+                                duration: 0.5,
+                                delay: idx * 0.05
                             } }
-                            className={ `relative overflow-hidden border ${project.border} ${project.surface} ${project.accent} shadow-[0_14px_44px_rgba(0,0,0,0.06)] ${project.featured ? "md:col-span-2" : ""}` }
+                            className={ `relative border ${project.border} ${project.surface} ${project.accent} shadow-[0_14px_44px_rgba(0,0,0,0.06)] ${project.featured ? "md:col-span-2" : ""}` }
                         >
-                            <div className="flex flex-col h-full p-10 md:p-12 gap-10">
+                            <div className="flex flex-col p-10 md:p-12 gap-10 max-h-[90vh] overflow-y-auto">
                                 <div className="flex items-center justify-between">
                                     <img
                                         src={ project.logo }
@@ -207,10 +206,10 @@ const References = () => {
                                     <AnimatePresence>
                                         { isOpen && (
                                             <motion.p
-                                                initial={ { opacity: 0, height: 0 } }
-                                                animate={ { opacity: 1, height: "auto" } }
-                                                exit={ { opacity: 0, height: 0 } }
-                                                transition={ { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }
+                                                initial={ { opacity: 0 } }
+                                                animate={ { opacity: 1 } }
+                                                exit={ { opacity: 0 } }
+                                                transition={ { duration: 0.3 } }
                                                 className={ `text-base leading-relaxed ${project.theme === "dark" ? "text-white/70" : "text-neutral-700"}` }
                                             >
                                                 { detail }
@@ -236,14 +235,14 @@ const References = () => {
                                         className={ `${project.theme === "dark" ? "text-white" : "text-neutral-900"} inline-flex items-center gap-2 text-sm font-semibold` }
                                         onClick={ () => setOpenId(isOpen ? null : project.key) }
                                         aria-expanded={ isOpen }
-                                        whileHover={ { x: 4 } }
-                                        transition={ { duration: 0.2 } }
+                                        whileHover={ { x: 2 } }
+                                        transition={ { duration: 0.15 } }
                                     >
                                         { isOpen ? t("references.collapse") : t("references.expand") }
                                         <motion.span
                                             aria-hidden="true"
                                             animate={ { rotate: isOpen ? 180 : 0 } }
-                                            transition={ { duration: 0.3, ease: [0.16, 1, 0.3, 1] } }
+                                            transition={ { duration: 0.2 } }
                                         >
                                             →
                                         </motion.span>

@@ -249,7 +249,7 @@ const Services = () => {
                         { t("services.cta.subtitle") }
                     </p>
 
-                    <CTAButton href="/contact">
+                    <CTAButton href="/contact#booker">
                         { t("nav.contact") }
                     </CTAButton>
                 </div>

@@ -9,6 +9,7 @@ interface CTAButtonProps {
     isExternal?: boolean
     variant?: ButtonVariant
     className?: string
+    download?: string | boolean
 }
 
 const CTAButton: React.FC<CTAButtonProps> = ({
@@ -17,9 +18,10 @@ const CTAButton: React.FC<CTAButtonProps> = ({
     isExternal = false,
     variant = "primary",
     className = "",
+    download,
 }) => {
     const base =
-        "inline-flex items-center justify-center px-6 py-3 rounded-full text-[15px] font-semibold tracking-tight transition-all duration-300 transform"
+        "inline-flex items-center justify-center px-6 py-3 rounded-full text-[15px] font-semibold tracking-tight transition-all duration-300 transform hyphens-none"
 
     const variants: Record<ButtonVariant, string> = {
         primary:
@@ -34,12 +36,18 @@ const CTAButton: React.FC<CTAButtonProps> = ({
 
     const classes = `${base} ${variants[variant]} ${className}`
 
-    if (isExternal) {
+    const isMail = href.startsWith("mailto:")
+    const isTel = href.startsWith("tel:")
+    const isHttp = /^https?:/.test(href)
+    const isExternalLink = isExternal || isMail || isTel || isHttp
+
+    if (isExternalLink) {
         return (
             <a
                 href={ href }
-                target="_blank"
-                rel="noopener noreferrer"
+                target={ isHttp ? "_blank" : undefined }
+                rel={ isHttp ? "noopener noreferrer" : undefined }
+                download={ download }
                 className={ classes }
             >
                 { children }

@@ -72,7 +72,8 @@
         "footer_cta": {
             "title": "Let's Talk.",
             "linkedin": "LinkedIn",
-            "email": "Send Email"
+            "email": "Send Email",
+            "book": "Book Intro Call"
         }
     },
     "about": {
@@ -247,7 +248,12 @@
         "contact_col": {
             "title": "Write to Me.",
             "text": "Briefly describe your situation. I typically respond within 24 hours.",
-            "linkedin": "LinkedIn Profile"
+            "linkedin": "LinkedIn Profile",
+            "CV": "Download CV"
+        },
+        "booker": {
+            "title": "Book Intro Call",
+            "text": "Book directly in the calendar. No preparation needed."
         }
     },
     "references": {
@@ -260,7 +266,7 @@
             "baywa": {
                 "name": "BayWa AG",
                 "description": "Design of a custom middleware architecture to replace manual processes and ensure consistent data.",
-                "detail": "Responsible for conception and implementation of tailored middleware between ERP, CRM, and third-party systems.\n\nKey Focus:\n- Analysis of existing manual and semi-automated processes\n- Definition of clear system boundaries and ownership per data object\n- API design for stable, comprehensible data flows\n- Introduction of parallel operation (phased rollout) for risk minimization\n- Monitoring and error concept for operational security\n\nThe result was a scalable integration architecture with high data integrity and significantly reduced manual rework."
+                "detail": "Responsible for conception and implementation of tailored middleware between ERP, CRM, and third-party systems.\n\nKey Focus:\n- Analysis of existing manual and semi-automated processes\n- Definition of clear system boundaries and ownership per data object\n- API design for stable, comprehensible data flTows\n- Introduction of parallel operation (phased rollout) for risk minimization\n- Monitoring and error concept for operational security\n\nThe result was a scalable integration architecture with high data integrity and significantly reduced manual rework."
             },
             "peek": {
                 "name": "Peek & Cloppenburg",

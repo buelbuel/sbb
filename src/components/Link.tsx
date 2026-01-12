@@ -11,6 +11,11 @@ export const Link: React.FC<LinkProps> = ({ href, children, className, ...props 
             return
         }
 
+        const isInternal = href.startsWith("/")
+        if (!isInternal) {
+            return
+        }
+
         e.preventDefault()
         window.history.pushState({}, "", href)
         window.dispatchEvent(new PopStateEvent("popstate"))

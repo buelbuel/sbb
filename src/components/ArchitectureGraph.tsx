@@ -48,7 +48,7 @@ const ArchitectureGraph = () => {
                             whileInView={ { scaleY: 1 } }
                             viewport={ { once: true } }
                             transition={ { duration: 0.4, delay: layerIdx * 0.15 + 0.3 } }
-                            className="w-0.5 h-8 mx-auto my-2 bg-gradient-to-b from-text-primary/30 to-text-primary/10 origin-top"
+                            className="w-0.5 h-8 mx-auto my-2 bg-linear-to-b from-text-primary/30 to-text-primary/10 origin-top"
                         />
                     ) }
                 </motion.div>
