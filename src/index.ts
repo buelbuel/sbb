@@ -1,6 +1,7 @@
 import { serve } from "bun"
 import index from "./index.html"
 
+
 serve({
     routes: {
         "/": index,
@@ -10,6 +11,14 @@ serve({
         "/imprint": index,
         "/privacy": index,
         "/*": index,
+        "/sitemap.xml": () =>
+            new Response(Bun.file("public/sitemap.xml"), {
+                headers: { "Content-Type": "application/xml" },
+            }),
+        "/robots.txt": () =>
+            new Response(Bun.file("public/robots.txt"), {
+                headers: { "Content-Type": "text/plain" },
+            }),
     },
 
     development: process.env.NODE_ENV !== "production" && {

@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             links: [
                 { label: t("footer.links.request"), href: "/contact" },
                 { label: "LinkedIn", href: "https://linkedin.com/in/alicem-buelbuel" },
-                { label: t("footer.links.email"), href: "mailto:kontakt@example.com" },
+                { label: t("footer.links.email"), href: "mailto:kontakt@sbbconsult.de" },
             ],
         },
         {
