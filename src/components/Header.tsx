@@ -15,6 +15,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
     const [mobileOpen, setMobileOpen] = useState(false)
     const [hovered, setHovered] = useState<string | null>(null)
     const [theme, setTheme] = useState<string>("light")
+    const [themeInitialized, setThemeInitialized] = useState(false)
 
     const navItems = [
         { label: t("nav.home"), href: "/" },
@@ -25,41 +26,54 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
     ]
 
     useEffect(() => {
-        const activeEl = listRef.current?.querySelector<HTMLButtonElement>(
-            `button[data-active="true"]`
-        )
-        if (!activeEl || !listRef.current) return
+        const updateIndicator = () => {
+            const activeEl = listRef.current?.querySelector<HTMLButtonElement>(
+                `button[data-active="true"]`
+            )
+            if (!activeEl || !listRef.current) return
 
-        const listRect = listRef.current.getBoundingClientRect()
-        const rect = activeEl.getBoundingClientRect()
+            const listRect = listRef.current.getBoundingClientRect()
+            const rect = activeEl.getBoundingClientRect()
 
-        setIndicator({
-            left: rect.left - listRect.left,
-            width: rect.width,
-        })
+            setIndicator({
+                left: rect.left - listRect.left,
+                width: rect.width,
+            })
+        }
+
+        requestAnimationFrame(updateIndicator)
     }, [currentPath, i18n.language])
 
     useEffect(() => {
-        const saved = localStorage.getItem("theme")
-        const hasSaved = Boolean(saved)
-        const media = window.matchMedia("(prefers-color-scheme: dark)")
+        const callback = () => {
+            const saved = localStorage.getItem("theme")
+            const hasSaved = Boolean(saved)
+            const media = window.matchMedia("(prefers-color-scheme: dark)")
 
-        const apply = (mode: string) => {
-            setTheme(mode)
-            document.documentElement.classList.toggle("dark", mode === "dark")
-        }
-
-        const initial = saved || (media.matches ? "dark" : "light")
-        apply(initial)
-
-        const handleSystemChange = (event: MediaQueryListEvent) => {
-            if (!hasSaved) {
-                apply(event.matches ? "dark" : "light")
+            const apply = (mode: string) => {
+                setTheme(mode)
+                document.documentElement.classList.toggle("dark", mode === "dark")
+                setThemeInitialized(true)
             }
+
+            const initial = saved || (media.matches ? "dark" : "light")
+            apply(initial)
+
+            const handleSystemChange = (event: MediaQueryListEvent) => {
+                if (!hasSaved) {
+                    apply(event.matches ? "dark" : "light")
+                }
+            }
+
+            media.addEventListener("change", handleSystemChange)
+            return () => media.removeEventListener("change", handleSystemChange)
         }
 
-        media.addEventListener("change", handleSystemChange)
-        return () => media.removeEventListener("change", handleSystemChange)
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(callback, { timeout: 2000 })
+        } else {
+            setTimeout(callback, 0)
+        }
     }, [])
 
     const toggleLanguage = () => {

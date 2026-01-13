@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salesforce Beratung Bülbül</title>
     <link rel="icon" type="image/svg+xml" href="src/assets/logo.svg" />
-    <title>sbb.dev</title>
+    <link rel="preload" href="src/assets/fonts/SF-Pro-Text-Regular.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="src/assets/fonts/SF-Pro-Text-Medium.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="src/assets/fonts/SF-Pro-Text-Semibold.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="src/assets/fonts/SF-Pro-Text-Bold.otf" as="font" type="font/otf" crossorigin />
 </head>
 
 <body>
@@ -14,7 +18,7 @@
 </body>
 
 <script>
-    if (localStorage.theme === "dark") {
+    if (localStorage.theme === "dark" || (!localStorage.theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
         document.documentElement.classList.add("dark")
     }
 </script>
