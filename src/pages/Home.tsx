@@ -1,12 +1,13 @@
-import "../index.css"
-import CTAButton from "../components/CTAButton"
-import PageMeta from "../components/PageMeta"
-import Hero from "../components/Hero"
-import { Layers, GitBranch, Bolt, Compass, ArrowRight } from "../components/Icons"
+import CTAButton from "@/components/CTAButton"
+import PageMeta from "@/components/PageMeta"
+import Hero from "@/components/Hero"
+import SocialLink from "@/components/SocialLink"
+import { Layers, GitBranch, Bolt, Compass, ArrowRight, LinkedIn, Mail, Calendar } from "@/components/Icons"
 import { useTranslation, Trans } from "react-i18next"
+import { getSocialLink } from "@/config/social"
 
 export function Home () {
-    const { t } = useTranslation()
+    const { t } = useTranslation(['home', 'common'])
 
     const cards = [
         {
@@ -27,24 +28,26 @@ export function Home () {
         },
     ]
 
+    const linkedinLink = getSocialLink('linkedin')
+
     const socialLinks = [
-        { label: t("home.footer_cta.linkedin"), href: "https://www.linkedin.com/in/alicem-buelbuel/" },
-        { label: t("home.footer_cta.email"), href: "/contact" },
-        { label: t("home.footer_cta.book"), href: "/contact#booker" },
+        { label: t("footer_cta.linkedin"), href: linkedinLink?.href || "#", icon: LinkedIn },
+        { label: t("footer_cta.email"), href: "/contact", icon: Mail },
+        { label: t("footer_cta.book"), href: "/contact#booker", icon: Calendar },
     ]
 
     return (
         <>
             <PageMeta
-                title={ t("meta.home.title") }
-                description={ t("meta.home.description") }
+                title={ t("common:meta.home.title") }
+                description={ t("common:meta.home.description") }
             />
 
             {/* HERO */ }
             <Hero
-                title={ <Trans i18nKey="hero.home.title" components={ { br: <br /> } } /> }
-                description={ t("hero.home.description") }
-                ctaLabel={ t("hero.home.cta") }
+                title={ <Trans i18nKey="common:hero.home.title" components={ { br: <br /> } } /> }
+                description={ t("common:hero.home.description") }
+                ctaLabel={ t("common:hero.home.cta") }
                 ctaHref="/contact"
             />
 
@@ -53,10 +56,10 @@ export function Home () {
                 <div className="container mx-auto px-6 max-w-245">
                     <div className="text-center space-y-8">
                         <h2 className="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
-                            <Trans i18nKey="home.positioning.title" components={ { br: <br /> } } />
+                            <Trans i18nKey="home:positioning.title" components={ { br: <br /> } } />
                         </h2>
-                        <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto font-medium">
-                            { t("home.positioning.text") }
+                        <p className="text-xl md:text-2xl max-w-3xl mx-auto font-bold text-text-secondary text-justify">
+                            { t("positioning.text") }
                         </p>
                     </div>
                 </div>
@@ -65,12 +68,12 @@ export function Home () {
             {/* LEISTUNGEN - Modern List */ }
             <section className="py-40">
                 <div className="container mx-auto px-6 max-w-300">
-                    <div className="mb-24 max-w-3xl">
+                    <div className="mb-24">
                         <h2 className="text-4xl md:text-6xl font-semibold mb-8 tracking-tight leading-tight">
-                            { t("meta.services.title").split(" – ")[0] }
+                            { t("common:meta.services.title").split(" – ")[0] }
                         </h2>
-                        <p className="text-xl font-medium leading-relaxed">
-                            { t("services.focus.text") }
+                        <p className="text-xl font-medium">
+                            { t("services:focus.text") }
                         </p>
                     </div>
 
@@ -95,14 +98,14 @@ export function Home () {
                                         </div>
                                         <div className="min-w-0">
                                             <h3 className="text-2xl md:text-3xl font-semibold group-hover:opacity-70 transition-opacity duration-300 leading-tight">
-                                                { t(`services.focus.items.${item.key}.title`) }
+                                                { t(`services:focus.items.${item.key}.title`) }
                                             </h3>
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-2 shrink-0 text-sm font-semibold group-hover:opacity-70 transition-opacity duration-300">
-                                        { t("home.positioning.cta") }
-                                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                                    <div className="arrow-link flex items-center gap-2 shrink-0 text-sm font-semibold transition-opacity duration-300 group-hover:opacity-70">
+                                        { t("positioning.cta") }
+                                        <ArrowRight className="arrow-icon w-4 h-4" />
                                     </div>
                                 </div>
 
@@ -116,7 +119,7 @@ export function Home () {
 
                     <div className="mt-6 text-center">
                         <CTAButton href="/services">
-                            { t("nav.services") ?? "View all services" }
+                            { t("common:nav.services") ?? "View all services" }
                         </CTAButton>
                     </div>
                 </div>
@@ -124,21 +127,21 @@ export function Home () {
 
             {/* SOCIAL LINKS / FOOTER CTA */ }
             <section className="py-16 border-t border-gray-100 dark:border-gray-800">
-                <div className="container mx-auto px-6 max-w-4xl text-center">
+                <div className="container mx-auto px-6 max-w-6xl text-center">
                     <h3 className="text-4xl font-semibold mb-12 tracking-tight">
-                        { t("home.footer_cta.title") }
+                        { t("footer_cta.title") }
                     </h3>
 
-                    <div className="flex flex-wrap justify-center gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
                         { socialLinks.map(link => (
-                            <CTAButton
+                            <SocialLink
                                 key={ link.label }
                                 href={ link.href }
-                                variant='neutral'
-                            >
-                                { link.label }
-                                <ArrowRight className="ml-2 w-4 h-4" />
-                            </CTAButton>
+                                label={ link.label }
+                                Icon={ link.icon }
+                                arrow={ true }
+                                newTab={ link.href.startsWith("http") }
+                            />
                         )) }
                     </div>
                 </div>

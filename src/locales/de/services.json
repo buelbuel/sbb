@@ -1,0 +1,139 @@
+{
+    "situations": {
+        "title": "Typische Ausgangssituationen.",
+        "subtitle": "Kontexte, in denen strukturiertes Lösungsdesign gefragt ist",
+        "items": [
+            "Salesforce- und CRM-Landschaften sind historisch gewachsen und fachlich wie technisch schwer wartbar.",
+            "Mehrere Lösungs- oder Integrationsoptionen stehen im Raum, Risiken und Auswirkungen sind unklar.",
+            "Produkt, Business und IT verfolgen unterschiedliche Zielbilder innerhalb desselben CRM-Systems."
+        ]
+    },
+    "focus": {
+        "title": "Leistungsschwerpunkte.",
+        "text": "Lösungsdesign und Entscheidungsarbeit für Salesforce-, CRM- und Integrationssysteme.",
+        "items": {
+            "architecture": {
+                "title": "Salesforce Solution Design",
+                "text": "Strukturierung von Lösungen für Sales, Service, CPQ, FSL und Experience Cloud mit Blick auf Skalierbarkeit und langfristige Wartbarkeit."
+            },
+            "crm": {
+                "title": "Integrationen & Systemkopplung",
+                "text": "Konzeption und Bewertung von Integrationen zu ERP-, Middleware- und Drittsystemen inklusive Schnittstellen-, Sicherheits- und Betriebsaspekten."
+            },
+            "product": {
+                "title": "Datenmodelle & Prozesse",
+                "text": "Fachlich saubere Datenmodelle, klare Prozesse und Automatisierungen zur gezielten Reduktion technischer Schulden."
+            },
+            "ownership": {
+                "title": "Verantwortung & Entscheidungsabsicherung",
+                "text": "Übernahme technischer Verantwortung und Unterstützung bei tragfähigen, dokumentierten Entscheidungen."
+            }
+        }
+    },
+    "details": {
+        "architecture": {
+            "subtitle": "Was ich liefere:",
+            "points": [
+                "Klar strukturierte Lösungsbilder mit definierten Systemgrenzen und Integrationspfaden",
+                "Security-, Identity- und Berechtigungskonzepte, die auch bei Wachstum tragfähig bleiben",
+                "Rollout- und Migrationspfade mit realistischen, überprüfbaren Meilensteinen"
+            ],
+            "longtext1": "Ich analysiere bestehende Salesforce-Landschaften, fachliche Anforderungen und organisatorische Rahmenbedingungen und leite daraus belastbare Lösungsbilder ab. Ziel ist keine abstrakte Zielzeichnung, sondern eine Lösung, die im Tagesgeschäft funktioniert und weiterentwickelbar bleibt.",
+            "longtext2": "Dabei beziehe ich Org-Gesundheit, Governance, Sicherheitskonzepte und Integrationen systematisch mit ein. Empfehlungen entstehen nicht generisch, sondern orientieren sich an Geschäftsmodell, Teamstruktur und realistischen Zeitplänen."
+        },
+        "crm": {
+            "subtitle": "Schwerpunktbereiche",
+            "points": [
+                "Integrationskonzepte zu ERP-, Middleware- und Fachsystemen (REST, Events, Auth)",
+                "Definition klarer Schnittstellenverträge, Monitoring- und Betriebskonzepte",
+                "Datenfluss- und Verantwortungsmodelle über System- und Teamgrenzen hinweg"
+            ],
+            "longtext": "Ich unterstütze dabei, CRM-Systeme so zu integrieren, dass Datenflüsse nachvollziehbar bleiben, operative Risiken reduziert werden und Teams effizient zusammenarbeiten können. Ziel ist ein Systemverbund, der Akzeptanz fördert statt zusätzliche Komplexität zu erzeugen.",
+            "stats": {
+                "adoption": "60%",
+                "adoption_label": "Typische Akzeptanzsteigerung",
+                "timeline": "3–4 Mon",
+                "timeline_label": "Typischer Umsetzungszeitraum"
+            }
+        },
+        "product": {
+            "points": [
+                "Domänenschnitte und Datenmodelle entlang fachlicher Verantwortlichkeiten",
+                "Automationen und Flows mit klaren Leitplanken und Testbarkeit",
+                "Reporting- und KPI-Strukturen zur fundierten Entscheidungsunterstützung"
+            ],
+            "longtext": "Saubere Datenmodelle und Prozesse bilden die Grundlage jeder skalierbaren CRM-Lösung. Ich helfe dabei, Fachlogik klar abzubilden, Automatisierungen beherrschbar zu halten und technische Schulden gezielt abzubauen."
+        },
+        "ownership": {
+            "subtitle": "Was das bedeutet:",
+            "points": [
+                "Klare Zuordnung technischer und fachlicher Verantwortung für Systeme und Daten",
+                "Dokumentierte Entscheidungen mit nachvollziehbarer Begründung und Abwägung",
+                "Governance-Modelle, die auch über Personen und Projektphasen hinaus tragen"
+            ],
+            "longtext1": "Verantwortung endet nicht mit einer Empfehlung. Ich unterstütze Organisationen dabei, technische Entscheidungen so zu treffen und zu dokumentieren, dass sie auch langfristig tragfähig bleiben.",
+            "longtext2": "Ob punktuelle Entscheidungsabsicherung, temporäre Übernahme technischer Verantwortung oder Unterstützung beim Aufbau klarer Ownership-Modelle über verteilte Teams – mein Fokus liegt darauf, dass Zuständigkeiten eindeutig sind und Entscheidungen Bestand haben.",
+            "flow_title": "Ownership-Framework"
+        }
+    },
+    "benefits": {
+        "title": "Warum mit mir arbeiten",
+        "subtitle": "Erfahrung aus realen Systemen statt theoretischer Modelle",
+        "items": [
+            {
+                "title": "Langjährige Erfahrung",
+                "description": "Über zehn Jahre Salesforce in komplexen Enterprise- und Mid-Market-Umgebungen"
+            },
+            {
+                "title": "Strategische Klarheit",
+                "description": "Nachvollziehbare Lösungsoptionen mit klaren Trade-offs"
+            },
+            {
+                "title": "Messbare Wirkung",
+                "description": "Verbesserte Akzeptanz, Stabilität und Entscheidungsfähigkeit"
+            },
+            {
+                "title": "Praxisnahe Umsetzung",
+                "description": "Lösungen, die im Alltag funktionieren und wartbar bleiben"
+            }
+        ]
+    },
+    "cta": {
+        "title": "Bereit für klare Lösungen?",
+        "subtitle": "Ob Lösungsdesign, Integrationsfrage oder kritische Entscheidung – lassen Sie uns gemeinsam klären, welcher nächste Schritt sinnvoll ist."
+    },
+    "faq": {
+        "title": "Fragen? Antworten.",
+        "subtitle": "Typische Situationen und Vorgehensweisen, aus der Praxis beschrieben.",
+        "items": [
+            {
+                "question": "Salesforce- und CRM-Landschaften sind historisch gewachsen und schwer wartbar.",
+                "answer": "In solchen Situationen analysiere ich bestehende Salesforce-Orgs, angebundene Systeme und reale Nutzungsweisen im Betrieb. Ich mache technische Abhängigkeiten, implizite Annahmen und gewachsene Sonderlogiken sichtbar und ordne diese fachlich wie technisch ein. Ergebnis ist ein klares Lösungsbild, das zeigt, welche Teile stabilisiert, vereinfacht oder neu geschnitten werden müssen, ohne den laufenden Betrieb zu gefährden."
+            },
+            {
+                "question": "Mehrere Lösungs- oder Integrationsoptionen stehen im Raum, Risiken und Auswirkungen sind unklar.",
+                "answer": "Ich bereite strukturierte Entscheidungsgrundlagen vor, in denen technische Optionen vergleichbar werden. Dazu gehören Trade-offs, Integrationsrisiken, Auswirkungen auf Betrieb, Datenqualität und Teamstrukturen sowie realistische Migrationspfade. Ziel ist eine Entscheidung, die nachvollziehbar getroffen wird und auch unter Zeit- und Organisationsdruck Bestand hat."
+            },
+            {
+                "question": "Produkt, Business und IT haben unterschiedliche Vorstellungen vom selben CRM-System.",
+                "answer": "Ich strukturiere Anforderungen, Zielbilder und Randbedingungen über alle beteiligten Rollen hinweg und übersetze sie in ein gemeinsames Lösungsverständnis. Dabei kläre ich, was das System leisten soll, was bewusst nicht und wo fachliche Verantwortung liegt. Entscheidungen werden dokumentiert und so getroffen, dass sie von den beteiligten Teams getragen und umgesetzt werden können."
+            },
+            {
+                "question": "Langjährige Erfahrung",
+                "answer": "Ich arbeite seit über zehn Jahren mit Salesforce-, CRM- und Integrationssystemen in Enterprise- und Mid-Market-Umgebungen. Meine Erfahrung reicht von operativer Administration über komplexe Migrationen bis hin zur Verantwortung für Lösungsdesign, Integrationen und langfristig stabile Systemlandschaften."
+            },
+            {
+                "question": "Strategische Klarheit",
+                "answer": "Technische Entscheidungen entstehen bei mir nicht implizit oder rein toolgetrieben. Ich lege Annahmen offen, bewerte Alternativen und formuliere klare Entscheidungsoptionen, die fachliche, technische und organisatorische Auswirkungen berücksichtigen. Das schafft Transparenz und reduziert spätere Korrektionen."
+            },
+            {
+                "question": "Messbare Wirkung",
+                "answer": "Der Fokus liegt auf stabilen Systemen, besserer Nutzerakzeptanz und belastbaren Prozessen. Lösungen werden so gestaltet, dass sie den operativen Alltag erleichtern, technische Schulden reduzieren und Entscheidungen messbar unterstützen, statt neue Komplexität zu erzeugen."
+            },
+            {
+                "question": "Praxisnahe Umsetzung",
+                "answer": "Alle Lösungen orientieren sich an realen Teams, bestehenden Fähigkeiten und betrieblichen Zwängen. Ziel ist keine theoretische Idealarchitektur, sondern ein System, das im Tagesgeschäft funktioniert, wartbar bleibt und schrittweise weiterentwickelt werden kann."
+            }
+        ]
+    }
+}

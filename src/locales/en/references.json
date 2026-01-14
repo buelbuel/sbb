@@ -1,0 +1,74 @@
+{
+    "intro": "Selected projects from Salesforce, CRM, integrations, and cloud architecture. The brief description provides context, the detailed view describes concrete architecture decisions, system boundaries, and technical responsibility.",
+    "description": "Selected projects from Salesforce, CRM, integrations, and cloud architecture.",
+    "section_title": "Selected Project Contexts.",
+    "expand": "More Details",
+    "collapse": "Less Details",
+    "items": {
+        "baywa": {
+            "name": "BayWa AG",
+            "description": "Design of a custom middleware architecture to replace manual processes and ensure consistent data.",
+            "detail": "Responsible for conception and implementation of tailored middleware between ERP, CRM, and third-party systems.\n\nKey Focus:\n- Analysis of existing manual and semi-automated processes\n- Definition of clear system boundaries and ownership per data object\n- API design for stable, comprehensible data flTows\n- Introduction of parallel operation (phased rollout) for risk minimization\n- Monitoring and error concept for operational security\n\nThe result was a scalable integration architecture with high data integrity and significantly reduced manual rework."
+        },
+        "peek": {
+            "name": "Peek & Cloppenburg",
+            "description": "Development of customer experience with Salesforce Experience Cloud.",
+            "detail": "Architectural consulting and implementation around Experience Cloud to improve cross-channel customer experience.\n\nKey Focus:\n- Structuring of data, role, and permission concepts\n- Conception of personalized journeys based on consistent customer data\n- Governance for content, data maintenance, and responsibilities\n- Connection of marketing, service, and CRM perspectives\n\nFocus was less on individual features but on a sustainable overall system that remains maintainable long-term."
+        },
+        "sennder": {
+            "name": "sennder GmbH",
+            "description": "Modeling of new objects and processes for operational optimization and system stability.",
+            "detail": "Responsible for restructuring data models and processes in an integration-intensive environment.\n\nKey Focus:\n- Modeling new Salesforce objects to represent operational processes\n- Ensuring consistent data between CRM, VoIP, and other systems\n- Consulting on GDPR-compliant data storage and access concepts\n- Documentation of cross-system processes and responsibilities\n\nThe goal was to make operational workflows comprehensible, stable, and understandable across organizations."
+        },
+        "meinestadt": {
+            "name": "meinestadt.de",
+            "description": "Migration from Salesforce Classic to Lightning and development of custom LWCs.",
+            "detail": "Support of technical and organizational migration from Salesforce Classic to Lightning Experience.\n\nKey Focus:\n- Planning a phased rollout (wave approach)\n- Operation of a shadow mode phase to secure daily operations\n- Development of reusable Lightning Web Components\n- Consulting on architecture decisions and legacy refactoring\n- Enablement of internal admins through documentation and training\n\nThe focus was on risk-minimized migration with long-term maintainable architecture."
+        },
+        "nordmetall": {
+            "name": "NORDMETALL",
+            "description": "Technical leadership in conception and implementation of a new web platform.",
+            "detail": "Assumption of overall technical responsibility for a new web platform.\n\nKey Focus:\n- Definition of system architecture and migration path\n- Technical coordination with editorial, marketing, and external service providers\n- KPI definition for reach, structure, and conversion\n- Ensuring a scalable, maintainable code and system base\n\nThe goal was a platform that meets both editorial and business requirements."
+        },
+        "bundesverband": {
+            "name": "Bundesverband Geothermie",
+            "description": "Introduction of a CRM system including data structure and user training.",
+            "detail": "Conception and introduction of a CRM system to replace distributed individual tools.\n\nKey Focus:\n- Definition of a clean data model and clear maintenance responsibility\n- Permission and role concept for different user groups\n- Planning and execution of user training\n- Support of organizational adoption\n\nThe focus was on acceptance, data quality, and long-term usability."
+        },
+        "tuev": {
+            "name": "TÜV Thüringen",
+            "description": "Digitalization and optimization of inspection processes with Salesforce.",
+            "detail": "Consulting and implementation in field service and mobile process environment.\n\nKey Focus:\n- Conception of mobile field service processes with offline capability\n- Modeling of device master data and inspection objects\n- Integration into existing backend systems\n- Stabilization of operational workflows through clean data flows\n\nThe goal was a robust, practical solution for field service."
+        },
+        "nordicdent": {
+            "name": "NordicDent",
+            "description": "Building a scalable sales and service architecture.",
+            "detail": "Responsible for structuring an end-to-end sales and service landscape.\n\nKey Focus:\n- Clear process definition for sales, service, and handover points\n- Building comprehensible escalation and service playbooks\n- Reporting structures for operational management and executive oversight\n\nThe focus was on maintainability, user acceptance, and scalability."
+        },
+        "traumzaun24": {
+            "name": "Traumzaun24",
+            "description": "Integration of Epicor CPQ and restructuring of complex Salesforce automations.",
+            "detail": "Overall responsibility for architecture, integration, and technical implementation.\n\nKey Focus:\n- Integration of Epicor CPQ into existing Salesforce landscape\n- Refactoring complex automations and APEX structures\n- Definition of role-based permissions\n- Building a repeatable deployment and release process\n\nThe goal was a future-proof, maintainable CPQ and sales architecture."
+        },
+        "secmarket": {
+            "name": "SECMarket",
+            "description": "Conception and implementation of a CRM solution including API design.",
+            "detail": "Greenfield project with complete responsibility for architecture and structure.\n\nKey Focus:\n- Definition of overall architecture and system boundaries\n- API-first approach for backend integration\n- Close coordination with backend teams for interface design\n- Conducting workshops with functional departments\n\nThe result was a clean, extensible CRM foundation with clear technical responsibility."
+        },
+        "uberall": {
+            "name": "uberall",
+            "description": "Optimization of existing Salesforce systems with focus on user acceptance.",
+            "detail": "Analysis and optimization of an existing Salesforce landscape.\n\nKey Focus:\n- Simplification of sales pipelines and processes\n- Sales enablement to increase user acceptance\n- Introduction of comprehensible KPIs\n- Incremental refactoring of existing automations\n\nThe goal was measurable improvement of pre-sales conversion and system acceptance."
+        },
+        "vaitrade": {
+            "name": "VAI Trade",
+            "description": "Introduction of structured sales and service processes.",
+            "detail": "Conception and implementation of scalable processes for sales and service.\n\nKey Focus:\n- Definition of clean handover points between teams\n- Reporting structures for growth and expansion\n- Technical implementation with focus on simplicity and maintainability"
+        },
+        "jakobs": {
+            "name": "Jakobs Medien",
+            "description": "Implementation of Salesforce Sales Cloud and quote automation.",
+            "detail": "Introduction of Salesforce Sales Cloud including quote and approval processes.\n\nKey Focus:\n- Automated quote and approval workflows\n- Template-based quote documents\n- Clearly regulated role and permission concepts\n\nThe goal was a significant reduction of manual effort in the sales process."
+        }
+    }
+}

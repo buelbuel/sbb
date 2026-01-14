@@ -1,0 +1,28 @@
+{
+    "text_col": {
+        "intro": "Ich unterstütze Unternehmen bei Architektur- und Entscheidungsfragen rund um Salesforce-, CRM- und Integrationssysteme.",
+        "sub": "Wenn Sie vor einer komplexen CRM- oder Architekturentscheidung stehen, lässt sich das in einem kurzen Gespräch gut einordnen.",
+        "suitable": {
+            "title": "Gut geeignet, wenn:",
+            "items": [
+                "Salesforce- oder CRM-Architekturen überprüft oder neu ausgerichtet werden sollen",
+                "Integrationen oder Datenmodelle an ihre Grenzen stoßen",
+                "technische Entscheidungen vorbereitet oder abgesichert werden müssen"
+            ]
+        }
+    },
+    "contact_col": {
+        "title": "Schreiben Sie mir.",
+        "text": "Schildern Sie kurz Ihre Situation. Ich melde mich in der Regel innerhalb von 24 Stunden.",
+        "CV": "Lebenslauf herunterladen",
+        "social": {
+            "badge": "Profile",
+            "title": "Online-Profile.",
+            "subtitle": "Direkte Links zu den Profilen, die ich aktiv nutze."
+        }
+    },
+    "booker": {
+        "title": "Kennenlerngespräch buchen",
+        "text": "Buchen Sie direkt im Kalender. Es ist keine Vorbereitung nötig – ein kurzer Austausch zur Einordnung Ihrer Situation reicht."
+    }
+}

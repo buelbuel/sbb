@@ -1,0 +1,84 @@
+{
+    "nav": {
+        "home": "Start",
+        "services": "Leistungen",
+        "about": "Über mich",
+        "references": "Referenzen",
+        "contact": "Kontakt"
+    },
+    "footer": {
+        "sections": {
+            "discover": "Entdecken",
+            "contact": "Kontakt",
+            "legal": "Rechtliches"
+        },
+        "links": {
+            "home": "Startseite",
+            "about": "Über mich",
+            "services": "Leistungen",
+            "references": "Referenzen",
+            "request": "Anfrage senden",
+            "email": "E-Mail",
+            "imprint": "Impressum",
+            "privacy": "Datenschutz"
+        },
+        "copyright": "Alle Rechte vorbehalten."
+    },
+    "meta": {
+        "home": {
+            "title": "Salesforce & CRM Solution Design für komplexe Systeme",
+            "description": "Senior Salesforce Solution Architect mit Schwerpunkt auf Lösungsdesign, Integrationen und tragfähigen Systementscheidungen."
+        },
+        "about": {
+            "title": "Über mich – Salesforce Solution Architect",
+            "description": "Mehr als zehn Jahre Erfahrung in Salesforce-, CRM- und Cloud-Lösungen mit Verantwortung für komplexe Enterprise-Systeme."
+        },
+        "services": {
+            "title": "Leistungen – Salesforce Solution Design & Integrationen",
+            "description": "Strukturiertes Lösungsdesign, Integrationskonzepte und Entscheidungsunterstützung für gewachsene Salesforce-Landschaften."
+        },
+        "references": {
+            "title": "Referenzen – Salesforce- & CRM-Projekte",
+            "description": "Ausgewählte Projektkontexte aus Lösungsdesign, Integrationen und Verantwortung in komplexen CRM-Systemen."
+        },
+        "contact": {
+            "title": "Kontakt – Unverbindlicher Austausch",
+            "description": "Ein erstes Gespräch zu Salesforce-, CRM- oder Integrationsfragen."
+        },
+        "privacy": {
+            "title": "Datenschutz",
+            "description": "Informationen zur Verarbeitung personenbezogener Daten auf dieser Website."
+        },
+        "imprint": {
+            "title": "Impressum",
+            "description": "Anbieterkennzeichnung und rechtliche Pflichtangaben."
+        },
+        "notfound": {
+            "title": "Seite nicht gefunden"
+        }
+    },
+    "hero": {
+        "home": {
+            "title": "Salesforce & CRM Solution Design.<br />Für komplexe Systeme.",
+            "description": "Strukturiertes Lösungsdesign, Integrationen und technische Entscheidungen für belastbare Salesforce-Landschaften.",
+            "cta": "Kontakt aufnehmen",
+            "secondaryCta": "Leistungen ansehen"
+        },
+        "about": {
+            "title": "Über mich.",
+            "description": "Senior Salesforce Solution Architect mit Fokus auf Lösungsdesign, Integrationen und verantwortungsvolle Systementscheidungen."
+        },
+        "services": {
+            "title": "Leistungen.",
+            "description": "Lösungsdesign und Entscheidungsarbeit für komplexe Salesforce- und CRM-Systeme."
+        },
+        "contact": {
+            "title": "Kurzer Austausch.",
+            "description": "Ein erstes Gespräch zur Einordnung Ihrer Salesforce- oder CRM-Situation."
+        },
+        "references": {
+            "title": "Referenzen.",
+            "description": "Ausgewählte Projektkontexte aus Salesforce, CRM und Integrationen."
+        }
+    }
+}

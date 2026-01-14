@@ -3,7 +3,7 @@ import { Link } from "./Link"
 import { useTranslation } from "react-i18next"
 
 const Footer: React.FC = () => {
-    const { t } = useTranslation()
+    const { t } = useTranslation('common')
     const currentYear = new Date().getFullYear()
     const firmName = "Salesforce Beratung Bülbül"
 
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                     </p>
 
                     <div className="flex gap-6">
-                        <Link href="/privacy" className="hover:underliney">
+                        <Link href="/privacy" className="hover:underline">
                             { t("footer.links.privacy") }
                         </Link>
                         <Link href="/imprint" className="hover:underline">

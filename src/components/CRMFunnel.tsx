@@ -1,6 +1,25 @@
-import { motion } from "framer-motion"
+import { useEffect, useRef } from "react"
 
 const CRMFunnel = () => {
+    const containerRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible')
+                    }
+                })
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+        )
+
+        const elements = containerRef.current?.querySelectorAll('.scroll-animate')
+        elements?.forEach((el) => observer.observe(el))
+
+        return () => observer.disconnect()
+    }, [])
     const stages = [
         { label: "Leads", value: 100 },
         { label: "Qualified", value: 70 },
@@ -9,43 +28,34 @@ const CRMFunnel = () => {
     ]
 
     return (
-        <div className="w-full max-w-md mx-auto space-y-3">
+        <div ref={ containerRef } className="w-full max-w-md mx-auto space-y-3">
             { stages.map((stage, idx) => {
                 const percentage = (stage.value / 100) * 100
                 return (
-                    <motion.div
+                    <div
                         key={ idx }
-                        initial={ { opacity: 0, x: -20 } }
-                        whileInView={ { opacity: 1, x: 0 } }
-                        viewport={ { once: true } }
-                        transition={ {
-                            duration: 0.6,
-                            delay: idx * 0.1,
-                            ease: [0.16, 1, 0.3, 1]
+                        className="scroll-animate flex flex-col gap-2"
+                        style={ {
+                            transform: 'translateX(-20px)',
+                            transitionDelay: `${idx * 0.1}s`
                         } }
-                        className="flex flex-col gap-2"
                     >
                         <div className="flex items-center justify-between">
                             <span className="text-sm font-semibold text-text-primary">{ stage.label }</span>
                             <span className="text-xs text-text-primary/60">{ stage.value }%</span>
                         </div>
-                        <motion.div
-                            initial={ { scaleX: 0 } }
-                            whileInView={ { scaleX: 1 } }
-                            viewport={ { once: true } }
-                            transition={ {
-                                duration: 0.8,
-                                delay: idx * 0.1 + 0.2,
-                                ease: [0.16, 1, 0.3, 1]
-                            } }
-                            className="h-3 bg-text-primary/10 rounded-full overflow-hidden origin-left"
-                        >
+                        <div className="h-3 bg-text-primary/10 rounded-full overflow-hidden">
                             <div
-                                className="h-full bg-text-primary rounded-full"
-                                style={ { width: `${percentage}%` } }
+                                className="scroll-animate h-full bg-text-primary rounded-full origin-left"
+                                style={ {
+                                    width: `${percentage}%`,
+                                    transform: 'scaleX(0)',
+                                    transitionDelay: `${idx * 0.1 + 0.2}s`,
+                                    transitionDuration: '0.8s'
+                                } }
                             />
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 )
             }) }
         </div>

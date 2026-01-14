@@ -1,0 +1,18 @@
+{
+    "profile": {
+        "title": "Profile.",
+        "p1": "I've been working with Salesforce, CRM, and cloud systems for over ten years — from operational administration to responsibility for complex solution and integration landscapes in enterprise and mid-market environments.",
+        "p2": "In roles as Salesforce Solution Architect, Senior Administrator, and external consultant, I have designed, restructured, migrated, and operated systems stably over several years.",
+        "p3": "My focus is on solution design and decision work: structuring requirements, cleanly defining system boundaries, securing integrations, and evaluating technical options under real organizational conditions.",
+        "philosophy": {
+            "p1": "I work where CRM systems are business-critical and technical decisions have long-term impact.",
+            "p2": "My standard is clarity: comprehensible solution architecture, resilient integrations, and decisions that teams can sustain long-term.",
+            "p3": "Good CRM solutions don't emerge from tool focus, but from clean interplay of processes, data, and responsibilities."
+        },
+        "image_alt": "Portrait of Senior Salesforce Solution Architect"
+    },
+    "cta": {
+        "title": "Let's Talk.",
+        "text": "Whether architecture review, solution design, or decision support — I look forward to your message."
+    }
+}

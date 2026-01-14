@@ -1,19 +1,21 @@
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Link } from "../components/Link"
+import { Link } from "@/components/Link"
 import { Globe, Moon, Sun, Menu, X } from "@/components/Icons"
-import { AnimatePresence, motion } from "framer-motion"
 
 type HeaderProps = {
     currentPath: string
 }
 
 export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
-    const { t, i18n } = useTranslation()
+    const { t, i18n } = useTranslation('common')
     const listRef = useRef<HTMLUListElement>(null)
+    const mobileListRef = useRef<HTMLUListElement>(null)
     const [indicator, setIndicator] = useState({ left: 0, width: 0 })
     const [mobileOpen, setMobileOpen] = useState(false)
+    const [mobileAnimState, setMobileAnimState] = useState<'entering' | 'entered' | 'exiting'>('entering')
     const [hovered, setHovered] = useState<string | null>(null)
+    const [hoverHighlight, setHoverHighlight] = useState({ top: 0, height: 0, visible: false })
     const [theme, setTheme] = useState<string>("light")
     const [themeInitialized, setThemeInitialized] = useState(false)
 
@@ -87,6 +89,47 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
         document.documentElement.classList.toggle("dark", next === "dark")
     }
 
+    const openMobileMenu = () => {
+        setMobileOpen(true)
+        setMobileAnimState('entering')
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                setMobileAnimState('entered')
+            })
+        })
+    }
+
+    const closeMobileMenu = () => {
+        setMobileAnimState('exiting')
+        setTimeout(() => {
+            setMobileOpen(false)
+            setMobileAnimState('entering')
+        }, 280)
+    }
+
+    const positionHoverHighlight = (target: HTMLLIElement) => {
+        const parent = mobileListRef.current
+        if (!parent) return
+        const rect = target.getBoundingClientRect()
+        const parentRect = parent.getBoundingClientRect()
+        setHoverHighlight({
+            top: rect.top - parentRect.top,
+            height: rect.height,
+            visible: true,
+        })
+    }
+
+    useEffect(() => {
+        if (mobileOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = ''
+        }
+        return () => {
+            document.body.style.overflow = ''
+        }
+    }, [mobileOpen])
+
     return (
         <>
             {/* HEADER */ }
@@ -101,7 +144,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                                 className="relative flex items-center p-1 rounded-full bg-bg-base ring-1 ring-bg-glass"
                             >
                                 <span
-                                    className="absolute top-1 bottom-1 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-[left,width] duration-500 ease-apple"
+                                    className="absolute top-1 bottom-1 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-[left,width] duration-500 ease-primary"
                                     style={ indicator }
                                 />
                                 { navItems.map(item => {
@@ -113,8 +156,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                                                     data-active={ active }
                                                     className={ `px-5 py-2 text-[15px] font-medium rounded-full ${active
                                                         ? "text-black"
-                                                        : "hover:opacity-70"
-                                                        }` }
+                                                        : "hover:opacity-70"}
+                                                    `}
                                                 >
                                                     { item.label }
                                                 </button>
@@ -143,7 +186,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                             </button>
 
                             <button
-                                onClick={ () => setMobileOpen(true) }
+                                onClick={ openMobileMenu }
                                 className="md:hidden w-10 h-10 flex items-center justify-center"
                             >
                                 <Menu className="w-5 h-5" />
@@ -154,72 +197,55 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
             </header>
 
             {/* MOBILE MENU */ }
-            <AnimatePresence>
-                { mobileOpen && (
-                    <>
-                        {/* Backdrop */ }
-                        <motion.div
-                            className="fixed inset-0 z-60 bg-bg-glass backdrop-blur-sm"
-                            initial={ { opacity: 0 } }
-                            animate={ { opacity: 1 } }
-                            exit={ { opacity: 0 } }
-                            onClick={ () => setMobileOpen(false) }
-                        />
+            { mobileOpen && (
+                <>
+                    {/* Backdrop */ }
+                    <div
+                        className={ `mobile-backdrop fixed inset-0 z-60 bg-bg-glass backdrop-blur-sm ${mobileAnimState}` }
+                        onClick={ closeMobileMenu }
+                    />
 
-                        {/* Panel */ }
-                        <motion.div
-                            className="fixed z-61 top-4 left-4 right-4 rounded-4xl bg-bg-glass/95 backdrop-blur-xl border border-white/40 shadow-[0_20px_60px_rgba(0,0,0,0.25)] p-6"
-                            initial={ { opacity: 0, y: -20, scale: 0.98 } }
-                            animate={ { opacity: 1, y: 0, scale: 1 } }
-                            exit={ { opacity: 0, y: -10, scale: 0.98 } }
-                            transition={ { type: "spring", stiffness: 260, damping: 26 } }
-                        >
-                            <div className="flex justify-between items-center mb-6">
-                                <span className="text-lg font-semibold">Menu</span>
-                                <button
-                                    onClick={ () => setMobileOpen(false) }
-                                    className="w-10 h-10 flex items-center justify-center"
+                    {/* Panel */ }
+                    <div className={ `mobile-panel fixed z-61 top-4 left-4 right-4 rounded-4xl bg-bg-glass/95 backdrop-blur-xl border border-white/40 shadow-[0_20px_60px_rgba(0,0,0,0.25)] p-6 ${mobileAnimState}` }>
+                        <div className="flex justify-between items-center mb-6">
+                            <span className="text-lg font-semibold">Menu</span>
+                            <button
+                                onClick={ closeMobileMenu }
+                                className="w-10 h-10 flex items-center justify-center"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+                        </div>
+
+                        <ul ref={ mobileListRef } className="relative flex flex-col">
+                            { hoverHighlight.visible && (
+                                <span
+                                    className="mobile-hover-highlight"
+                                    style={ { top: hoverHighlight.top, height: hoverHighlight.height } }
+                                />
+                            ) }
+
+                            { navItems.map(item => (
+                                <li
+                                    key={ item.href }
+                                    className="mobile-nav-item relative"
+                                    onPointerEnter={ e => { setHovered(item.href); positionHoverHighlight(e.currentTarget) } }
+                                    onPointerLeave={ () => setHoverHighlight(h => ({ ...h, visible: false })) }
+                                    onPointerDown={ e => { setHovered(item.href); positionHoverHighlight(e.currentTarget) } }
                                 >
-                                    <X className="w-5 h-5" />
-                                </button>
-                            </div>
-
-                            <ul className="relative flex flex-col">
-                                { navItems.map(item => (
-                                    <li
-                                        key={ item.href }
-                                        className="relative"
-                                        onPointerEnter={ () => setHovered(item.href) }
-                                        onPointerLeave={ () => setHovered(null) }
-                                        onPointerDown={ () => setHovered(item.href) }
+                                    <Link
+                                        href={ item.href }
+                                        onClick={ closeMobileMenu }
+                                        className="relative z-10 block px-4 py-3 text-lg font-medium"
                                     >
-                                        { hovered === item.href && (
-                                            <motion.span
-                                                layoutId="mobile-hover"
-                                                className="absolute inset-0 rounded-2xl bg-black/5 dark:bg-white/10 backdrop-blur-[2px]"
-                                                transition={ {
-                                                    type: "tween",
-                                                    duration: 0.28,
-                                                    ease: [0.25, 0.1, 0.25, 1],
-                                                } }
-                                            />
-                                        ) }
-
-                                        <Link
-                                            href={ item.href }
-                                            onClick={ () => setMobileOpen(false) }
-                                            className="relative z-10 block px-4 py-3 text-lg font-medium"
-                                        >
-                                            { item.label }
-                                        </Link>
-                                    </li>
-                                )) }
-                            </ul>
-
-                        </motion.div>
-                    </>
-                ) }
-            </AnimatePresence>
+                                        { item.label }
+                                    </Link>
+                                </li>
+                            )) }
+                        </ul>
+                    </div>
+                </>
+            ) }
         </>
     )
 }

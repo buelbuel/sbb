@@ -1,0 +1,84 @@
+{
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About",
+        "references": "References",
+        "contact": "Contact"
+    },
+    "footer": {
+        "sections": {
+            "discover": "Discover",
+            "contact": "Contact",
+            "legal": "Legal"
+        },
+        "links": {
+            "home": "Home",
+            "about": "About",
+            "services": "Services",
+            "references": "References",
+            "request": "Send Request",
+            "email": "Email",
+            "imprint": "Imprint",
+            "privacy": "Privacy"
+        },
+        "copyright": "All rights reserved."
+    },
+    "meta": {
+        "home": {
+            "title": "Salesforce & CRM Solution Design for Complex Systems",
+            "description": "Senior Salesforce Solution Architect with focus on solution design, integrations, and sustainable system decisions."
+        },
+        "about": {
+            "title": "About — Salesforce Solution Architect",
+            "description": "More than ten years of experience in Salesforce, CRM, and cloud solutions with responsibility for complex enterprise systems."
+        },
+        "services": {
+            "title": "Services — Salesforce Solution Design & Integrations",
+            "description": "Structured solution design, integration concepts, and decision support for evolved Salesforce landscapes."
+        },
+        "references": {
+            "title": "References — Salesforce & CRM Projects",
+            "description": "Selected project contexts from solution design, integrations, and responsibility in complex CRM systems."
+        },
+        "contact": {
+            "title": "Contact — Initial Discussion",
+            "description": "An initial conversation about Salesforce, CRM, or integration questions."
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "description": "Information on the processing of personal data on this website."
+        },
+        "imprint": {
+            "title": "Imprint",
+            "description": "Legal notice and mandatory information."
+        },
+        "notfound": {
+            "title": "Page Not Found"
+        }
+    },
+    "hero": {
+        "home": {
+            "title": "Salesforce & CRM Solution Design.<br />For Complex Systems.",
+            "description": "Structured solution design, integrations, and technical decisions for resilient Salesforce landscapes.",
+            "cta": "Get in Touch",
+            "secondaryCta": "View Services"
+        },
+        "about": {
+            "title": "About Me.",
+            "description": "Senior Salesforce Solution Architect with focus on solution design, integrations, and responsible system decisions."
+        },
+        "services": {
+            "title": "Services.",
+            "description": "Solution design and decision work for complex Salesforce and CRM systems."
+        },
+        "contact": {
+            "title": "Brief Discussion.",
+            "description": "An initial conversation to assess your Salesforce or CRM situation."
+        },
+        "references": {
+            "title": "References.",
+            "description": "Selected project contexts from Salesforce, CRM, and integrations."
+        }
+    }
+}

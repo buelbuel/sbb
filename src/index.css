@@ -1,130 +1,6 @@
 @import "tailwindcss";
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-Thin.otf") format("opentype");
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-ThinItalic.otf") format("opentype");
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-Ultralight.otf") format("opentype");
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-UltralightItalic.otf") format("opentype");
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-Light.otf") format("opentype");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-LightItalic.otf") format("opentype");
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-Regular.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-RegularItalic.otf") format("opentype");
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-Medium.otf") format("opentype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-MediumItalic.otf") format("opentype");
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-Semibold.otf") format("opentype");
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-SemiboldItalic.otf") format("opentype");
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-Bold.otf") format("opentype");
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-BoldItalic.otf") format("opentype");
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-Heavy.otf") format("opentype");
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-HeavyItalic.otf") format("opentype");
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-Black.otf") format("opentype");
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Text";
-    src: url("./assets/fonts/SF-Pro-Text-BlackItalic.otf") format("opentype");
-    font-weight: 900;
-    font-style: italic;
-}
+@import "./fonts.css";
+@import "./animations.css";
 
 @theme {
     --color-scheme: light;
@@ -134,16 +10,16 @@
     --color-secondary: #5E5CE6;
     --color-secondary-dark: #4744BE;
 
-    --color-bg-base: #F8F8F7;
+    --color-bg-base: #fafaf9;
     --color-bg-glass: rgba(255, 255, 255, 0.65);
     --color-bg-glass-dark: rgba(30, 30, 30, 0.65);
     --color-bg-card-solid: rgba(255, 255, 255, 0.75);
     --color-text-primary: #1D1D1F;
     --color-text-secondary: #6B7280;
     --color-border-glass: rgba(255, 255, 255, 0.5);
-    --color-border-subtle: rgba(0, 0, 0, 0.1);
+    --color-border-subtle: rgba(0, 0, 0, 0.25);
 
-    --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ease-primary: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 @variant dark (:is(.dark *));
@@ -191,35 +67,4 @@
     .glass-panel-dark {
         @apply backdrop-blur-xl bg-black/60 border border-white/10 shadow-lg text-white;
     }
-}
-
-/* Custom Animations */
-@keyframes blob {
-    0% {
-        transform: translate(0px, 0px) scale(1);
-    }
-
-    33% {
-        transform: translate(30px, -50px) scale(1.1);
-    }
-
-    66% {
-        transform: translate(-20px, 20px) scale(0.9);
-    }
-
-    100% {
-        transform: translate(0px, 0px) scale(1);
-    }
-}
-
-.animate-blob {
-    animation: blob 20s infinite;
-}
-
-.animation-delay-2000 {
-    animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-    animation-delay: 4s;
 }

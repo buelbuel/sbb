@@ -1,0 +1,74 @@
+{
+    "intro": "Ausgewählte Projekte aus Salesforce, CRM, Integrationen und Cloud-Architektur. Die Kurzbeschreibung ordnet den Kontext ein, die Detailansicht beschreibt konkrete Architekturentscheidungen, Systemgrenzen und technische Verantwortung.",
+    "description": "Ausgewählte Projekte aus Salesforce, CRM, Integrationen und Cloud-Architektur.",
+    "section_title": "Ausgewählte Projektkontexte.",
+    "expand": "Mehr Details",
+    "collapse": "Weniger Details",
+    "items": {
+        "baywa": {
+            "name": "BayWa AG",
+            "description": "Entwurf einer individuellen Middleware-Architektur zur Ablösung manueller Prozesse und Sicherstellung konsistenter Daten.",
+            "detail": "Verantwortlich für die Konzeption und Umsetzung einer maßgeschneiderten Middleware zwischen ERP-, CRM- und Drittsystemen.\n\nSchwerpunkte:\n- Analyse bestehender manueller und teilautomatisierter Prozesse\n- Definition klarer Systemgrenzen und Ownership je Datenobjekt\n- API-Design für stabile, nachvollziehbare Datenflüsse\n- Einführung eines Parallelbetriebs (Phased Rollout) zur Risikominimierung\n- Monitoring- und Fehlerkonzept zur operativen Absicherung\n\nErgebnis war eine skalierbare Integrationsarchitektur mit hoher Datenintegrität und deutlich reduzierter manueller Nacharbeit."
+        },
+        "peek": {
+            "name": "Peek & Cloppenburg",
+            "description": "Weiterentwicklung der Customer Experience mit Salesforce Experience Cloud.",
+            "detail": "Architektonische Beratung und Umsetzung rund um Experience Cloud zur Verbesserung der kanalübergreifenden Customer Experience.\n\nSchwerpunkte:\n- Strukturierung von Daten-, Rollen- und Berechtigungskonzepten\n- Konzeption personalisierter Journeys auf Basis konsistenter Kundendaten\n- Governance für Inhalte, Datenpflege und Zuständigkeiten\n- Verbindung von Marketing-, Service- und CRM-Perspektive\n\nFokus lag weniger auf einzelnen Features, sondern auf einem tragfähigen Gesamtsystem, das langfristig wartbar bleibt."
+        },
+        "sennder": {
+            "name": "sennder GmbH",
+            "description": "Modellierung neuer Objekte und Prozesse zur operativen Optimierung und Systemstabilität.",
+            "detail": "Verantwortlich für die Neustrukturierung von Datenmodellen und Prozessen in einer integrationsintensiven Umgebung.\n\nSchwerpunkte:\n- Modellierung neuer Salesforce-Objekte zur Abbildung operativer Prozesse\n- Sicherstellung konsistenter Daten zwischen CRM, VoIP und weiteren Systemen\n- Beratung zu DSGVO-konformer Datenhaltung und Zugriffskonzepten\n- Dokumentation systemübergreifender Prozesse und Verantwortlichkeiten\n\nZiel war es, operative Abläufe nachvollziehbar, stabil und organisationsübergreifend verständlich zu gestalten."
+        },
+        "meinestadt": {
+            "name": "meinestadt.de",
+            "description": "Migration von Salesforce Classic zu Lightning und Entwicklung maßgeschneiderter LWCs.",
+            "detail": "Begleitung der technischen und organisatorischen Migration von Salesforce Classic zu Lightning Experience.\n\nSchwerpunkte:\n- Planung eines stufenweisen Rollouts (Wave-Ansatz)\n- Betrieb einer Shadow-Mode-Phase zur Absicherung des Tagesgeschäfts\n- Entwicklung wiederverwendbarer Lightning Web Components\n- Beratung zu Architekturentscheidungen und Bestands-Refactoring\n- Enablement interner Admins durch Dokumentation und Schulungen\n\nDer Fokus lag auf einer risikoarmen Migration mit langfristig wartbarer Architektur."
+        },
+        "nordmetall": {
+            "name": "NORDMETALL",
+            "description": "Technische Leitung bei Konzeption und Umsetzung einer neuen Web-Plattform.",
+            "detail": "Übernahme der technischen Gesamtverantwortung für eine neue Web-Plattform.\n\nSchwerpunkte:\n- Definition der Systemarchitektur und des Migrationspfads\n- Technische Abstimmung mit Redaktion, Marketing und externen Dienstleistern\n- KPI-Definition für Reichweite, Struktur und Conversion\n- Sicherstellung einer skalierbaren, wartbaren Code- und Systembasis\n\nZiel war eine Plattform, die sowohl redaktionellen als auch geschäftlichen Anforderungen gerecht wird."
+        },
+        "bundesverband": {
+            "name": "Bundesverband Geothermie",
+            "description": "Einführung eines CRM-Systems inklusive Datenstruktur und Nutzertrainings.",
+            "detail": "Konzeption und Einführung eines CRM-Systems zur Ablösung verteilter Einzeltools.\n\nSchwerpunkte:\n- Definition eines sauberen Datenmodells und klarer Pflegeverantwortung\n- Berechtigungs- und Rollenkonzept für unterschiedliche Nutzergruppen\n- Planung und Durchführung von Nutzertrainings\n- Begleitung der organisatorischen Adoption\n\nDer Fokus lag auf Akzeptanz, Datenqualität und langfristiger Nutzbarkeit."
+        },
+        "tuev": {
+            "name": "TÜV Thüringen",
+            "description": "Digitalisierung und Optimierung von Prüfprozessen mit Salesforce.",
+            "detail": "Beratung und Umsetzung im Umfeld Field Service und mobiler Prozesse.\n\nSchwerpunkte:\n- Konzeption mobiler Field-Service-Prozesse mit Offline-Fähigkeit\n- Modellierung von Gerätestammdaten und Prüfobjekten\n- Integration in bestehende Backend-Systeme\n- Stabilisierung operativer Abläufe durch saubere Datenflüsse\n\nZiel war eine robuste, praxistaugliche Lösung für den Außendienst."
+        },
+        "nordicdent": {
+            "name": "NordicDent",
+            "description": "Aufbau einer skalierbaren Sales- und Service-Architektur.",
+            "detail": "Verantwortlich für die Strukturierung einer durchgängigen Sales- und Service-Landschaft.\n\nSchwerpunkte:\n- Klare Prozessdefinition für Sales, Service und Übergabepunkte\n- Aufbau nachvollziehbarer Eskalations- und Service-Playbooks\n- Reporting-Strukturen für operative Steuerung und Management\n\nDer Fokus lag auf Wartbarkeit, Nutzerakzeptanz und Skalierbarkeit."
+        },
+        "traumzaun24": {
+            "name": "Traumzaun24",
+            "description": "Integration von Epicor CPQ und Neustrukturierung komplexer Salesforce-Automationen.",
+            "detail": "Gesamtverantwortung für Architektur, Integration und technische Umsetzung.\n\nSchwerpunkte:\n- Integration von Epicor CPQ in eine bestehende Salesforce-Landschaft\n- Refactoring komplexer Automationen und APEX-Strukturen\n- Definition rollenbasierter Berechtigungen\n- Aufbau eines wiederholbaren Deployment- und Release-Prozesses\n\nZiel war eine zukunftssichere, wartbare CPQ- und Sales-Architektur."
+        },
+        "secmarket": {
+            "name": "SECMarket",
+            "description": "Konzeption und Umsetzung einer CRM-Lösung inklusive API-Design.",
+            "detail": "Greenfield-Projekt mit vollständiger Verantwortung für Architektur und Struktur.\n\nSchwerpunkte:\n- Definition der Gesamtarchitektur und Systemgrenzen\n- API-first-Ansatz für Backend-Integration\n- Enge Abstimmung mit Backend-Teams zur Schnittstellengestaltung\n- Durchführung von Workshops mit Fachbereichen\n\nErgebnis war eine saubere, erweiterbare CRM-Basis mit klarer technischer Verantwortung."
+        },
+        "uberall": {
+            "name": "uberall",
+            "description": "Optimierung bestehender Salesforce-Systeme mit Fokus auf Nutzerakzeptanz.",
+            "detail": "Analyse und Optimierung einer bestehenden Salesforce-Landschaft.\n\nSchwerpunkte:\n- Vereinfachung von Sales-Pipelines und Prozessen\n- Sales-Enablement zur Steigerung der Nutzerakzeptanz\n- Einführung nachvollziehbarer KPIs\n- Schrittweises Refactoring bestehender Automationen\n\nZiel war messbare Verbesserung von Pre-Sales-Conversion und Systemakzeptanz."
+        },
+        "vaitrade": {
+            "name": "VAI Trade",
+            "description": "Einführung strukturierter Sales- und Serviceprozesse.",
+            "detail": "Konzeption und Umsetzung skalierbarer Prozesse für Sales und Service.\n\nSchwerpunkte:\n- Definition sauberer Übergabepunkte zwischen Teams\n- Reporting-Strukturen für Wachstum und Expansion\n- Technische Umsetzung mit Fokus auf Einfachheit und Wartbarkeit"
+        },
+        "jakobs": {
+            "name": "Jakobs Medien",
+            "description": "Implementierung von Salesforce Sales Cloud und Angebotsautomatisierung.",
+            "detail": "Einführung von Salesforce Sales Cloud inklusive Angebots- und Genehmigungsprozessen.\n\nSchwerpunkte:\n- Automatisierte Angebots- und Freigabeworkflows\n- Template-basierte Angebotsdokumente\n- Klar geregelte Rollen- und Berechtigungskonzepte\n\nZiel war eine deutliche Reduktion manueller Aufwände im Vertriebsprozess."
+        }
+    }
+}

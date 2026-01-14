@@ -1,23 +1,21 @@
-import "../index.css"
-import PageMeta from "../components/PageMeta"
-import Hero from "../components/Hero"
+import PageMeta from "@/components/PageMeta"
+import Hero from "@/components/Hero"
 import { useTranslation } from "react-i18next"
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import baywaLogo from "@/assets/logos/baywa.svg"
+import peekCloppenburgLogo from "@/assets/logos/peek-cloppenburg.svg"
+import sennderLogo from "@/assets/logos/sennder.svg"
+import meinestadtLogo from "@/assets/logos/meinestadt.svg"
+import nordmetallLogo from "@/assets/logos/nordmetall.svg"
+import bundesverbandLogo from "@/assets/logos/bundesverband.png"
+import tuevLogo from "@/assets/logos/tuev.jpg"
+import nordicdentLogo from "@/assets/logos/nordicdent.png"
+import traumzaun24Logo from "@/assets/logos/traumzaun24.svg"
+import secmarketLogo from "@/assets/logos/secmarket.svg"
+import uberallLogo from "@/assets/logos/uberall.svg"
+import vaiTradeLogo from "@/assets/logos/vaiTrade.png"
+import jakobsMedienLogo from "@/assets/logos/jakobsMedien.jpg"
 
-import baywaLogo from "../assets/logos/baywa.svg"
-import peekCloppenburgLogo from "../assets/logos/peek-cloppenburg.svg"
-import sennderLogo from "../assets/logos/sennder.svg"
-import meinestadtLogo from "../assets/logos/meinestadt.svg"
-import nordmetallLogo from "../assets/logos/nordmetall.svg"
-import bundesverbandLogo from "../assets/logos/bundesverband.png"
-import tuevLogo from "../assets/logos/tuev.jpg"
-import nordicdentLogo from "../assets/logos/nordicdent.png"
-import traumzaun24Logo from "../assets/logos/traumzaun24.svg"
-import secmarketLogo from "../assets/logos/secmarket.svg"
-import uberallLogo from "../assets/logos/uberall.svg"
-import vaiTradeLogo from "../assets/logos/vaiTrade.png"
-import jakobsMedienLogo from "../assets/logos/jakobsMedien.jpg"
 type Project = {
     key: string
     showName: boolean
@@ -166,27 +164,27 @@ const projects: Project[] = [
 ]
 
 const References = () => {
-    const { t } = useTranslation()
+    const { t } = useTranslation(['references', 'common'])
     const [openId, setOpenId] = useState<string | null>(null)
 
     return (
         <>
             <PageMeta
-                title={ t("meta.references.title") }
-                description={ t("meta.references.description") }
+                title={ t("common:meta.references.title") }
+                description={ t("common:meta.references.description") }
             />
 
             <Hero
-                title={ t("hero.references.title") }
-                description={ t("hero.references.description") }
+                title={ t("common:hero.references.title") }
+                description={ t("common:hero.references.description") }
             />
 
             {/* Showcase */ }
             <section className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 { projects.map((project, idx) => {
                     const isOpen = openId === project.key
-                    const detail = t(`references.items.${project.key}.detail`, {
-                        defaultValue: t(`references.items.${project.key}.description`),
+                    const detail = t(`items.${project.key}.detail`, {
+                        defaultValue: t(`items.${project.key}.description`),
                     })
 
                     return (
@@ -199,31 +197,25 @@ const References = () => {
                                 <div className="flex items-center justify-start gap-6">
                                     <img
                                         src={ project.logo }
-                                        alt={ t(`references.items.${project.key}.name`) }
+                                        alt={ t(`items.${project.key}.name`) }
                                         className="h-10 md:h-12 w-auto object-contain"
                                     />
                                     <h3 className="text-3xl md:text-4xl font-semibold leading-tight">
-                                        { project.showName && t(`references.items.${project.key}.name`) }
+                                        { project.showName && t(`items.${project.key}.name`) }
                                     </h3>
                                 </div>
 
                                 <div className="space-y-4">
-                                    <p className={ `text-lg leading-relaxed ${project.theme === "dark" ? "text-white/80" : "text-neutral-600"}` }>
-                                        { t(`references.items.${project.key}.description`) }
+                                    <p className={ `text-lg ${project.theme === "dark" ? "text-white/80" : "text-neutral-600"}` }>
+                                        { t(`items.${project.key}.description`) }
                                     </p>
-                                    <AnimatePresence>
-                                        { isOpen && (
-                                            <motion.p
-                                                initial={ { opacity: 0 } }
-                                                animate={ { opacity: 1 } }
-                                                exit={ { opacity: 0 } }
-                                                transition={ { duration: 0.3 } }
-                                                className={ `text-base leading-relaxed ${project.theme === "dark" ? "text-white/70" : "text-neutral-700"}` }
-                                            >
-                                                { detail }
-                                            </motion.p>
-                                        ) }
-                                    </AnimatePresence>
+                                    { isOpen && (
+                                        <p
+                                            className={ `text-base ${project.theme === "dark" ? "text-white/70" : "text-neutral-700"} animate-fade-in` }
+                                        >
+                                            { detail }
+                                        </p>
+                                    ) }
                                 </div>
 
                                 <div className="flex flex-wrap items-center gap-3 text-sm font-medium">
@@ -238,23 +230,20 @@ const References = () => {
                                 </div>
 
                                 <div>
-                                    <motion.button
+                                    <button
                                         type="button"
-                                        className={ `${project.theme === "dark" ? "text-white" : "text-neutral-900"} inline-flex items-center gap-2 text-sm font-semibold` }
+                                        className={ `${project.theme === "dark" ? "text-white" : "text-neutral-900"} arrow-link inline-flex items-center gap-2 text-sm font-semibold` }
                                         onClick={ () => setOpenId(isOpen ? null : project.key) }
                                         aria-expanded={ isOpen }
-                                        whileHover={ { x: 2 } }
-                                        transition={ { duration: 0.15 } }
                                     >
-                                        { isOpen ? t("references.collapse") : t("references.expand") }
-                                        <motion.span
+                                        { isOpen ? t("collapse") : t("expand") }
+                                        <span
                                             aria-hidden="true"
-                                            animate={ { rotate: isOpen ? 180 : 0 } }
-                                            transition={ { duration: 0.2 } }
+                                            className={ `arrow-icon transition-transform duration-200 ${isOpen ? "rotate-180" : ""}` }
                                         >
                                             →
-                                        </motion.span>
-                                    </motion.button>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
                         </article>

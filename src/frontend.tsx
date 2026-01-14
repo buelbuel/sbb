@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client"
 import React, { useEffect, useState, Suspense, lazy } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import i18n from "./i18n"
+import "./index.css"
 
 import { Header } from "./components/Header"
 import Footer from "./components/Footer"
@@ -44,6 +44,16 @@ const PageLoader = () => (
 
 const App: React.FC = () => {
     const [path, setPath] = useState(window.location.pathname)
+
+    const navigate = (newPath: string) => {
+        if ('startViewTransition' in document) {
+            (document as any).startViewTransition(() => {
+                setPath(newPath)
+            })
+        } else {
+            setPath(newPath)
+        }
+    }
 
     useEffect(() => {
         const onLocationChange = () => {
@@ -93,18 +103,9 @@ const App: React.FC = () => {
             <Header currentPath={ path } />
 
             <Suspense fallback={ <PageLoader /> }>
-                <AnimatePresence mode="wait">
-                    <motion.main
-                        key={ path }
-                        initial={ { opacity: 0, y: 15, filter: "blur(5px)" } }
-                        animate={ { opacity: 1, y: 0, filter: "blur(0px)" } }
-                        exit={ { opacity: 0, y: -15, filter: "blur(5px)" } }
-                        transition={ { duration: 0.5, ease: [0.32, 0.72, 0, 1] } }
-                        className="pt-28 min-h-screen"
-                    >
-                        { resolvePage(path) }
-                    </motion.main>
-                </AnimatePresence>
+                <main key={ path } className="pt-28 min-h-screen animate-page-transition">
+                    { resolvePage(path) }
+                </main>
             </Suspense>
 
             <Footer />

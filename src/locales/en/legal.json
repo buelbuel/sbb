@@ -1,0 +1,85 @@
+{
+    "notfound": {
+        "title": "404",
+        "text": "This page does not exist or has been moved.",
+        "cta": "Go to Homepage"
+    },
+    "privacy_title": "Privacy Policy",
+    "privacy_heading": "Privacy Information",
+    "privacy_intro": "How I handle personal data on this website.",
+    "privacy_sections": [
+        {
+            "title": "Responsible Party",
+            "items": [
+                "Salesforce Beratung Bülbül (SBB)",
+                "Ali Cem Bülbül",
+                "Email: hallo@sbb.dev"
+            ]
+        },
+        {
+            "title": "Data Sources",
+            "items": [
+                "Server log files (IP address, timestamp, URL)",
+                "Communication data upon contact (name, email, content)"
+            ]
+        },
+        {
+            "title": "Purposes & Legal Bases",
+            "items": [
+                "Provision of the website (legitimate interest, Art. 6 para. 1 lit. f GDPR)",
+                "Processing of inquiries (Art. 6 para. 1 lit. b GDPR)"
+            ]
+        },
+        {
+            "title": "Storage Duration",
+            "items": [
+                "Server logs are routinely rotated or anonymized.",
+                "Contact data is stored until completion of the inquiry or legal retention obligations."
+            ]
+        },
+        {
+            "title": "Your Rights",
+            "items": [
+                "Access, rectification, deletion, restriction, objection, data portability",
+                "Right to lodge a complaint with a supervisory authority"
+            ]
+        }
+    ],
+    "privacy_contact_label": "Privacy Inquiries",
+    "privacy_contact_text": "For questions about the processing of your data, you can contact me at any time.",
+    "privacy_contact_cta": "Contact",
+    "imprint_title": "Imprint",
+    "imprint_heading": "Legal Notice",
+    "imprint_intro": "Mandatory information according to § 5 TMG and § 18 MStV.",
+    "imprint_sections": [
+        {
+            "title": "Provider",
+            "items": [
+                "Salesforce Beratung Bülbül (SBB)",
+                "Ali Cem Bülbül",
+                "Karower Straße 22, 13156 Berlin, Germany"
+            ]
+        },
+        {
+            "title": "Contact",
+            "items": [
+                "Email: hallo@sbb.dev",
+                "Additional contact options see contact page."
+            ]
+        },
+        {
+            "title": "Responsible for Content",
+            "items": [
+                "Ali Cem Bülbül",
+                "Address as above"
+            ]
+        },
+        {
+            "title": "Liability and Copyright",
+            "items": [
+                "No liability is assumed for external links; the respective providers are responsible.",
+                "Own content is subject to German copyright law."
+            ]
+        }
+    ]
+}

@@ -1,6 +1,25 @@
-import { motion } from "framer-motion"
+import { useEffect, useRef } from "react"
 
 const OwnershipFlow = () => {
+    const containerRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible')
+                    }
+                })
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+        )
+
+        const elements = containerRef.current?.querySelectorAll('.scroll-animate')
+        elements?.forEach((el) => observer.observe(el))
+
+        return () => observer.disconnect()
+    }, [])
     const steps = [
         { label: "Define", desc: "Scope & Goals" },
         { label: "Document", desc: "Standards" },
@@ -9,48 +28,35 @@ const OwnershipFlow = () => {
     ]
 
     return (
-        <div className="w-full max-w-2xl mx-auto py-8">
+        <div ref={ containerRef } className="w-full max-w-2xl mx-auto py-8">
             <div className="relative">
                 {/* Progress line */ }
-                <motion.div
-                    initial={ { scaleX: 0 } }
-                    whileInView={ { scaleX: 1 } }
-                    viewport={ { once: true } }
-                    transition={ { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
-                    className="absolute top-9 left-0 right-0 h-0.5 bg-text-primary/20 origin-left"
+                <div className="scroll-animate absolute top-9 left-0 right-0 h-0.5 bg-text-primary/20 origin-left"
+                    style={ { transform: 'scaleX(0)', transitionDuration: '1.2s' } }
                 />
 
                 <div className="relative grid grid-cols-4 gap-4">
                     { steps.map((step, idx) => (
-                        <motion.div
+                        <div
                             key={ idx }
-                            initial={ { opacity: 0, y: 20 } }
-                            whileInView={ { opacity: 1, y: 0 } }
-                            viewport={ { once: true } }
-                            transition={ {
-                                duration: 0.6,
-                                delay: idx * 0.15,
-                                ease: [0.16, 1, 0.3, 1]
+                            className="scroll-animate flex flex-col items-center gap-3"
+                            style={ {
+                                transform: 'translateY(20px)',
+                                transitionDelay: `${idx * 0.15}s`
                             } }
-                            className="flex flex-col items-center gap-3"
                         >
                             {/* Circle indicator */ }
-                            <motion.div
-                                initial={ { scale: 0 } }
-                                whileInView={ { scale: 1 } }
-                                viewport={ { once: true } }
-                                transition={ {
-                                    duration: 0.5,
-                                    delay: idx * 0.15 + 0.2,
-                                    ease: [0.16, 1, 0.3, 1]
+                            <div
+                                className="scroll-animate relative w-18 h-18 rounded-full bg-text-primary flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
+                                style={ {
+                                    transform: 'scale(0)',
+                                    transitionDelay: `${idx * 0.15 + 0.2}s`
                                 } }
-                                whileHover={ { scale: 1.1 } }
-                                className="relative w-18 h-18 rounded-full bg-text-primary flex items-center justify-center shadow-lg"
                             >
                                 <div className="text-white text-xl font-bold">
                                     { idx + 1 }
                                 </div>
-                            </motion.div>
+                            </div>
 
                             {/* Label */ }
                             <div className="text-center">
@@ -61,7 +67,7 @@ const OwnershipFlow = () => {
                                     { step.desc }
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     )) }
                 </div>
             </div>

@@ -1,9 +1,9 @@
 import React from "react"
-import CTAButton from "../components/CTAButton"
+import CTAButton from "@/components/CTAButton"
 import { useTranslation } from "react-i18next"
 
 const NotFound: React.FC = () => {
-    const { t } = useTranslation()
+    const { t } = useTranslation(['legal', 'common'])
 
     return (
         <section className="min-h-[70vh] flex items-center justify-center px-6">

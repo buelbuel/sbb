@@ -63,7 +63,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, subtitle, items, idPrefix 
                                     className={ `overflow-hidden transition-[max-height] duration-300 ${isOpen ? "max-h-96" : "max-h-0"}` }
                                 >
                                     <div className="pb-8">
-                                        <p className="text-base leading-relaxed">
+                                        <p className="text-base">
                                             { item.answer }
                                         </p>
                                     </div>

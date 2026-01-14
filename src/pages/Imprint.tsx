@@ -1,29 +1,28 @@
-import "../index.css"
-import PageMeta from "../components/PageMeta"
+import PageMeta from "@/components/PageMeta"
 import { useTranslation } from "react-i18next"
 
 const Imprint = () => {
-    const { t } = useTranslation()
-    const sections = t("imprint.sections", { returnObjects: true }) as { title: string; items: string[] }[]
+    const { t } = useTranslation(['legal', 'common'])
+    const sections = t("imprint_sections", { returnObjects: true }) as { title: string; items: string[] }[]
 
     return (
         <>
             <PageMeta
-                title={ t("meta.imprint.title") }
-                description={ t("meta.imprint.description") }
+                title={ t("common:meta.imprint.title") }
+                description={ t("common:meta.imprint.description") }
             />
 
             <section className="py-28">
                 <div className="container mx-auto px-6 max-w-4xl space-y-12">
                     <div className="space-y-4">
                         <p className="text-sm uppercase tracking-[0.2em] text-neutral-500">
-                            { t("imprint.title") }
+                            { t("imprint_title") }
                         </p>
                         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
-                            { t("imprint.heading") }
+                            { t("imprint_heading") }
                         </h1>
-                        <p className="text-lg md:text-xl leading-relaxed">
-                            { t("imprint.intro") }
+                        <p className="text-lg md:text-xl">
+                            { t("imprint_intro") }
                         </p>
                     </div>
 
@@ -33,7 +32,7 @@ const Imprint = () => {
                                 <h2 className="text-2xl font-semibold mb-4">
                                     { section.title }
                                 </h2>
-                                <ul className="space-y-3 text-lg leading-relaxed">
+                                <ul className="space-y-3 text-lg">
                                     { section.items.map((item, idx) => (
                                         <li key={ idx }>{ item }</li>
                                     )) }

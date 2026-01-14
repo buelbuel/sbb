@@ -1,0 +1,13 @@
+{
+    "positioning": {
+        "title": "Evolved CRM Systems.<br />High Complexity.<br />Clear Solutions.",
+        "text": "Challenges in CRM systems are rarely purely technical. Often, what's missing is clean solution architecture, clear responsibilities, or resilient integration concepts. I help organizations structure Salesforce landscapes, make decision options visible, and establish systems that are sustainable long-term.",
+        "cta": "Learn More"
+    },
+    "footer_cta": {
+        "title": "Let's Talk.",
+        "linkedin": "LinkedIn",
+        "email": "Send Email",
+        "book": "Intro Call"
+    }
+}

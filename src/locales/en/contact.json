@@ -1,0 +1,28 @@
+{
+    "text_col": {
+        "intro": "I support companies with architecture and decision questions around Salesforce, CRM, and integration systems.",
+        "sub": "If you're facing a complex CRM or architecture decision, this can be well assessed in a brief conversation.",
+        "suitable": {
+            "title": "Well suited if:",
+            "items": [
+                "Salesforce or CRM architectures need to be reviewed or realigned",
+                "Integrations or data models are reaching their limits",
+                "technical decisions need to be prepared or secured"
+            ]
+        }
+    },
+    "contact_col": {
+        "title": "Write to Me.",
+        "text": "Briefly describe your situation. I typically respond within 24 hours.",
+        "CV": "Download CV",
+        "social": {
+            "badge": "Profiles",
+            "title": "Find me online.",
+            "subtitle": "Quick links to the profiles I actively use."
+        }
+    },
+    "booker": {
+        "title": "Book Intro Call",
+        "text": "Book directly in the calendar. No preparation needed."
+    }
+}

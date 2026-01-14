@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "./Link"
 
-type ButtonVariant = "primary" | "glass" | "outline" | "neutral"
+type ButtonVariant = "primary" | "neutral"
 
 interface CTAButtonProps {
     href: string
@@ -28,10 +28,6 @@ const CTAButton: React.FC<CTAButtonProps> = ({
             "bg-primary hover:bg-primary-dark text-white",
         neutral:
             "bg-text-primary hover:bg-text-primary/60 text-bg-base",
-        glass:
-            "bg-bg-glass backdrop-blur-xl border border-white/40 hover:bg-white/80 dark:bg-black/60 dark:border-white/10",
-        outline:
-            "border border-text-primary/30 hover:bg-text-primary/5 hover:border-text-primary/60",
     }
 
     const classes = `${base} ${variants[variant]} ${className}`
