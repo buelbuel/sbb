@@ -2,7 +2,7 @@ import "../index.css"
 import CTAButton from "../components/CTAButton"
 import PageMeta from "../components/PageMeta"
 import Hero from "../components/Hero"
-import { Layers, GitBranch, Settings, Compass, ArrowRight } from "lucide-react"
+import { Layers, GitBranch, Bolt, Compass, ArrowRight } from "../components/Icons"
 import { useTranslation, Trans } from "react-i18next"
 
 export function Home () {
@@ -18,7 +18,7 @@ export function Home () {
             key: "crm",
         },
         {
-            icon: Settings,
+            icon: Bolt,
             key: "product",
         },
         {
@@ -84,14 +84,14 @@ export function Home () {
                             >
                                 {/* Background animation */ }
                                 <div className="absolute inset-0 -right-64 top-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none">
-                                    <item.icon className="w-80 h-80" strokeWidth={ 0.5 } />
+                                    <item.icon className="w-80 h-80" />
                                 </div>
 
                                 {/* Content */ }
                                 <div className="relative z-10 md:flex items-center justify-between gap-8">
                                     <div className="md:flex items-start gap-6 flex-1 min-w-0">
                                         <div className="w-12 h-12 flex items-center justify-center shrink-0">
-                                            <item.icon className="w-6 h-6" strokeWidth={ 1.5 } />
+                                            <item.icon className="w-6 h-6" />
                                         </div>
                                         <div className="min-w-0">
                                             <h3 className="text-2xl md:text-3xl font-semibold group-hover:opacity-70 transition-opacity duration-300 leading-tight">

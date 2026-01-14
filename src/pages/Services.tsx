@@ -5,7 +5,7 @@ import {
     Lightbulb,
     Zap,
     Check
-} from "lucide-react"
+} from "../components/Icons"
 import CTAButton from "../components/CTAButton"
 import PageMeta from "../components/PageMeta"
 import Hero from "@/components/Hero"

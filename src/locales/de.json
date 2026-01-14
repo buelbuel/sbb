@@ -249,7 +249,17 @@
             "title": "Schreiben Sie mir.",
             "text": "Schildern Sie kurz Ihre Situation. Ich melde mich in der Regel innerhalb von 24 Stunden.",
             "linkedin": "LinkedIn Profil",
-            "CV": "Lebenslauf herunterladen"
+            "trailhead": "Trailblazer Profil",
+            "github": "GitHub Profil",
+            "CV": "Lebenslauf herunterladen",
+            "social": {
+                "badge": "Profile",
+                "title": "Online-Profile.",
+                "subtitle": "Direkte Links zu den Profilen, die ich aktiv nutze.",
+                "linkedin_handle": "linkedin.com/in/alicem-buelbuel",
+                "trailhead_handle": "trailblazer.me/alicemb",
+                "github_handle": "github.com/buelbuel"
+            }
         },
         "booker": {
             "title": "Kennenlerngespräch buchen",

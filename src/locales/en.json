@@ -249,7 +249,17 @@
             "title": "Write to Me.",
             "text": "Briefly describe your situation. I typically respond within 24 hours.",
             "linkedin": "LinkedIn Profile",
-            "CV": "Download CV"
+            "trailhead": "Trailblazer Profile",
+            "github": "GitHub Profile",
+            "CV": "Download CV",
+            "social": {
+                "badge": "Profiles",
+                "title": "Find me online.",
+                "subtitle": "Quick links to the profiles I actively use.",
+                "linkedin_handle": "linkedin.com/in/alicem-buelbuel",
+                "trailhead_handle": "trailblazer.me/alicemb",
+                "github_handle": "github.com/buelbuel"
+            }
         },
         "booker": {
             "title": "Book Intro Call",

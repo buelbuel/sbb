@@ -2,9 +2,10 @@ import "../index.css"
 import PageMeta from "../components/PageMeta"
 import CTAButton from "@/components/CTAButton"
 import Card from "../components/Card"
-import { Mail, CheckCircle2, ArrowRight } from "lucide-react"
+import { Mail, CheckCircle, ArrowRight } from "@/components/Icons"
 import { useTranslation } from "react-i18next"
 import { Booker } from "../components/Booker"
+import { LinkedIn, GitHub, Trailhead } from '@/components/Icons'
 import cvDe from "../assets/de_cv_9_buelbuel_2026.pdf"
 import cvEn from "../assets/en_cv_9_buelbuel_2026.pdf"
 
@@ -14,6 +15,30 @@ const Contact = () => {
     const cvHref = locale.startsWith("de") ? cvDe : cvEn
 
     const suitableItems = t("contact.text_col.suitable.items", { returnObjects: true }) as string[]
+
+    const socialLinks = [
+        {
+            key: "linkedin",
+            href: "https://www.linkedin.com/in/alicem-buelbuel/",
+            label: t("contact.contact_col.linkedin"),
+            handle: t("contact.contact_col.social.linkedin_handle"),
+            Icon: LinkedIn
+        },
+        {
+            key: "trailhead",
+            href: "https://www.salesforce.com/trailblazer/alicemb",
+            label: t("contact.contact_col.trailhead"),
+            handle: t("contact.contact_col.social.trailhead_handle"),
+            Icon: Trailhead
+        },
+        {
+            key: "github",
+            href: "https://github.com/buelbuel",
+            label: t("contact.contact_col.github"),
+            handle: t("contact.contact_col.social.github_handle"),
+            Icon: GitHub
+        }
+    ]
 
     return (
         <>
@@ -46,13 +71,14 @@ const Contact = () => {
                                 <ul className="space-y-4">
                                     { suitableItems.map((item, i) => (
                                         <li key={ i } className="flex items-start gap-3 font-medium">
-                                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                            <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                                             <span>{ item }</span>
                                         </li>
                                     )) }
                                 </ul>
                             </Card>
                         </div>
+
 
                         {/* Contact Column */ }
                         <div className="space-y-6">
@@ -69,35 +95,44 @@ const Contact = () => {
                                     <CTAButton href="mailto:hallo@sbb.dev">
                                         hallo@sbb.dev
                                     </CTAButton>
-
                                 </div>
                             </Card>
 
-                            <Card className="p-8 flex items-center justify-between group cursor-pointer border-border-subtle hover:bg-bg-glass dark:hover:bg-bg-glass-dark transition-colors" variant="outline">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
-                                        in
-                                    </div>
-                                    <a href="https://www.linkedin.com/in/alicem-buelbuel/" className="font-semibold">{ t("contact.contact_col.linkedin") }</a>
-                                </div>
-                                <ArrowRight className="w-5 h-5 group-hover:opacity-70 transition-opacity" />
-                            </Card>
-                            <Card className="p-8 flex items-center justify-between group cursor-pointer border-border-subtle hover:bg-bg-glass dark:hover:bg-bg-glass-dark transition-colors" variant="outline">
+                            <Card className="p-8 flex items-center justify-between group cursor-pointer border-border-subtle hover:bg-bg-glass transition-colors" variant="outline">
                                 <div className="flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-full bg-bg-glass-dark flex items-center justify-center text-white">
                                         cv
                                     </div>
-                                    <a href={ cvHref }
-                                        download className="font-semibold">
-                                        { t("contact.contact_col.CV") }</a>
+                                    <a href={ cvHref } download className="font-semibold">
+                                        { t("contact.contact_col.CV") }
+                                    </a>
                                 </div>
                                 <ArrowRight className="w-5 h-5 group-hover:opacity-70 transition-opacity" />
                             </Card>
+
+                            {/* Social Links - Single Row with Text */ }
+                            <div className="flex flex-wrap gap-2 justify-between">
+                                { socialLinks.map(({ key, href, label, Icon }) => (
+                                    <a
+                                        key={ key }
+                                        href={ href }
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="group flex items-center gap-2 rounded-xl border border-border-subtle bg-bg-glass px-3 py-2 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-primary/40"
+                                    >
+                                        <Icon className="w-5 h-5" />
+                                        { label }
+                                    </a>
+                                )) }
+                            </div>
                         </div>
                     </div>
 
                 </div>
+
+
             </section>
+            <div className="border-t border-border-subtle mt-12" />
             <section id="booker" className='py-8 max-w-245 mx-auto'>
                 <div className="space-y-8">
                     <h2 className='text-2xl md:text-4xl font-semibold leading-tight'>{ t("contact.booker.title") }</h2>

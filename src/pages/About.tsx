@@ -4,9 +4,35 @@ import PageMeta from "../components/PageMeta"
 import Hero from "@/components/Hero"
 import { useTranslation } from "react-i18next"
 import portrait from "../assets/portrait.jpg"
+import { LinkedIn, GitHub, Trailhead } from '@/components/Icons'
+import { ArrowRight } from "@/components/Icons"
 
 const About = () => {
     const { t } = useTranslation()
+
+    const socialLinks = [
+        {
+            key: "linkedin",
+            href: "https://www.linkedin.com/in/alicem-buelbuel/",
+            label: t("contact.contact_col.linkedin"),
+            handle: t("contact.contact_col.social.linkedin_handle"),
+            Icon: LinkedIn
+        },
+        {
+            key: "trailhead",
+            href: "https://www.salesforce.com/trailblazer/alicemb",
+            label: t("contact.contact_col.trailhead"),
+            handle: t("contact.contact_col.social.trailhead_handle"),
+            Icon: Trailhead
+        },
+        {
+            key: "github",
+            href: "https://github.com/buelbuel",
+            label: t("contact.contact_col.github"),
+            handle: t("contact.contact_col.social.github_handle"),
+            Icon: GitHub
+        }
+    ]
 
     return (
         <>
@@ -57,6 +83,37 @@ const About = () => {
                     </div>
                 </div>
             </section>
+            <div className="container mx-auto my-10 max-w-245">
+                <div className="mb-6">
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-2">
+                        { t("contact.contact_col.social.title") }
+                    </h3>
+                    <p className="text-text-secondary text-base md:text-lg">
+                        { t("contact.contact_col.social.subtitle") }
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    { socialLinks.map(({ key, href, label, handle, Icon }) => (
+                        <a
+                            key={ key }
+                            href={ href }
+                            target="_blank"
+                            rel="noreferrer"
+                            className="group relative flex items-center gap-4 rounded-3xl border border-border-subtle bg-bg-glass p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
+                        >
+                            <div className="flex h-12 w-12 shrink-0 items-center justify-center">
+                                <Icon className="h-6 w-6" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                                <div className="font-semibold text-base">{ label }</div>
+                                <div className="text-sm text-text-secondary truncate">{ handle }</div>
+                            </div>
+                            <ArrowRight className="h-5 w-5 shrink-0 opacity-60 transition-all group-hover:translate-x-1 group-hover:opacity-100" />
+                        </a>
+                    )) }
+                </div>
+            </div>
 
             {/* CTA */ }
             <section className="py-32 bg-bg-base">

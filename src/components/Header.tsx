@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Link } from "../components/Link"
-import { Globe, X, Menu, Sun, Moon } from "lucide-react"
+import { Globe, Moon, Sun, Menu, X } from "@/components/Icons"
 import { AnimatePresence, motion } from "framer-motion"
 
 type HeaderProps = {
@@ -144,7 +144,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
 
                             <button
                                 onClick={ () => setMobileOpen(true) }
-                                className="md:hidden w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center"
+                                className="md:hidden w-10 h-10 flex items-center justify-center"
                             >
                                 <Menu className="w-5 h-5" />
                             </button>
@@ -178,7 +178,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                                 <span className="text-lg font-semibold">Menu</span>
                                 <button
                                     onClick={ () => setMobileOpen(false) }
-                                    className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center"
+                                    className="w-10 h-10 flex items-center justify-center"
                                 >
                                     <X className="w-5 h-5" />
                                 </button>
