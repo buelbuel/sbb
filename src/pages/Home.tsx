@@ -2,7 +2,7 @@ import CTAButton from "@/components/CTAButton"
 import PageMeta from "@/components/PageMeta"
 import Hero from "@/components/Hero"
 import SocialLink from "@/components/SocialLink"
-import { Layers, GitBranch, Bolt, Compass, ArrowRight, LinkedIn, Mail, Calendar } from "@/components/Icons"
+import { Database, Layers, GitBranch, Bolt, Compass, ArrowRight, LinkedIn, Mail, Calendar } from "@/components/Icons"
 import { useTranslation, Trans } from "react-i18next"
 import { getSocialLink } from "@/config/social"
 
@@ -26,6 +26,10 @@ export function Home () {
             icon: Compass,
             key: "ownership",
         },
+        {
+            icon: Database,
+            key: "ai",
+        },
     ]
 
     const linkedinLink = getSocialLink('linkedin')
@@ -45,38 +49,99 @@ export function Home () {
 
             {/* HERO */ }
             <Hero
-                title={ <Trans i18nKey="common:hero.home.title" components={ { br: <br /> } } /> }
+                title={ t("common:hero.home.title") }
                 description={ t("common:hero.home.description") }
                 ctaLabel={ t("common:hero.home.cta") }
                 ctaHref="/contact"
             />
 
-            {/* POSITIONIERUNG - Big Statement */ }
-            <section className="py-32">
-                <div className="container mx-auto px-6 max-w-245">
-                    <div className="text-center space-y-8">
-                        <h2 className="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
-                            <Trans i18nKey="home:positioning.title" components={ { br: <br /> } } />
+            {/* POSITIONIERUNG */ }
+            <section className="py-32 container mx-auto px-6 max-w-245 ">
+                <p className="text-2xl md:text-4xl font-bold text-justify">
+                    { t("positioning.title") + " " }
+                    <span className="text-text-secondary">
+                        { t("positioning.text") }
+                    </span>
+                </p>
+            </section>
+
+            {/* AI & DATA SCIENCE */ }
+            <section className="py-32 px-6 space-y-16 bg-bg-card-solid">
+                <div className="container mx-auto max-w-300 space-y-16">
+                    <div className="space-y-8 text-center font-semibold tracking-tight leading-tight">
+                        <h2 className="text-4xl md:text-6xl">
+                            { t("home:ai.title") }
                         </h2>
-                        <p className="text-xl md:text-2xl max-w-3xl mx-auto font-bold text-text-secondary text-justify">
-                            { t("positioning.text") }
+                        <p className="text-2xl md:text-4xl text-text-secondary">
+                            { t("home:ai.text") }
                         </p>
                     </div>
+
+                    {/* Grid content */ }
+                    <div className="overflow-hidden relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12 p-12 border border-border-subtle rounded-2xl bg-bg-base">
+
+                        {/* Animated wave background */ }
+                        <svg
+                            className="absolute inset-0 w-full h-full opacity-10 pointer-events-none"
+                            viewBox="0 0 1200 400"
+                            preserveAspectRatio="none"
+                        >
+                            <defs>
+                                <style>{ `
+                                    @keyframes wave1 {
+                                        0%, 100% { d: path('M0,200 Q300,100 600,200 T1200,200 L1200,400 L0,400 Z'); }
+                                        50% { d: path('M0,150 Q300,200 600,150 T1200,150 L1200,400 L0,400 Z'); }
+                                    }
+                                    @keyframes wave2 {
+                                        0%, 100% { d: path('M0,250 Q300,150 600,250 T1200,250 L1200,400 L0,400 Z'); }
+                                        50% { d: path('M0,300 Q300,100 600,300 T1200,300 L1200,400 L0,400 Z'); }
+                                    }
+                                    @keyframes wave3 {
+                                        0%, 100% { d: path('M0,300 Q300,200 600,300 T1200,300 L1200,400 L0,400 Z'); }
+                                        50% { d: path('M0,200 Q300,280 600,200 T1200,200 L1200,400 L0,400 Z'); }
+                                    }
+                                    .wave1 { animation: wave1 6s ease-in-out infinite; }
+                                    .wave2 { animation: wave2 8s ease-in-out infinite -2s; }
+                                    .wave3 { animation: wave3 10s ease-in-out infinite -4s; }
+                                `}</style>
+                            </defs>
+                            <path className="wave1" fill="currentColor" fillOpacity="0.4" />
+                            <path className="wave2" fill="currentColor" fillOpacity="0.3" />
+                            <path className="wave3" fill="currentColor" fillOpacity="0.2" />
+                        </svg>
+
+                        { (() => {
+                            const cards = t("home:ai.cards", { returnObjects: true })
+                            return Array.isArray(cards) && cards.map((card: any, idx: number) => (
+                                <div key={ idx } className="space-y-2 text-xl text-justify">
+                                    <div className='font-bold'>
+                                        { card.title + " " }
+                                        <span className="text-text-secondary">{ card.subtitle }</span>
+                                    </div>
+                                    <p className="font-medium">{ card.description }</p>
+                                </div>
+                            ))
+                        })() }
+                    </div>
+                </div>
+
+                <div className="text-center">
+                    <CTAButton href="/services#ai">
+                        { t("positioning.cta") }
+                    </CTAButton>
                 </div>
             </section>
 
-            {/* LEISTUNGEN - Modern List */ }
-            <section className="py-40">
-                <div className="container mx-auto px-6 max-w-300">
-                    <div className="mb-24">
-                        <h2 className="text-4xl md:text-6xl font-semibold mb-8 tracking-tight leading-tight">
-                            { t("common:meta.services.title").split(" – ")[0] }
-                        </h2>
-                        <p className="text-xl font-medium">
-                            { t("services:focus.text") }
-                        </p>
-                    </div>
+            {/* LEISTUNGEN */ }
+            <section className="py-32 container mx-auto px-6 max-w-300 space-y-16">
+                <p className="text-2xl md:text-4xl font-bold text-justify">
+                    { t("services:focus.title") + " " }
+                    <span className="text-text-secondary">
+                        { t("services:focus.text") }
+                    </span>
+                </p>
 
+                <article>
                     { cards.map((item, idx) => {
                         const href = `/services#${item.key}`
                         return (
@@ -116,34 +181,32 @@ export function Home () {
                             </a>
                         )
                     }) }
+                </article>
 
-                    <div className="mt-6 text-center">
-                        <CTAButton href="/services">
-                            { t("common:nav.services") ?? "View all services" }
-                        </CTAButton>
-                    </div>
+                <div className="text-center">
+                    <CTAButton href="/services">
+                        { t("common:nav.services") ?? "View all services" }
+                    </CTAButton>
                 </div>
             </section>
 
-            {/* SOCIAL LINKS / FOOTER CTA */ }
-            <section className="py-16 border-t border-gray-100 dark:border-gray-800">
-                <div className="container mx-auto px-6 max-w-6xl text-center">
-                    <h3 className="text-4xl font-semibold mb-12 tracking-tight">
-                        { t("footer_cta.title") }
-                    </h3>
+            {/* SOCIAL LINKS */ }
+            <section className="py-32 container mx-auto px-6 max-w-6xl text-center space-y-16">
+                <h3 className="text-2xl md:text-4xl font-bold">
+                    { t("footer_cta.title") }
+                </h3>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
-                        { socialLinks.map(link => (
-                            <SocialLink
-                                key={ link.label }
-                                href={ link.href }
-                                label={ link.label }
-                                Icon={ link.icon }
-                                arrow={ true }
-                                newTab={ link.href.startsWith("http") }
-                            />
-                        )) }
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    { socialLinks.map(link => (
+                        <SocialLink
+                            key={ link.label }
+                            href={ link.href }
+                            label={ link.label }
+                            Icon={ link.icon }
+                            arrow={ true }
+                            newTab={ link.href.startsWith("http") }
+                        />
+                    )) }
                 </div>
             </section>
         </>

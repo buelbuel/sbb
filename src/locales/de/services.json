@@ -27,6 +27,10 @@
             "ownership": {
                 "title": "Verantwortung & Entscheidungsabsicherung",
                 "text": "Übernahme technischer Verantwortung und Unterstützung bei tragfähigen, dokumentierten Entscheidungen."
+            },
+            "ai": {
+                "title": "KI, GPT & Data Science",
+                "text": "Von der Strategie bis zur produktiven KI — verwurzelt in Business Value, angetrieben durch Daten."
             }
         }
     },
@@ -74,6 +78,18 @@
             "longtext1": "Verantwortung endet nicht mit einer Empfehlung. Ich unterstütze Organisationen dabei, technische Entscheidungen so zu treffen und zu dokumentieren, dass sie auch langfristig tragfähig bleiben.",
             "longtext2": "Ob punktuelle Entscheidungsabsicherung, temporäre Übernahme technischer Verantwortung oder Unterstützung beim Aufbau klarer Ownership-Modelle über verteilte Teams – mein Fokus liegt darauf, dass Zuständigkeiten eindeutig sind und Entscheidungen Bestand haben.",
             "flow_title": "Ownership-Framework"
+        },
+        "ai": {
+            "subtitle": "Wobei wir Sie konkret unterstützen",
+            "points": [
+                "Konzeption und Umsetzung von KI-Use-Cases wie Customer Lifetime Value, Lead Scoring, Forecasting und Personalisierung",
+                "Integration von Salesforce Einstein, Data Cloud, Tableau und GPT-basierten Lösungen in bestehende Systemlandschaften",
+                "Nachvollziehbare, nutzerorientierte KI-Implementierung statt Black-Box-Ansätzen",
+                "Fundierte Data- & AI-Expertise mit tiefem Salesforce-Verständnis"
+            ],
+            "approach_title": "Unser Ansatz für KI-Implementierungen",
+            "longtext1": "Wir verbinden fachliche Anforderungen, Salesforce-Plattformen und Data-Science-Methoden zu stabilen, wartbaren KI-Lösungen, die sich sinnvoll in Ihre bestehende IT-Architektur einfügen.",
+            "longtext2": "Auf Basis von CRISP-DM, ergänzt um ein design-orientiertes Vorgehen, entwickeln wir KI-Systeme, die verständlich, skalierbar und langfristig tragfähig sind."
         }
     },
     "benefits": {

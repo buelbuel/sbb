@@ -1,7 +1,6 @@
 import { serve } from "bun"
 import index from "@/index.html"
 
-
 serve({
     routes: {
         "/": index,
@@ -10,6 +9,7 @@ serve({
         "/contact": index,
         "/imprint": index,
         "/privacy": index,
+        "/test": index,
         "/*": index,
         "/sitemap.xml": () =>
             new Response(Bun.file("public/sitemap.xml"), {

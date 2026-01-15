@@ -3,7 +3,8 @@ import {
     Clipboard,
     Lightbulb,
     Zap,
-    Check
+    Check,
+    Layers
 } from "@/components/Icons"
 import CTAButton from "@/components/CTAButton"
 import PageMeta from "@/components/PageMeta"
@@ -12,6 +13,7 @@ import { useTranslation } from "react-i18next"
 import ArchitectureGraph from "@/components/ArchitectureGraph"
 import CRMFunnel from "@/components/CRMFunnel"
 import OwnershipFlow from "@/components/OwnershipFlow"
+import AIDiagram from '@/components/AIDiagram'
 import Accordion from "@/components/Accordion"
 import Card from "@/components/Card"
 
@@ -49,6 +51,13 @@ const Services = () => {
             description: t("focus.items.ownership.text"),
             details: t("details.ownership.points", { returnObjects: true }) as string[],
         },
+        {
+            key: "ai",
+            icon: Layers,
+            title: t("focus.items.ai.title"),
+            description: t("focus.items.ai.text"),
+            details: t("details.ai.points", { returnObjects: true }) as string[],
+        },
     ]
 
     return (
@@ -64,37 +73,36 @@ const Services = () => {
             />
 
             {/* SERVICE 1: ARCHITECTURE */ }
-            <section id="architecture" className="py-40">
+            <section id="architecture" className="py-32">
                 <div className="container mx-auto px-6 max-w-300">
-                    <div className="mb-12">
-                        <h2 className="text-5xl md:text-6xl font-semibold tracking-tight leading-tight mb-6">
+                    <div className="mb-16">
+                        <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-8">
                             { services?.[0]?.title ?? "" }
-
                         </h2>
-                        <p className="text-2xl font-medium">
+                        <p className="text-xl font-medium">
                             { services?.[0]?.description ?? "" }
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 mt-12">
-                        <div>
-                            <h3 className="text-lg font-semibold mb-6">{ t("details.architecture.subtitle") }</h3>
-                            <ul className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                        <div className="space-y-8">
+                            <h3 className="text-xl font-bold">{ t("details.architecture.subtitle") }</h3>
+                            <ul className="space-y-6">
                                 { services?.[0]?.details?.map((point, idx) => (
                                     <li key={ idx } className="flex gap-4 items-start">
                                         <Check className="w-6 h-6 shrink-0 mt-0.5" />
-                                        <span className="text-base font-medium">
+                                        <span className="text-xl font-medium">
                                             { point }
                                         </span>
                                     </li>
                                 )) }
                             </ul>
 
-                            <div className="prose prose-invert mt-16">
-                                <p className="text-lg mb-8">
+                            <div className="space-y-6">
+                                <p className="text-xl font-medium">
                                     { t("details.architecture.longtext1") }
                                 </p>
-                                <p className="text-lg">
+                                <p className="text-xl font-medium">
                                     { t("details.architecture.longtext2") }
                                 </p>
                             </div>
@@ -106,24 +114,24 @@ const Services = () => {
             </section>
 
             {/* SERVICE 2: CRM STRATEGY */ }
-            <section id="crm" className="py-40 bg-bg-base">
+            <section id="crm" className="py-32 bg-bg-base">
                 <div className="container mx-auto px-6 max-w-300">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        <div>
-                            <h2 className="text-5xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
+                        <div className="space-y-8">
+                            <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
                                 { services?.[1]?.title ?? "" }
                             </h2>
-                            <p className="text-xl font-medium mb-10">
+                            <p className="text-xl font-medium">
                                 { services?.[1]?.description ?? "" }
                             </p>
 
-                            <Card className="p-10 mb-10">
-                                <h3 className="text-sm font-semibold tracking-widest uppercase mb-6">{ t("details.crm.subtitle") }</h3>
-                                <ul className="space-y-5">
+                            <Card className="p-10">
+                                <h3 className="text-xl font-bold mb-6">{ t("details.crm.subtitle") }</h3>
+                                <ul className="space-y-6">
                                     { services?.[1]?.details?.map((point, idx) => (
                                         <li key={ idx } className="flex gap-4 items-start">
                                             <div className="w-2 h-2 rounded-full mt-2.5 shrink-0" />
-                                            <span className="text-base">
+                                            <span className="text-xl font-medium">
                                                 { point }
                                             </span>
                                         </li>
@@ -131,7 +139,7 @@ const Services = () => {
                                 </ul>
                             </Card>
 
-                            <p className="text-base">
+                            <p className="text-xl font-medium">
                                 { t("details.crm.longtext") }
                             </p>
                         </div>
@@ -141,12 +149,12 @@ const Services = () => {
                                 <CRMFunnel />
                             </div><div className="grid grid-cols-2 gap-6">
                                 <Card className="p-8 text-center">
-                                    <div className="text-3xl font-bold mb-2">{ t("details.crm.stats.adoption") }</div>
-                                    <p className="text-sm">{ t("details.crm.stats.adoption_label") }</p>
+                                    <div className="text-2xl md:text-4xl font-bold mb-2">{ t("details.crm.stats.adoption") }</div>
+                                    <p className="text-xl font-medium">{ t("details.crm.stats.adoption_label") }</p>
                                 </Card>
                                 <Card className="p-8 text-center">
-                                    <div className="text-3xl font-bold mb-2">{ t("details.crm.stats.timeline") }</div>
-                                    <p className="text-sm">{ t("details.crm.stats.timeline_label") }</p>
+                                    <div className="text-2xl md:text-4xl font-bold mb-2">{ t("details.crm.stats.timeline") }</div>
+                                    <p className="text-xl font-medium">{ t("details.crm.stats.timeline_label") }</p>
                                 </Card>
                             </div>
                         </div>
@@ -155,81 +163,85 @@ const Services = () => {
             </section >
 
             {/* SERVICE 3: PRODUCT */ }
-            <section id="product" className="py-40" >
-                <div className="container mx-auto px-6 max-w-300">
-                    <div className="text-center mb-16 max-w-3xl mx-auto">
-                        <h2 className="text-5xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
-                            { services?.[2]?.title ?? "" }
-                        </h2>
-                        <p className="text-2xl font-medium mb-6">
-                            { services?.[2]?.description ?? "" }
-                        </p>
-                    </div>
+            <section id="product" className="py-32 container mx-auto px-6 max-w-300 space-y-16">
+                <div className="text-center max-w-3xl mx-auto space-y-8">
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+                        { services?.[2]?.title ?? "" }
+                    </h2>
+                </div>
 
+                <p className="text-xl md:text-2xl font-bold text-justify">
+                    { services?.[2]?.description ?? "" }
+                    <span className="text-text-secondary">
+                        { " " + t("details.product.longtext") }
+                    </span>
+                </p>
 
-
-                    <div className="bg-linear-to-br from-green-50 via-bg-base to-[#e8e8ed] rounded-3xl flex items-center justify-center relative overflow-hidden mb-16 p-8">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            { services?.[2]?.details?.map((point, idx) => (
-                                <div key={ idx } className="flex items-center gap-4">
-                                    <div className="w-10 h-10 flex items-center justify-center shrink-0">
-                                        <span className="text-sm font-bold">{ idx + 1 }</span>
-                                    </div>
-                                    <p className="text-base font-medium">
-                                        { point }
-                                    </p>
+                <div className="bg-linear-to-br from-green-50 via-bg-base to-[#e8e8ed] rounded-3xl flex items-center justify-center relative overflow-hidden p-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        { services?.[2]?.details?.map((point, idx) => (
+                            <div key={ idx } className="flex items-center gap-4">
+                                <div className="w-10 h-10 flex items-center justify-center shrink-0">
+                                    <span className="text-xl font-bold">{ idx + 1 }</span>
                                 </div>
-                            )) }
-                        </div>
-                    </div>
-
-                    <div className="prose prose-invert max-w-none text-center">
-                        <p className="text-lg mx-auto max-w-2xl">
-                            { t("details.product.longtext") }
-                        </p>
+                                <p className="text-xl font-medium">
+                                    { point }
+                                </p>
+                            </div>
+                        )) }
                     </div>
                 </div>
             </section >
 
-            {/* SERVICE 4: OWNERSHIP */ }
-            <section id="ownership" className="py-40 bg-bg-base" >
+            {/* SERVICE 5: AI, GPT & DATA SCIENCE */ }
+            <section id="ai" className="py-32 bg-bg-base">
                 <div className="container mx-auto px-6 max-w-300">
-                    <div className="mb-16">
-                        <h2 className="text-5xl md:text-6xl font-semibold tracking-tight leading-tight mb-8">
-                            { services?.[3]?.title ?? "" }
+
+                    {/* Headline */ }
+                    <div className="mb-16 space-y-8">
+                        <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+                            { services?.[4]?.title }
                         </h2>
-                        <p className="text-2xl font-medium">
-                            { services?.[3]?.description ?? "" }
+                        <p className="text-xl font-medium">
+                            { services?.[4]?.description }
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                        <div className="space-y-8">
-                            <h3 className="text-xl font-semibold mb-6">{ t("details.ownership.subtitle") }</h3>
-                            <ul className="space-y-6">
-                                { services?.[3]?.details?.map((point, idx) => (
-                                    <li key={ idx } className="flex gap-4 items-start">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-text-primary mt-3 shrink-0" />
-                                        <span className="text-base font-medium">
-                                            { point }
-                                        </span>
-                                    </li>
-                                )) }
-                            </ul>
+                    {/* Diagram */ }
+                    <div className="mb-16">
+                        <div className="h-96 rounded-3xl bg-linear-to-br from-blue-50 via-bg-base to-[#e8e8ed] flex items-center justify-center relative overflow-hidden">
+                            <AIDiagram />
                         </div>
-                        <OwnershipFlow />
                     </div>
 
-                    <Card className="p-12">
-                        <p className="text-base mb-6">
-                            { t("details.ownership.longtext1") }
-                        </p>
-                        <p className="text-base">
-                            { t("details.ownership.longtext2") }
-                        </p>
-                    </Card>
+                    {/* Capability statements */ }
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                        { services?.[4]?.details?.map((point, idx) => {
+                            const [title, text] = point.split(" — ")
+                            return (
+                                <Card key={ idx } className="p-8 h-full space-y-4">
+                                    <p className="text-xl font-bold">
+                                        { title }
+                                    </p>
+                                    <p className="text-xl font-medium">
+                                        { text ?? point }
+                                    </p>
+                                </Card>
+                            )
+                        }) }
+                    </div>
+
+                    {/* Philosophy */ }
+                    <div className="space-y-8 text-2xl md:text-4xl font-bold">
+                        { t("details.ai.approach_title") + " " }
+                        <span className="text-text-secondary">
+                            { t("details.ai.longtext1") }
+                            { t("details.ai.longtext2") }
+                        </span>
+                    </div>
+
                 </div>
-            </section >
+            </section>
 
             {/* FAQ Accordion */ }
             <Accordion
@@ -240,12 +252,12 @@ const Services = () => {
             />
 
             {/* CTA SECTION */ }
-            < section className="py-40 bg-linear-to-br from-text-primary to-[#4b5563]" >
-                <div className="container mx-auto px-6 max-w-300 text-center">
-                    <h2 className="text-4xl md:text-5xl font-semibold mb-8 text-white tracking-tight">
+            < section className="py-32 bg-linear-to-br from-text-primary to-[#4b5563]" >
+                <div className="container mx-auto px-6 max-w-300 text-center space-y-8">
+                    <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight">
                         { t("cta.title") }
                     </h2>
-                    <p className="text-lg text-white/70 mb-12 max-w-2xl mx-auto font-medium">
+                    <p className="text-xl text-white/70 max-w-2xl mx-auto font-medium">
                         { t("cta.subtitle") }
                     </p>
 

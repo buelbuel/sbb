@@ -14,6 +14,7 @@ const Contact = lazy(() => import("./pages/Contact"))
 const NotFound = lazy(() => import("./pages/NotFound"))
 const Imprint = lazy(() => import("./pages/Imprint"))
 const Privacy = lazy(() => import("./pages/Privacy"))
+const Test = lazy(() => import("./pages/Test"))
 
 function resolvePage (pathname: string) {
     switch (pathname) {
@@ -31,6 +32,8 @@ function resolvePage (pathname: string) {
             return <Imprint />
         case "/privacy":
             return <Privacy />
+        case "/test":
+            return <Test />
         default:
             return <NotFound />
     }

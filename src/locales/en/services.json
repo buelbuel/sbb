@@ -27,6 +27,10 @@
             "ownership": {
                 "title": "Responsibility & Decision Assurance",
                 "text": "Assuming technical responsibility and supporting sustainable, documented decisions."
+            },
+            "ai": {
+                "title": "AI, GPT & Data Science",
+                "text": "From strategy to production-ready AI — grounded in business value, powered by data."
             }
         }
     },
@@ -74,6 +78,18 @@
             "longtext1": "Responsibility doesn't end with a recommendation. I support organizations in making and documenting technical decisions so they remain sustainable long-term.",
             "longtext2": "Whether point decision assurance, temporary assumption of technical responsibility, or support in building clear ownership models across distributed teams — my focus is on ensuring responsibilities are unambiguous and decisions endure.",
             "flow_title": "Ownership Framework"
+        },
+        "ai": {
+            "subtitle": "How we support you",
+            "points": [
+                "Design and implementation of AI use cases such as customer lifetime value, lead scoring, forecasting and personalization",
+                "Integration of Salesforce Einstein, Data Cloud, Tableau and GPT-based solutions into existing system landscapes",
+                "Transparent, user-oriented AI implementations instead of black-box approaches",
+                "Strong data and AI expertise with deep Salesforce platform knowledge"
+            ],
+            "approach_title": "Our approach to AI implementations",
+            "longtext1": "We combine business requirements, Salesforce platforms and data science methods to build stable, maintainable AI solutions that fit naturally into your existing IT architecture.",
+            "longtext2": "Based on CRISP-DM and complemented by a design-oriented approach, we develop AI systems that are understandable, scalable and sustainable in the long term."
         }
     },
     "benefits": {

@@ -345,6 +345,56 @@ export const Calendar: React.FC<IconProps> = ({ className = "" }) => (
     </svg>
 )
 
+export const Brain: React.FC<IconProps> = ({ className = "" }) => (
+    <svg
+        className={ className }
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+    >
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+        <path d="M12 6a6 6 0 0 0-6 6h6V6zm0 0a6 6 0 0 1 6 6h-6V6zm0 12a6 6 0 0 0 6-6h-6v6zm0 0a6 6 0 0 1-6-6h6v6z" />
+    </svg>
+)
+
+export const Database: React.FC<IconProps> = ({ className = "" }) => (
+    <svg
+        className={ className }
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+    >
+        <ellipse cx="12" cy="5" rx="9" ry="3" />
+        <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+        <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" />
+    </svg>
+)
+
+export const Users: React.FC<IconProps> = ({ className = "" }) => (
+    <svg
+        className={ className }
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+    >
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+)
 
 export const iconMap = {
     linkedin: LinkedIn,
@@ -367,5 +417,8 @@ export const iconMap = {
     checkCircle: CheckCircle,
     bolt: Bolt,
     cv: Cv,
-    calendar: Calendar
+    calendar: Calendar,
+    brain: Brain,
+    database: Database,
+    users: Users
 } as const

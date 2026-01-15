@@ -1,8 +1,29 @@
 {
     "positioning": {
-        "title": "Gewachsene CRM-Systeme.<br />Hohe Komplexität.<br />Klare Lösungen.",
+        "title": "Gewachsene CRM-Systeme. Hohe Komplexität. Klare Lösungen.",
         "text": "Herausforderungen in CRM-Systemen sind selten rein technisch. Häufig fehlen saubere Lösungsbilder, klare Zuständigkeiten oder belastbare Integrationskonzepte. Ich unterstütze dabei, Salesforce-Landschaften zu ordnen, Entscheidungsoptionen sichtbar zu machen und Systeme langfristig tragfähig aufzustellen.",
         "cta": "Mehr erfahren"
+    },
+    "ai": {
+        "title": "KI, GPT & Data Science — sinnvoll eingesetzt",
+        "text": "Wir entwickeln KI-Lösungen, die echten Mehrwert schaffen: technisch sauber umgesetzt, fachlich sinnvoll integriert und auf Ihre Organisation abgestimmt.",
+        "cards": [
+            {
+                "title": "KI- & GPT-Strategie",
+                "subtitle": "Von der Fragestellung zur umsetzbaren Roadmap",
+                "description": "Wir analysieren Datenlage, Prozesse und technische Voraussetzungen, priorisieren geeignete KI-Use-Cases und entwickeln eine realistische Umsetzungsstrategie."
+            },
+            {
+                "title": "Salesforce AI",
+                "subtitle": "Einstein, Data Cloud & Automatisierung",
+                "description": "Wir integrieren Salesforce-KI-Funktionen gezielt in Ihre CRM-Prozesse – von Vorhersagen über Datenharmonisierung bis zu intelligenter Automatisierung."
+            },
+            {
+                "title": "Data Science",
+                "subtitle": "Modelle für Prognose & Entscheidungsunterstützung",
+                "description": "Wir entwickeln maßgeschneiderte ML-Modelle für Themen wie CLV, Lead Scoring oder Churn-Prognosen – transparent, wartbar und produktionsnah."
+            }
+        ]
     },
     "footer_cta": {
         "title": "Lassen Sie uns sprechen.",
