@@ -27,7 +27,12 @@ const ArchitectureGraph = () => {
     ]
 
     return (
-        <div ref={ containerRef } className="w-full max-w-2xl mx-auto py-8">
+        <div
+            ref={ containerRef }
+            className="w-full max-w-2xl mx-auto py-8"
+            role="img"
+            aria-label="Enterprise Salesforce architecture diagram showing three layers: Experience Layer (Web, Mobile, API), Business Layer (Automation, Logic, Integration), and Data Layer (Storage, Analytics, Security)"
+        >
             { layers.map((layer, layerIdx) => (
                 <div
                     key={ layerIdx }

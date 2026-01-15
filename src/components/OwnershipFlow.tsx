@@ -28,7 +28,12 @@ const OwnershipFlow = () => {
     ]
 
     return (
-        <div ref={ containerRef } className="w-full max-w-2xl mx-auto py-8">
+        <div
+            ref={ containerRef }
+            className="w-full max-w-2xl mx-auto py-8"
+            role="img"
+            aria-label="Data ownership lifecycle with four stages: Define scope & goals, Document standards, Govern policies, Maintain continuously"
+        >
             <div className="relative">
                 {/* Progress line */ }
                 <div className="scroll-animate absolute top-9 left-0 right-0 h-0.5 bg-text-primary/20 origin-left"

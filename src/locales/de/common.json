@@ -27,31 +27,31 @@
     "meta": {
         "home": {
             "title": "Salesforce & CRM Solution Design für komplexe Systeme",
-            "description": "Senior Salesforce Solution Architect mit Schwerpunkt auf Lösungsdesign, Integrationen und tragfähigen Systementscheidungen."
+            "description": "Expert für Salesforce-Architektur, CRM-Integrationsstrategie und nachhaltige technische Entscheidungen. SBB Consult - Beratung für Enterprise-Systeme."
         },
         "about": {
             "title": "Über mich – Salesforce Solution Architect",
-            "description": "Mehr als zehn Jahre Erfahrung in Salesforce-, CRM- und Cloud-Lösungen mit Verantwortung für komplexe Enterprise-Systeme."
+            "description": "10+ Jahre Erfahrung in Salesforce-Architektur. Spezialisiert auf Lösungsdesign, Enterprise-Integrationen und Governance komplexer CRM-Systeme."
         },
         "services": {
             "title": "Leistungen – Salesforce Solution Design & Integrationen",
-            "description": "Strukturiertes Lösungsdesign, Integrationskonzepte und Entscheidungsunterstützung für gewachsene Salesforce-Landschaften."
+            "description": "Salesforce-Architektur, CRM-Integration, AI-Implementierung, Datenmodelle und Ownership-Frameworks. Strategische Beratung für gewachsene Salesforce-Landschaften."
         },
         "references": {
             "title": "Referenzen – Salesforce- & CRM-Projekte",
-            "description": "Ausgewählte Projektkontexte aus Lösungsdesign, Integrationen und Verantwortung in komplexen CRM-Systemen."
+            "description": "Bewährte Salesforce-Beratung. Komplexe Integrationen, Architektur-Design und digitale Transformation. Referenzen aus verschiedenen Industrien."
         },
         "contact": {
-            "title": "Kontakt – Unverbindlicher Austausch",
-            "description": "Ein erstes Gespräch zu Salesforce-, CRM- oder Integrationsfragen."
+            "title": "Kontakt – Salesforce Beratung",
+            "description": "Vereinbaren Sie ein Gespräch zu Salesforce-Architektur, CRM-Integrationen, AI und digitaler Transformation. Kostenlose Erstanalyse."
         },
         "privacy": {
             "title": "Datenschutz",
-            "description": "Informationen zur Verarbeitung personenbezogener Daten auf dieser Website."
+            "description": "Informationen zur Datenverarbeitung auf unserer Website. Wir respektieren Ihre Privatsphäre und beachten GDPR und Datenschutzbestimmungen."
         },
         "imprint": {
             "title": "Impressum",
-            "description": "Anbieterkennzeichnung und rechtliche Pflichtangaben."
+            "description": "Rechtliche Pflichtangaben und Kontaktdaten von SBB Consult."
         },
         "notfound": {
             "title": "Seite nicht gefunden"

@@ -1,9 +1,10 @@
 import CTAButton from "@/components/CTAButton"
 import PageMeta from "@/components/PageMeta"
+import StructuredData from "@/components/StructuredData"
 import Hero from "@/components/Hero"
 import SocialLink from "@/components/SocialLink"
 import { Database, Layers, GitBranch, Bolt, Compass, ArrowRight, LinkedIn, Mail, Calendar } from "@/components/Icons"
-import { useTranslation, Trans } from "react-i18next"
+import { useTranslation } from "react-i18next"
 import { getSocialLink } from "@/config/social"
 
 export function Home () {
@@ -45,6 +46,24 @@ export function Home () {
             <PageMeta
                 title={ t("common:meta.home.title") }
                 description={ t("common:meta.home.description") }
+                url="https://sbbconsult.de/"
+                keywords="Salesforce consulting, CRM implementation, enterprise architecture, AI solutions, product strategy, digital transformation"
+            />
+
+            <StructuredData
+                breadcrumbs={ [
+                    { name: "Home", url: "https://sbbconsult.de/" }
+                ] }
+                schema={ {
+                    "@context": "https://schema.org",
+                    "@type": "LocalBusiness",
+                    "name": "SBB Consult",
+                    "image": "https://sbbconsult.de/logo.png",
+                    "description": t("common:meta.home.description"),
+                    "url": "https://sbbconsult.de/",
+                    "telephone": "contact@sbbconsult.de",
+                    "priceRange": "€€€"
+                } }
             />
 
             {/* HERO */ }
@@ -78,38 +97,8 @@ export function Home () {
                     </div>
 
                     {/* Grid content */ }
-                    <div className="overflow-hidden relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12 p-12 border border-border-subtle rounded-2xl bg-bg-base">
-
-                        {/* Animated wave background */ }
-                        <svg
-                            className="absolute inset-0 w-full h-full opacity-10 pointer-events-none"
-                            viewBox="0 0 1200 400"
-                            preserveAspectRatio="none"
-                        >
-                            <defs>
-                                <style>{ `
-                                    @keyframes wave1 {
-                                        0%, 100% { d: path('M0,200 Q300,100 600,200 T1200,200 L1200,400 L0,400 Z'); }
-                                        50% { d: path('M0,150 Q300,200 600,150 T1200,150 L1200,400 L0,400 Z'); }
-                                    }
-                                    @keyframes wave2 {
-                                        0%, 100% { d: path('M0,250 Q300,150 600,250 T1200,250 L1200,400 L0,400 Z'); }
-                                        50% { d: path('M0,300 Q300,100 600,300 T1200,300 L1200,400 L0,400 Z'); }
-                                    }
-                                    @keyframes wave3 {
-                                        0%, 100% { d: path('M0,300 Q300,200 600,300 T1200,300 L1200,400 L0,400 Z'); }
-                                        50% { d: path('M0,200 Q300,280 600,200 T1200,200 L1200,400 L0,400 Z'); }
-                                    }
-                                    .wave1 { animation: wave1 6s ease-in-out infinite; }
-                                    .wave2 { animation: wave2 8s ease-in-out infinite -2s; }
-                                    .wave3 { animation: wave3 10s ease-in-out infinite -4s; }
-                                `}</style>
-                            </defs>
-                            <path className="wave1" fill="currentColor" fillOpacity="0.4" />
-                            <path className="wave2" fill="currentColor" fillOpacity="0.3" />
-                            <path className="wave3" fill="currentColor" fillOpacity="0.2" />
-                        </svg>
-
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 p-12 border border-border-subtle rounded-2xl bg-linear-40 from-bg-glass to-fuchsia-400/5">
+                        {/* Animated background */ }
                         { (() => {
                             const cards = t("home:ai.cards", { returnObjects: true })
                             return Array.isArray(cards) && cards.map((card: any, idx: number) => (

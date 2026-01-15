@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({
                     { title }
                 </h1>
 
-                <p className="animate-fade-in-up delay-200 text-xl md:text-2xl font-medium max-w-2xl mx-auto mb-10">
+                <p className="animate-fade-in-up delay-200 text-2xl md:text-4xl font-medium max-w-2xl mx-auto mb-10 text-text-secondary">
                     { description }
                 </p>
 

@@ -8,6 +8,9 @@ import {
 } from "@/components/Icons"
 import CTAButton from "@/components/CTAButton"
 import PageMeta from "@/components/PageMeta"
+import StructuredData from "@/components/StructuredData"
+import ServiceSchema from "@/components/ServiceSchema"
+import FAQSchema from "@/components/FAQSchema"
 import Hero from "@/components/Hero"
 import { useTranslation } from "react-i18next"
 import ArchitectureGraph from "@/components/ArchitectureGraph"
@@ -65,6 +68,22 @@ const Services = () => {
             <PageMeta
                 title={ t("common:meta.services.title") }
                 description={ t("common:meta.services.description") }
+                url="https://sbbconsult.de/services"
+                keywords="Salesforce architecture, CRM strategy, product development, AI integration, ownership management, enterprise consulting"
+            />
+
+            <StructuredData
+                breadcrumbs={ [
+                    { name: "Home", url: "https://sbbconsult.de/" },
+                    { name: "Services", url: "https://sbbconsult.de/services" }
+                ] }
+                schema={ {
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    "name": t("common:meta.services.title"),
+                    "description": t("common:meta.services.description"),
+                    "url": "https://sbbconsult.de/services"
+                } }
             />
 
             <Hero
@@ -73,6 +92,11 @@ const Services = () => {
             />
 
             {/* SERVICE 1: ARCHITECTURE */ }
+            <ServiceSchema
+                name={ services?.[0]?.title ?? "Salesforce Solution Design" }
+                description={ services?.[0]?.description ?? "" }
+                url="https://sbbconsult.de/services#architecture"
+            />
             <section id="architecture" className="py-32">
                 <div className="container mx-auto px-6 max-w-300">
                     <div className="mb-16">
@@ -90,7 +114,7 @@ const Services = () => {
                             <ul className="space-y-6">
                                 { services?.[0]?.details?.map((point, idx) => (
                                     <li key={ idx } className="flex gap-4 items-start">
-                                        <Check className="w-6 h-6 shrink-0 mt-0.5" />
+                                        <Check className="w-6 h-6 shrink-0 mt-0.5" alt="checkmark" aria-hidden="true" />
                                         <span className="text-xl font-medium">
                                             { point }
                                         </span>
@@ -107,13 +131,18 @@ const Services = () => {
                                 </p>
                             </div>
                         </div>
-                        <ArchitectureGraph />
+                        <ArchitectureGraph aria-label="Salesforce architecture diagram showing system integration layers" />
                     </div>
 
                 </div>
             </section>
 
             {/* SERVICE 2: CRM STRATEGY */ }
+            <ServiceSchema
+                name={ services?.[1]?.title ?? "Integrations & System Coupling" }
+                description={ services?.[1]?.description ?? "" }
+                url="https://sbbconsult.de/services#crm"
+            />
             <section id="crm" className="py-32 bg-bg-base">
                 <div className="container mx-auto px-6 max-w-300">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -130,7 +159,7 @@ const Services = () => {
                                 <ul className="space-y-6">
                                     { services?.[1]?.details?.map((point, idx) => (
                                         <li key={ idx } className="flex gap-4 items-start">
-                                            <div className="w-2 h-2 rounded-full mt-2.5 shrink-0" />
+                                            <div className="w-2 h-2 rounded-full mt-2.5 shrink-0" aria-hidden="true" />
                                             <span className="text-xl font-medium">
                                                 { point }
                                             </span>
@@ -146,7 +175,7 @@ const Services = () => {
 
                         <div className="space-y-6">
                             <div className="h-96 rounded-3xl bg-linear-to-br from-amber-50 via-bg-base to-[#e8e8ed] flex items-center justify-center relative overflow-hidden">
-                                <CRMFunnel />
+                                <CRMFunnel aria-label="CRM funnel visualization showing customer journey stages" />
                             </div><div className="grid grid-cols-2 gap-6">
                                 <Card className="p-8 text-center">
                                     <div className="text-2xl md:text-4xl font-bold mb-2">{ t("details.crm.stats.adoption") }</div>
@@ -163,6 +192,11 @@ const Services = () => {
             </section >
 
             {/* SERVICE 3: PRODUCT */ }
+            <ServiceSchema
+                name={ services?.[2]?.title ?? "Data Models & Processes" }
+                description={ services?.[2]?.description ?? "" }
+                url="https://sbbconsult.de/services#product"
+            />
             <section id="product" className="py-32 container mx-auto px-6 max-w-300 space-y-16">
                 <div className="text-center max-w-3xl mx-auto space-y-8">
                     <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
@@ -193,7 +227,57 @@ const Services = () => {
                 </div>
             </section >
 
+            {/* SERVICE 4: OWNERSHIP */ }
+            <ServiceSchema
+                name={ services?.[3]?.title ?? "Responsibility & Decision Assurance" }
+                description={ services?.[3]?.description ?? "" }
+                url="https://sbbconsult.de/services#ownership"
+            />
+            <section id="ownership" className="py-32">
+                <div className="container mx-auto px-6 max-w-300">
+                    <div className="mb-16">
+                        <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-8">
+                            { services?.[3]?.title ?? "" }
+                        </h2>
+                        <p className="text-xl font-medium">
+                            { services?.[3]?.description ?? "" }
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                        <div className="space-y-8">
+                            <h3 className="text-xl font-bold">{ t("details.ownership.subtitle") }</h3>
+                            <ul className="space-y-6">
+                                { services?.[3]?.details?.map((point, idx) => (
+                                    <li key={ idx } className="flex gap-4 items-start">
+                                        <Check className="w-6 h-6 shrink-0 mt-0.5" alt="checkmark" aria-hidden="true" />
+                                        <span className="text-xl font-medium">
+                                            { point }
+                                        </span>
+                                    </li>
+                                )) }
+                            </ul>
+
+                            <div className="space-y-6">
+                                <p className="text-xl font-medium">
+                                    { t("details.ownership.longtext1") }
+                                </p>
+                                <p className="text-xl font-medium">
+                                    { t("details.ownership.longtext2") }
+                                </p>
+                            </div>
+                        </div>
+                        <OwnershipFlow aria-label="Data ownership lifecycle diagram" />
+                    </div>
+                </div>
+            </section>
+
             {/* SERVICE 5: AI, GPT & DATA SCIENCE */ }
+            <ServiceSchema
+                name={ services?.[4]?.title ?? "AI, GPT & Data Science" }
+                description={ services?.[4]?.description ?? "" }
+                url="https://sbbconsult.de/services#ai"
+            />
             <section id="ai" className="py-32 bg-bg-base">
                 <div className="container mx-auto px-6 max-w-300">
 
@@ -210,7 +294,7 @@ const Services = () => {
                     {/* Diagram */ }
                     <div className="mb-16">
                         <div className="h-96 rounded-3xl bg-linear-to-br from-blue-50 via-bg-base to-[#e8e8ed] flex items-center justify-center relative overflow-hidden">
-                            <AIDiagram />
+                            <AIDiagram aria-label="AI and data science architecture showing machine learning pipeline" />
                         </div>
                     </div>
 
@@ -244,12 +328,17 @@ const Services = () => {
             </section>
 
             {/* FAQ Accordion */ }
-            <Accordion
-                title={ t("faq.title") }
-                subtitle={ t("faq.subtitle") }
-                idPrefix="faq"
-                items={ t("faq.items", { returnObjects: true }) as Array<{ question: string; answer: string }> }
-            />
+            <>
+                <FAQSchema
+                    faqs={ t("faq.items", { returnObjects: true }) as Array<{ question: string; answer: string }> }
+                />
+                <Accordion
+                    title={ t("faq.title") }
+                    subtitle={ t("faq.subtitle") }
+                    idPrefix="faq"
+                    items={ t("faq.items", { returnObjects: true }) as Array<{ question: string; answer: string }> }
+                />
+            </>
 
             {/* CTA SECTION */ }
             < section className="py-32 bg-linear-to-br from-text-primary to-[#4b5563]" >

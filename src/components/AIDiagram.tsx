@@ -18,7 +18,11 @@ const connections: Array<[string, string]> = [
 
 export default function AIDiagram () {
     return (
-        <div className="relative w-full h-105 rounded-3xl bg-linear-to-br from-indigo-50 via-bg-base to-[#e8e8ed] overflow-hidden">
+        <div
+            className="relative w-full h-105 rounded-3xl bg-linear-to-br from-indigo-50 via-bg-base to-[#e8e8ed] overflow-hidden"
+            role="img"
+            aria-label="AI and machine learning architecture diagram showing data flow from Business & CRM Data through AI/ML Models and Automation Logic to Salesforce Apps for Users & Customers"
+        >
 
             {/* SVG connections */ }
             <svg className="absolute inset-0 w-full h-full pointer-events-none">

@@ -28,7 +28,12 @@ const CRMFunnel = () => {
     ]
 
     return (
-        <div ref={ containerRef } className="w-full max-w-md mx-auto space-y-3">
+        <div
+            ref={ containerRef }
+            className="w-full max-w-md mx-auto space-y-3"
+            role="img"
+            aria-label="CRM sales funnel visualization showing conversion rates: 100% Leads, 70% Qualified, 45% Proposals, 25% Closed deals"
+        >
             { stages.map((stage, idx) => {
                 const percentage = (stage.value / 100) * 100
                 return (
