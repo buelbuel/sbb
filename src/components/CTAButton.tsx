@@ -25,9 +25,9 @@ const CTAButton: React.FC<CTAButtonProps> = ({
 
     const variants: Record<ButtonVariant, string> = {
         primary:
-            "bg-primary hover:bg-primary-dark text-white",
+            "bg-[#0066CC] hover:bg-[#0052A3] text-white shadow-sm",
         neutral:
-            "bg-text-primary hover:bg-text-primary/60 text-bg-base",
+            "bg-text-primary hover:bg-text-primary/90 text-bg-base shadow-sm",
     }
 
     const classes = `${base} ${variants[variant]} ${className}`

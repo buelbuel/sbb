@@ -93,7 +93,6 @@ const About = () => {
                     </p>
                     <CTAButton href="/contact">
                         { t("common:nav.contact") }
-                        arrow={ true }
                     </CTAButton>
                 </div>
             </section>

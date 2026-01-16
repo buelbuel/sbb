@@ -143,9 +143,9 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                                 ref={ listRef }
                                 className="relative flex items-center p-1 rounded-full bg-bg-base ring-1 ring-bg-glass"
                             >
-                                <span
-                                    className="absolute top-1 bottom-1 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-[left,width] duration-500 ease-primary"
-                                    style={ indicator }
+                                <li
+                                    className="absolute top-1 bottom-1 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-all duration-500 ease-primary will-change-[left,width]"
+                                    style={ { left: `${indicator.left}px`, width: `${indicator.width}px` } }
                                 />
                                 { navItems.map(item => {
                                     const active = currentPath === item.href
@@ -157,7 +157,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                                                     className={ `px-5 py-2 text-[15px] font-medium rounded-full ${active
                                                         ? "text-black"
                                                         : "hover:opacity-70"}
-                                                    `}
+                                                `}
                                                 >
                                                     { item.label }
                                                 </button>
@@ -188,6 +188,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                             <button
                                 onClick={ openMobileMenu }
                                 className="md:hidden w-10 h-10 flex items-center justify-center"
+                                aria-label="Open menu"
                             >
                                 <Menu className="w-5 h-5" />
                             </button>
@@ -212,6 +213,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath }) => {
                             <button
                                 onClick={ closeMobileMenu }
                                 className="w-10 h-10 flex items-center justify-center"
+                                aria-label="Close menu"
                             >
                                 <X className="w-5 h-5" />
                             </button>

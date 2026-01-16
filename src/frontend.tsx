@@ -1,12 +1,12 @@
 import { createRoot } from "react-dom/client"
 import React, { useEffect, useState, Suspense, lazy } from "react"
-import i18n from "./i18n"
+import i18n, { initializeI18n } from "./i18n"
 import "./index.css"
 
 import { Header } from "./components/Header"
 import Footer from "./components/Footer"
 
-const Home = lazy(() => import("./pages/Home"))
+import Home from "./pages/Home"
 const About = lazy(() => import("./pages/About"))
 const References = lazy(() => import("./pages/References"))
 const Services = lazy(() => import("./pages/Services"))
@@ -14,7 +14,6 @@ const Contact = lazy(() => import("./pages/Contact"))
 const NotFound = lazy(() => import("./pages/NotFound"))
 const Imprint = lazy(() => import("./pages/Imprint"))
 const Privacy = lazy(() => import("./pages/Privacy"))
-const Test = lazy(() => import("./pages/Test"))
 
 function resolvePage (pathname: string) {
     switch (pathname) {
@@ -32,8 +31,6 @@ function resolvePage (pathname: string) {
             return <Imprint />
         case "/privacy":
             return <Privacy />
-        case "/test":
-            return <Test />
         default:
             return <NotFound />
     }
@@ -125,8 +122,13 @@ function start () {
     }
 }
 
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", start)
-} else {
-    start()
+async function initAndStart () {
+    await initializeI18n()
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", start)
+    } else {
+        start()
+    }
 }
+
+initAndStart()

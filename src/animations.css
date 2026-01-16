@@ -161,6 +161,7 @@
 
 .animate-page-transition {
     animation: page-transition 0.5s cubic-bezier(0.32, 0.72, 0, 1) both;
+    will-change: opacity, filter, transform;
 }
 
 /* Animation delays */
@@ -214,6 +215,22 @@
     ::view-transition-new(root) {
         animation-duration: 0.5s;
         animation-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-blob,
+    .animate-fade-in-up,
+    .animate-fade-in-scale,
+    .animate-fade-in,
+    .animate-slide-down,
+    .animate-scale-in,
+    .animate-slide-in-left,
+    .animate-scale-x-in,
+    .animate-scale-y-in,
+    .animate-page-transition {
+        animation: none !important;
+        transition: none !important;
     }
 }
 

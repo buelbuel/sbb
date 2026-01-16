@@ -2,7 +2,7 @@ FROM oven/bun:latest
 
 WORKDIR /app
 COPY . .
-RUN bun install --production
+RUN bun install --production && bun build
 
 ENV PORT=8080
 EXPOSE 8080
