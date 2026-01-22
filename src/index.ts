@@ -69,12 +69,12 @@ serve({
         message () { },
     },
 
-    fetch (req) {
+    async fetch (req) {
         const url = new URL(req.url)
         const path = url.pathname
 
         if (path.match(/\.(js|css|png|jpg|jpeg|svg|webp|gif|ico|woff2|woff|ttf|eot)$/)) {
-            const file = Bun.file(`dist${path}`)
+            const filePath = `dist${path}`
             const headers = new Headers({
                 "Content-Type": getContentType(path),
                 "Cache-Control": getCacheControl(path),
@@ -82,14 +82,17 @@ serve({
 
             if (path.match(/\.(js|css|html|json|svg)$/)) {
                 const acceptEncoding = req.headers.get('accept-encoding') || ''
-                if (acceptEncoding.includes('br')) {
-                    headers.set('Content-Encoding', 'br')
-                } else if (acceptEncoding.includes('gzip')) {
-                    headers.set('Content-Encoding', 'gzip')
+
+                if (acceptEncoding.includes('gzip')) {
+                    const gzFile = Bun.file(`${filePath}.gz`)
+                    if (await gzFile.exists()) {
+                        headers.set('Content-Encoding', 'gzip')
+                        return new Response(gzFile, { headers })
+                    }
                 }
             }
 
-            return new Response(file, { headers })
+            return new Response(Bun.file(filePath), { headers })
         }
 
         return undefined

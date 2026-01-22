@@ -44,6 +44,14 @@ const PageLoader = () => (
 
 const App: React.FC = () => {
     const [path, setPath] = useState(window.location.pathname)
+    const [isI18nReady, setI18nReady] = useState(i18n.isInitialized)
+
+    useEffect(() => {
+        const onInitialized = () => setI18nReady(true)
+        i18n.on('initialized', onInitialized)
+        if (i18n.isInitialized) setI18nReady(true)
+        return () => i18n.off('initialized', onInitialized)
+    }, [])
 
     const navigate = (newPath: string) => {
         if ('startViewTransition' in document) {
@@ -98,6 +106,10 @@ const App: React.FC = () => {
         }
     }, [])
 
+    if (!isI18nReady) {
+        return <PageLoader />
+    }
+
     return (
         <>
             <Header currentPath={ path } />
@@ -122,13 +134,10 @@ function start () {
     }
 }
 
-async function initAndStart () {
-    await initializeI18n()
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", start)
-    } else {
-        start()
-    }
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start)
+} else {
+    start()
 }
 
-initAndStart()
+initializeI18n().catch(console.error)

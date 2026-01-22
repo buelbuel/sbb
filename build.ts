@@ -157,4 +157,15 @@ const outputTable = result.outputs.map(output => ({
 console.table(outputTable)
 const buildTime = (end - start).toFixed(2)
 
+console.log("📦 Compressing assets...")
+let compressedCount = 0
+for (const output of result.outputs) {
+    if (output.path.endsWith(".js") || output.path.endsWith(".css") || output.path.endsWith(".html")) {
+        const content = await Bun.file(output.path).arrayBuffer()
+        const compressed = Bun.gzipSync(new Uint8Array(content))
+        await Bun.write(`${output.path}.gz`, compressed)
+        compressedCount++
+    }
+}
+console.log(`✅ Compressed ${compressedCount} files\n`)
 console.log(`\n✅ Build completed in ${buildTime}ms\n`)
