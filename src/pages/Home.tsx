@@ -61,7 +61,7 @@ export function Home () {
                     "image": "https://sbbconsult.de/logo.png",
                     "description": t("common:meta.home.description"),
                     "url": "https://sbbconsult.de/",
-                    "telephone": "contact@sbbconsult.de",
+                    "telephone": "+4917631111700",
                     "priceRange": "€€€"
                 } }
             />

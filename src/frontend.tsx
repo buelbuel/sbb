@@ -5,6 +5,7 @@ import "./index.css"
 
 import { Header } from "./components/Header"
 import Footer from "./components/Footer"
+import BreadcrumbSchema from "./components/BreadcrumbSchema"
 
 import Home from "./pages/Home"
 const About = lazy(() => import("./pages/About"))
@@ -112,6 +113,7 @@ const App: React.FC = () => {
 
     return (
         <>
+            <BreadcrumbSchema pathname={ path } />
             <Header currentPath={ path } />
 
             <Suspense fallback={ <PageLoader /> }>
