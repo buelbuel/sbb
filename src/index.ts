@@ -72,6 +72,15 @@ serve({
     async fetch (req) {
         const url = new URL(req.url)
         const path = url.pathname
+        const host = req.headers.get('host') || ''
+
+        if (host.startsWith('www.')) {
+            const redirectUrl = `https://${host.slice(4)}${url.pathname}${url.search}`
+            return new Response(null, {
+                status: 301,
+                headers: { 'Location': redirectUrl }
+            })
+        }
 
         if (path.match(/\.(js|css|png|jpg|jpeg|svg|webp|gif|ico|woff2|woff|ttf|eot)$/)) {
             const filePath = `dist${path}`
