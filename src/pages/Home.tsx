@@ -47,7 +47,7 @@ export function Home () {
                 title={ t("common:meta.home.title") }
                 description={ t("common:meta.home.description") }
                 url="https://sbbconsult.de/"
-                keywords="Salesforce consulting, CRM implementation, enterprise architecture, AI solutions, product strategy, digital transformation"
+                keywords="Salesforce consultancy, Salesforce consulting, Salesforce customization, Salesforce architecture, CRM integration, Berlin, Germany, EU, enterprise CRM"
             />
 
             <StructuredData
@@ -62,7 +62,19 @@ export function Home () {
                     "description": t("common:meta.home.description"),
                     "url": "https://sbbconsult.de/",
                     "telephone": "+4917631111700",
-                    "priceRange": "€€€"
+                    "priceRange": "€€€",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Karower Str. 22",
+                        "addressLocality": "Berlin",
+                        "postalCode": "13156",
+                        "addressCountry": "DE"
+                    },
+                    "areaServed": [
+                        { "@type": "City", "name": "Berlin" },
+                        { "@type": "Country", "name": "Germany" },
+                        { "@type": "AdministrativeArea", "name": "European Union" }
+                    ]
                 } }
             />
 

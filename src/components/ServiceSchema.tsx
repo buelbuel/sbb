@@ -1,12 +1,17 @@
 import { useEffect } from "react"
 
+type ServiceArea = string | {
+    type: "Country" | "City" | "AdministrativeArea"
+    name: string
+}
+
 type ServiceSchemaProps = {
     name: string
     description: string
     url: string
     image?: string
     provider?: string
-    areaServed?: string[]
+    areaServed?: ServiceArea[]
 }
 
 const ServiceSchema: React.FC<ServiceSchemaProps> = ({
@@ -15,9 +20,32 @@ const ServiceSchema: React.FC<ServiceSchemaProps> = ({
     url,
     image,
     provider = "SBB Consult",
-    areaServed = ["DE", "CH", "AT"]
+    areaServed = [
+        { type: "City", name: "Berlin" },
+        { type: "Country", name: "Germany" },
+        { type: "AdministrativeArea", name: "European Union" },
+        { type: "Country", name: "Austria" },
+        { type: "Country", name: "Switzerland" }
+    ]
 }) => {
     useEffect(() => {
+        const countryNames: Record<string, string> = {
+            DE: "Germany",
+            AT: "Austria",
+            CH: "Switzerland",
+            EU: "European Union"
+        }
+
+        const normalizeArea = (area: ServiceArea) => {
+            if (typeof area === "string") {
+                const name = countryNames[area] ?? area
+                const type = name === "European Union" ? "AdministrativeArea" : "Country"
+                return { "@type": type, "name": name }
+            }
+
+            return { "@type": area.type, "name": area.name }
+        }
+
         const serviceSchema = {
             "@context": "https://schema.org",
             "@type": "Service",
@@ -30,10 +58,7 @@ const ServiceSchema: React.FC<ServiceSchemaProps> = ({
                 "name": provider,
                 "url": "https://sbbconsult.de"
             },
-            "areaServed": areaServed.map(area => ({
-                "@type": "Country",
-                "name": area
-            })),
+            "areaServed": areaServed.map(normalizeArea),
             "serviceType": "Consulting",
             "availableChannel": {
                 "@type": "ServiceChannel",

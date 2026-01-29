@@ -69,7 +69,7 @@ const Services = () => {
                 title={ t("common:meta.services.title") }
                 description={ t("common:meta.services.description") }
                 url="https://sbbconsult.de/services"
-                keywords="Salesforce architecture, CRM strategy, product development, AI integration, ownership management, enterprise consulting"
+                keywords="Salesforce consultancy, Salesforce customization, Salesforce architecture, CRM integration, Berlin, Germany, EU, enterprise consulting"
             />
 
             <StructuredData
