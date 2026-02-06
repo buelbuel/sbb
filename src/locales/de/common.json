@@ -22,7 +22,12 @@
             "imprint": "Impressum",
             "privacy": "Datenschutz"
         },
-        "copyright": "Alle Rechte vorbehalten."
+        "copyright": "Alle Rechte vorbehalten.",
+        "address": {
+            "street": "Karower Str. 22",
+            "city": "13156 Berlin",
+            "country": "Germany"
+        }
     },
     "meta": {
         "home": {

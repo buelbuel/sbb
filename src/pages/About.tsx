@@ -3,8 +3,31 @@ import PageMeta from "@/components/PageMeta"
 import Hero from "@/components/Hero"
 import { useTranslation } from "react-i18next"
 import portrait from "@/assets/portrait.jpg"
+import badgeAiAssociate from "@/assets/badge_ai_associate.png"
+import badgePlatformAppBuilder from "@/assets/badge_platform_app_builder.png"
+import badgePlatformAdministrator from "@/assets/badge_platform_adminstrator.png"
+import badgeCpqAdministrator from "@/assets/badge_cpq_administrator.png"
 import SocialLink from "@/components/SocialLink"
 import { SOCIAL_LINKS } from "@/config/social"
+
+const badges = [
+    {
+        src: badgeAiAssociate,
+        alt: "Berlin Certified Salesforce AI Associate",
+    },
+    {
+        src: badgePlatformAppBuilder,
+        alt: "Berlin Certified Salesforce Platform App Builder",
+    },
+    {
+        src: badgePlatformAdministrator,
+        alt: "Berlin Certified Salesforce Platform Administrator",
+    },
+    {
+        src: badgeCpqAdministrator,
+        alt: "Berlin Certified Salesforce CPQ Administrator",
+    },
+]
 
 const About = () => {
     const { t } = useTranslation(['about', 'common', 'contact'])
@@ -21,6 +44,23 @@ const About = () => {
                 title={ t("common:hero.about.title") }
                 description={ t("common:hero.about.description") }
             />
+
+            {/* BADGES */ }
+            <section className="py-8">
+                <div className="container mx-auto px-6 max-w-245">
+                    <div className="flex flex-wrap justify-center gap-6">
+                        { badges.map(({ src, alt }) => (
+                            <img
+                                key={ alt }
+                                src={ src }
+                                alt={ alt }
+                                className="h-32 object-contain"
+                                loading="lazy"
+                            />
+                        )) }
+                    </div>
+                </div>
+            </section>
 
             {/* PROFIL */ }
             <section className="py-32">

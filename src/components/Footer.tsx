@@ -69,6 +69,18 @@ const Footer: React.FC = () => {
                             </ul>
                         </div>
                     )) }
+                    <div>
+                        <address className="not-italic">
+                            <h3 className="font-semibold mb-3">
+                                { firmName }
+                            </h3>
+                            <p>
+                                { t("footer.address.street") }<br />
+                                { t("footer.address.city") }<br />
+                                { t("footer.address.country") }
+                            </p>
+                        </address>
+                    </div>
                 </div>
 
                 {/* Lower Footer: Copyright & Legal */ }
